@@ -23,87 +23,96 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body>
+	<body
+		>
 		<!--[if lt IE 7]>
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
-		<div class="container pageHeader">
-			<div class="clearfix">
-				<div class="pull-left">
-					<a class="" href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
+		<div class="PageWrapper DefaultPage">
+			<a class="PageHeaderLogo" href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
+			<div class="PageContentWrapper">
+				<div class="PageHeader">
+					<div id="topMenu">
+						<ul class="linkList-hor">
+							<li><a href="index.html" title="Home">Home</a></li>
+							<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
+							<li><a href="information.html" title="Informatie">Informatie</a></li>
+						</ul>
+					</div>
+					<!-- #topMenu -->
+					<div id="messageBlock">
+					</div>
 				</div>
-				<div class="pull-right">
-					<ul class="linkList-hor ">
-						<li><a href="index.html" title="Home">Home</a></li>
-						<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
-						<li><a href="information.html" title="Informatie">Informatie</a></li>
-					</ul>
-				</div> <!-- #topMenu -->
+				<!-- PageHeader -->
+				<div id="PageContent" class="PageContent">
+					<div class="StandardPage">
+						<div class="PageContentColumn1">
+							<div class="page-header">
+								<h1 id="pageTitle">Internetoplichting</h1>
+							</div>
+							<div id="mioprevention">
+								<h2>Check (ver)koper</h2>
+								Voordat u een transactie met elkaar aangaat via een handelssite of
+								webshop, kunt u hier controleren of er meldingen over deze (ver)koper
+								zijn gedaan. Ook kunt een melding doen via de knop "Doe melding".
+								<div class="clearfix marginTop">
+									<div id="miopreventionFormDiv" class="panel panel-default pull-left" style="width: 86%;">
+										<div class="panel-body bg-info">
+											<form id="miopreventionForm" method="post" action="/f/index.html" class="" onsubmit="return false">
+												<div class="form-group">
+													<select name="checkCategory" onkeypress="return entsub(event);" id="checkCategory" class="">
+														<option value="">Kies categorie</option>
+														<option value="2">Categorie_1</option>
+														<option value="3">Categorie_2</option>
+													</select>
+													<i class="ietje" title="Dit veld is niet verplicht, maar helpt ons bij het onderzoek naar internetoplichting."></i>
+												</div>
+												<div class="form-group">
+													<label>Controleer op</label> <input type="text" class="" size="40" maxlength="40" id="sTerm" onkeyup="return entsub(this)" name="searchTerm"/>
+												</div>
+												<div class="form-group">
+													<strong>Toon aan dat u een persoon bent, bereken: </strong><span id="mioCalculation">6 + 5</span> = <input type="text"  class="" size="5" maxlength="5" id="result" onkeyup="return entsub(this)" name="result"/>
+												</div>
+												<div class="form-group">
+													<button class="btn btn-primary" onclick="javascript:checkOrNot()">controleer</button>
+												</div>
+												<div id="mioPreventionResult"></div>
+											</form>
+										</div>
+										<!-- .panel-body -->
+									</div>
+									<!-- .panel -->
+									<div class="pull-right">
+										<button id="mioMelding" class="btn btn-signal" type="button">Doe melding</button>
+									</div>
+								</div>
+								<button id="mioInfo" class="btn btn-default text-left overflow-x-hidden" type="button">
+								<i class="fa fa-info fa-lg"></i> Informatie over de checkfunctie
+								</button>
+								<div id='preventionHelp' class="hidden">
+									<h2>Waarop kunt u controleren?</h2>
+									U kunt zoeken op de volgende gegevens:
+									<ul class="marginTop">
+										<li>Nederlands bankrekeningnummer (gebruik alleen cijfers, bijv. 123456789)</li>
+										<li>IBAN-nummer (gebruik alleen letters en cijfers, bijv. NL05123412341234123400)</li>
+										<li>E-mailadres (niet van toepassing voor Marktplaats adressen, deze zijn al door Marktplaats geblokkeerd - <a class="textlink targetblank" href="http://www.marktplaats.nl/i/help/faq.dot?articleNumber=000005006" target="_blank">lees meer</a>)</li>
+										<li>Telefoonnummer (gebruik alleen cijfers, bijv. 0201234567)</li>
+										<li>URL van een webwinkel (bijv. www.eenwinkel.nl)</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- PageContentColumn1 -->
+					</div>
+					<!-- StandardPage -->
+				</div>
+				<!-- PageContent -->
 			</div>
-		</div> <!-- container -->
-		<div class="container">
-			<div class="main-content">
-				<div class="content-area">
-					<div id="messageBlock"></div>
-					<div class="page-header">
-						<h1 id="pageTitle">Internetoplichting</h1>
-					</div>
-					<div id="mioprevention">
-						<h2>Check (ver)koper</h2>
-						<p>
-						Voordat u een transactie met elkaar aangaat via een handelssite of
-						webshop, kunt u hier controleren of er meldingen over deze (ver)koper
-						zijn gedaan. Ook kunt een melding doen via de knop "Doe melding".
-						</p>
-						<div id="miopreventionFormDiv" class="col-md-10 panel panel-default bg-info-forced">
-							<div class="panel-body">
-								<form id="miopreventionForm" method="post" action="/f/index.html" class="form form-horizontal" onsubmit="return false">
-									<div class="form-group form-group-sm form-inline">
-										<select name="checkCategory" onkeypress="return entsub(event);" id="checkCategory" class="form-control">
-											<option value="">Kies categorie</option>
-											<option value="2">Categorie_1</option>
-											<option value="3">Categorie_2</option>
-										</select>
-										<i class="ietje" title="Dit veld is niet verplicht, maar helpt ons bij het onderzoek naar internetoplichting."></i>
-									</div>
-									<div class="form-group form-group-sm form-inline">
-										<label for="sTerm">Controleer op</label> <input type="text" id="sTerm" class="form-control" size="40" maxlength="40" onkeyup="return entsub(this)" name="searchTerm"/>
-									</div>
-									<div class="form-group form-group-sm form-inline">
-										<label for="result">Toon aan dat u een persoon bent, bereken:</label> <span id="mioCalculation">6 + 5</span> = <input type="text" id="result" class="form-control" size="5" maxlength="5" onkeyup="return entsub(this)" name="result"/>
-									</div>
-									<div class="form-group">
-										<button class="btn btn-primary" onclick="javascript:checkOrNot()">controleer</button>
-									</div>
-									<div id="mioPreventionResult"></div>
-								</form>
-							</div> <!-- .panel-body -->
-						</div> <!-- .panel -->
-						<div class="col-md-2 marginBottom">
-							<button id="mioMelding" class="btn btn-signal btn-block" type="button">Doe melding</button>
-						</div>
-						<div>
-							<button id="mioInfo" class="btn btn-default text-left overflow-x-hidden" type="button">
-							<i class="fa fa-info fa-lg"></i> Informatie over de checkfunctie
-							</button>
-						</div>
-						<div id='preventionHelp' class="hidden">
-							<h2>Waarop kunt u controleren?</h2>
-							U kunt zoeken op de volgende gegevens:
-							<ul class="marginTop">
-								<li>Nederlands bankrekeningnummer (gebruik alleen cijfers, bijv. 123456789)</li>
-								<li>IBAN-nummer (gebruik alleen letters en cijfers, bijv. NL05123412341234123400)</li>
-								<li>E-mailadres (niet van toepassing voor Marktplaats adressen, deze zijn al door Marktplaats geblokkeerd - <a class="textlink targetblank" href="http://www.marktplaats.nl/i/help/faq.dot?articleNumber=000005006" target="_blank">lees meer</a>)</li>
-								<li>Telefoonnummer (gebruik alleen cijfers, bijv. 0201234567)</li>
-								<li>URL van een webwinkel (bijv. www.eenwinkel.nl)</li>
-							</ul>
-						</div>
-					</div>
-				</div> <!-- .content-area -->
-			</div> <!-- .main-content -->
-		</div> <!-- .container -->
-		<div class="container marginTop">
-			<footer>
+			<!-- PageContentWrapper -->
+		</div>
+		<!-- PageWrapper -->
+		<div class="PageFooter">
+			<div class="PageFooterContent">
 				<div class="clearfix">
 					<div class="pull-left">
 						<ul class="linkList-hor">
@@ -124,8 +133,10 @@
 					</div>
 				</div>
 				<div id="cookieStatus"></div>
-			</footer>
-		</div> <!-- footer -->
+			</div>
+			<!-- PageFooterContent -->
+		</div>
+		<!-- PageFooter -->
 		<script src="resources/scripts/prototype.js"></script>
 		<script src="resources/scripts/yrtools.js"></script>
 		<script src="resources/scripts/yrsession.js"></script>

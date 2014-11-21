@@ -5898,11 +5898,7 @@ button.close {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after,
-main-content:before,
-main-content:after,
-.breadcrumb-row:before,
-.breadcrumb-row:after {
+.modal-footer:after {
   content: " ";
   display: table;
 }
@@ -5920,9 +5916,7 @@ main-content:after,
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after,
-main-content:after,
-.breadcrumb-row:after {
+.modal-footer:after {
   clear: both;
 }
 .center-block {
@@ -7738,9 +7732,9 @@ main-content:after,
   content: "\f1e2";
 }
 .forms-gradient {
-  background-image: -webkit-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: -o-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: linear-gradient(to right, #ffffff 40%, #ececec 80%);
+  background-image: -webkit-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: -o-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: linear-gradient(to right, white 40%, #ececec 80%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffececec', GradientType=1);
 }
@@ -7795,29 +7789,40 @@ main-content:after,
 /*************************************************************
  * NIEUW
  *************************************************************/
-main-content {
-  margin-left: -15px;
-  margin-right: -15px;
+.pageHeader {
+  margin-top: 15px;
 }
-main-content .content-area {
+.main-content .content-area {
   line-height: 1.2em;
 }
 @media (min-width: 992px) {
-  main-content .content-area {
+  .main-content .content-area {
     line-height: 1.6em;
   }
 }
-main-content .content-area h1 {
-  font-size: 30px;
+.main-content .content-area h1 {
+  font-size: 27px;
 }
 @media (min-width: 992px) {
-  main-content .content-area h1 {
-    font-size: 40px;
+  .main-content .content-area h1 {
+    font-size: 36px;
   }
 }
-.breadcrumb-row {
-  margin-left: -15px;
-  margin-right: -15px;
+.main-content .content-area h2 {
+  font-size: 22.5px;
+}
+@media (min-width: 992px) {
+  .main-content .content-area h2 {
+    font-size: 30px;
+  }
+}
+.main-content .content-area h3 {
+  font-size: 18px;
+}
+@media (min-width: 992px) {
+  .main-content .content-area h3 {
+    font-size: 24px;
+  }
 }
 @media (max-width: 480px) {
   .breadcrumb-row {
@@ -7832,6 +7837,12 @@ main-content .content-area h1 {
 }
 .fg-primary {
   color: #000099;
+}
+.bg-info-forced {
+  background-color: #d9edf7 !important;
+}
+a.bg-info-forced:hover {
+  background-color: #afd9ee !important;
 }
 /*************************************************************
  * general
@@ -7944,6 +7955,10 @@ a.ietje:hover {
 .helphover {
   cursor: help;
 }
+.margin-leftright-negative {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 /*************************************************************
  * meldingen
  *************************************************************/
@@ -8011,9 +8026,6 @@ div.close {
 /*************************************************************
  * menu
  *************************************************************/
-#topMenu {
-  margin-top: 1em;
-}
 /*************************************************************
  * SERVICES ALGEMEEN
  *************************************************************/
@@ -8040,9 +8052,9 @@ div.close {
  * Formulieren
 /**********************************************************************/
 .panel-forms {
-  background-image: -webkit-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: -o-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: linear-gradient(to right, #ffffff 40%, #ececec 80%);
+  background-image: -webkit-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: -o-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: linear-gradient(to right, white 40%, #ececec 80%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffececec', GradientType=1);
 }

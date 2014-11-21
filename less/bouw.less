@@ -32,24 +32,37 @@
 /*************************************************************
  * NIEUW
  *************************************************************/
-main-content {
-	.make-row();
+.pageHeader {
+	margin-top: 15px;
+}
+.main-content {
 	.content-area {
 		line-height: 1.2em;
 		@media(min-width: @screen-desktop) {
 			line-height: 1.6em;
 		}
 		h1 {
-			font-size: 30px;
+			font-size: @font-size-h1 * 0.75;
 			@media(min-width: @screen-desktop) {
-				font-size: 40px;
+				font-size: @font-size-h1;
+			}
+		}
+		h2 {
+			font-size: @font-size-h2 * 0.75;
+			@media(min-width: @screen-desktop) {
+				font-size: @font-size-h2;
+			}
+		}
+		h3 {
+			font-size: @font-size-h3 * 0.75;
+			@media(min-width: @screen-desktop) {
+				font-size: @font-size-h3;
 			}
 		}
 	}
 }
 //breadcrumb
 .breadcrumb-row {
-	.make-row();
 	@media(max-width: @screen-xs) {
 		display: none;
 	}
