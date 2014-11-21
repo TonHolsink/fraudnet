@@ -1,0 +1,56 @@
+/*************************************************************
+ * page
+ *************************************************************/
+// .PageWrapper {position: relative; margin: 0 auto; width: 960px; min-height: 665px; height: auto !important; height: 665px;}
+.PageWrapper {min-height: 665px;}
+/* Standard Content Page */
+.StandardPage {
+	padding: 0 20px 0 20px;
+	width: auto;
+	min-height: 392px;
+	height: auto !important;
+	height: 392px;
+}
+
+.PageHeader {
+/*	width: 960px; */
+	min-height: 64px;
+	height: auto !important;
+	height: 64px;
+}
+
+.PageHeaderLogo {z-index: 1; position: absolute; left: 20px; top: 0;}
+
+.PageContentWrapper{ height: auto;}
+/* .DefaultPage .PageContentWrapper .PageContentColumn1 {min-height: 457px; height: auto !important; height: 457px;} */
+.DefaultPage .PageContentWrapper .PageContentColumn1 {padding: 0 16px 0 16px;}
+
+.PageFooter { position: relative; width: 100%; min-height: 20px; height: auto !important; height: 20px; margin-top: 15px; margin-bottom: 15px}
+// .PageFooterContent { margin: 0 auto; position: relative; width: 960px; min-height: 20px; height: auto !important; height: 20px; text-align: right;}
+.PageFooterContent { min-height: 20px; height: auto !important; height: 20px; text-align: right;}
+
+/*************************************************************
+ * NIEUW
+ *************************************************************/
+main-content {
+	.make-row();
+	.content-area {
+		line-height: 1.2em;
+		@media(min-width: @screen-desktop) {
+			line-height: 1.6em;
+		}
+		h1 {
+			font-size: 30px;
+			@media(min-width: @screen-desktop) {
+				font-size: 40px;
+			}
+		}
+	}
+}
+//breadcrumb
+.breadcrumb-row {
+	.make-row();
+	@media(max-width: @screen-xs) {
+		display: none;
+	}
+}

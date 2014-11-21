@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- HTTP 1.1 -->
+		<meta http-equiv="Cache-Control" content="no-store"/>
+		<!-- HTTP 1.0 -->
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<!-- Prevents caching at the Proxy Server -->
+		<meta http-equiv="Expires" content="0"/>
+		<meta name="robots" content="noindex"/>
+		<meta name="author" content="YourRequest BV"/>
+		<link rel="icon" href="/f/images/favicon.ico"/>
+		<title>Mijn Politie Nederland</title>
+		<link rel="stylesheet" type="text/css" media="all" href="resources/styles/style.css" />
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body
+		>
+		<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="PageWrapper DefaultPage">
+			<a class="PageHeaderLogo" href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
+			<div class="PageContentWrapper">
+				<div class="PageHeader">
+					<div id="topMenu">
+						<ul class="linkList-hor">
+							<li><a href="index.html" title="Home">Home</a></li>
+							<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
+							<li><a href="information.html" title="Informatie">Informatie</a></li>
+						</ul>
+					</div>
+					<!-- #topMenu -->
+					<div id="messageBlock">
+					</div>
+				</div>
+				<!-- PageHeader -->
+				<div id="PageContent" class="PageContent">
+					<div class="StandardPage">
+						<div class="PageContentColumn1">
+							<div class="breadcrumb-row">
+								<ul class="breadcrumb">
+									<li>
+										<a href="/f/index.html">Home</a>
+									</li>
+									<li class="active">Meldingen</li>
+								</ul>
+							</div>
+							<div class="page-header">
+								<h1 id="pageTitle">	MIJN AANGIFTE</h1>
+							</div>
+							Aangifte doen is belangrijk. En als vanzelfsprekend wilt u graag weten wat er met uw aangifte gebeurt. Diverse politieregio&#39;s bieden de mogelijkheid status en voortgang van uw aangifte te volgen. Als uw aangifte hiervoor in aanmerking komt, dan ontvangt u hierover per e-mail bericht.<br/><br/>
+							<div id="avsTable" class="panel panel-default">
+								<form id="itemsForm" method="post" action="/f/zaken.html">
+									<input type="hidden" name="serviceID" value="200" />
+									<input type="hidden" name="sortKey" value="" />
+									<input type="hidden" name="sortDirection" value="desc" />
+									<div class="table-responsive">
+										<table class="table table-condensed table-striped table-hover">
+											<thead>
+												<tr>
+													<th id="number">
+														<a href="javascript:doSubmit('itemnumber');">
+														Regnr
+														</a>
+													</th>
+													<th id="date">
+														<a href="javascript:doSubmit('datum');">
+														Datum
+														</a>
+													</th>
+													<th class="text">
+														Delict
+													</th>
+													<th class="statusname">
+														<a href="javascript:doSubmit('status');">
+														Status/voortgang
+														</a>
+													</th>
+													<th class="actions">Acties</th>
+												</tr>
+											</thead>
+											<tbody id="tbodyResult">
+												<tr data-orderID="012850000005362" class="pointer">
+													<td>
+														012850000005362
+													</td>
+													<td>
+														10-11-2014
+													</td>
+													<td class="text">
+														Internetoplichting
+													</td>
+													<td>
+														nieuwe aangifte
+													</td>
+													<td>
+														<span data-action="ADD" class="glyphicon glyphicon-plus-sign fg-primary"title="Aanvulling op aangifte doen"></span>
+														<span data-action="DEL" class="glyphicon glyphicon-remove-sign fg-danger" title="Aangifte intrekken"></span>
+													</td>
+												</tr>
+												<tr data-orderID="012850000005362" class="pointer">
+													<td>
+														012850000005362
+													</td>
+													<td>
+														10-11-2014
+													</td>
+													<td class="text">
+														Internetoplichting
+													</td>
+													<td>
+														nieuwe aangifte
+													</td>
+													<td>
+														<span data-action="ADD" class="glyphicon glyphicon-plus-sign fg-primary"title="Aanvulling op aangifte doen"></span>
+														<span data-action="DEL" class="glyphicon glyphicon-remove-sign fg-danger" title="Aangifte intrekken"></span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</form>
+							</div>
+							<!-- #avsTable -->
+							<div id="withdraw" class="panel panel-default popupMsg hidden">
+								<div class="panel-headings">
+									<div class="panel-heading">
+										<strong>Uw aangifte internetoplichting intrekken</strong>
+										<button	id="close" type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+									</div>
+								</div>
+								<div class="panel-body">
+									<form id="melding_intrekken_form" method="post" action="/f/melding_intrekken_list.html">
+										<table class="table">
+											<tr>
+												<td class="col1">Reden</td>
+												<td class="col2">
+													<select name="withdrawReason" id="withdrawReason">
+														<option value="">Kies</option>
+														<option value="MIO_IGOED">Goederen geleverd</option>
+														<option value="MIO_IGELD">Geld teruggekregen</option>
+														<option value="MIO_IANDERS">Anders...</option>
+													</select>
+												</td>
+											</tr>
+											<tr id="withdraw_other_row" class="hidden">
+												<td class="col1">Reden intrekken</td>
+												<td class="col2">
+													<input type="text" name="withdrawReasonOther" maxlength="200" size="40" value="" />
+												</td>
+											</tr>
+											<tr>
+												<td class="right" colspan="2">
+													<input type="hidden" name="itemID" value="" id="withdrawID" />
+													<input type="submit" value="Intrekken" id="submitIntrekken" class="btn btn-primary" />
+												</td>
+											</tr>
+										</table>
+									</form>
+								</div>
+								<!-- .panel-body -->
+							</div>
+							<!-- #withdraw -->
+						</div>
+						<!-- PageContentColumn1 -->
+					</div>
+					<!-- StandardPage -->
+				</div>
+				<!-- PageContent -->
+			</div>
+			<!-- PageContentWrapper -->
+		</div>
+		<!-- PageWrapper -->
+		<div class="PageFooter">
+			<div class="PageFooterContent">
+				<div class="clearfix">
+					<div class="pull-left">
+						<ul class="linkList-hor">
+							<li><a href="services.html">Diensten</a></li>
+							<li><a href="partners.html">Partners</a></li>
+							<li><a href="about_us.html">Over ons</a></li>
+						</ul>
+					</div>
+					<div class="pull-right">
+						<ul class="linkList-hor">
+							<li><a href="disclaimer.html">Privacy en voorwaarden</a></li>
+							<li>
+								&copy;
+								2014
+								<a href="http://www.yourrequest.nl" class="targetblank">YourRequest</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="cookieStatus"></div>
+			</div>
+			<!-- PageFooterContent -->
+		</div>
+		<!-- PageFooter -->
+		<script src="resources/scripts/prototype.js"></script>
+		<script src="resources/scripts/yrtools.js"></script>
+		<script src="resources/scripts/yrsession.js"></script>
+		<script src="resources/scripts/yr-cookiebar.js"></script>
+		<script type="text/javascript">
+			//<![CDATA[
+				(function() {
+					document.observe("dom:loaded", function() {
+						$$('a.targetblank').each(function(el) {
+							el.target = '_blank';
+						});
+					});
+				})();
+			//]]>
+		</script>
+		<!-- local script to bottom -->
+		<script type="text/javascript">
+			//<![CDATA[
+				(function() {
+
+					this.doSubmit = function(sortKey, serviceID) {
+						var newSort = false;
+						var sortDirection;
+
+						if (typeof(serviceID) == "undefined" || serviceID.length == 0) {
+							serviceID = document.forms[0].serviceID.value;
+						}
+
+						if (sortKey.length > 0) {
+							/**
+							 * Controleer of we op een nieuw element gaan sorteren
+							 */
+							if (sortKey.toLowerCase() != document.forms[0].sortKey.value.toLowerCase()) {
+								newSort = true;
+							}
+							document.forms[0].sortKey.value = sortKey;
+						} else {
+							sortKey = document.forms[0].sortKey.value;
+						}
+
+						if (newSort) {
+							if (sortKey.toLowerCase() == 'itemnumber' || sortKey.toLowerCase() =='datum') {
+								sortDirection = 'desc';
+							} else {
+							sortDirection = 'asc';
+							}
+						}
+						else {
+							sortDirection = document.forms[0].sortDirection.value;
+							if (sortDirection.toLowerCase() == 'asc') {
+								sortDirection = 'desc';
+							} else if (sortDirection.toLowerCase() == 'desc') {
+								sortDirection = 'asc';
+							} else {
+								sortDirection = 'desc';
+							}
+						}
+						document.forms[0].sortDirection.value = sortDirection;
+						document.forms[0].submit();
+					};
+
+					function openWithdraw(itemid, event) {
+						var pos = Event.pointer(event);
+						var styles= {top: (pos.y - 50) + 'px'};
+						$('withdrawID').value = itemid;
+						$('withdraw').setStyle(styles).removeClassName('hidden');
+						$('withdraw').removeClassName('hidden');
+					};
+
+					function openAdd(itemid) {
+						window.location.href="startaanvullen.html?itemID=" + itemid;
+					};
+
+					document.observe("dom:loaded", function() {
+						// YRTOOLS.trHilight($('tbodyResult'), "tr[data-orderID]");
+						if ($('tbodyResult')) {
+							$('tbodyResult').observe('click', function(ev) {
+								var el = ev.element();
+								if (el.hasAttribute('data-action')) {
+									var action = el.readAttribute('data-action');
+									var orderID = el.up('tr').readAttribute('data-orderID');
+									if (action == 'ADD') {
+										openAdd(orderID);
+									} else if (action == 'DEL') {
+										openWithdraw(orderID, ev);
+									}
+								} else {
+									var row = el.up('tr');
+									if (row) document.location = 'mijnzaak.html?itemID=' + row.readAttribute('data-orderID');
+								}
+							});
+						}
+
+						Event.observe('melding_intrekken_form', 'submit', function(event) {
+							if (this['withdrawReason'].value == '') {
+								alert('Geef een reden voor het intrekken van uw melding');
+								Event.stop(event);
+							} else {
+								var dowithdraw=confirm("Let op: trek alleen uw melding in als de\n" +
+										"kwestie inderdaad opgelost is en u het goed alsnog\n " +
+										"ontvangen heeft dan wel het geld teruggestort heeft\n " +
+										"gekregen.");
+								if (dowithdraw == false) {
+									Event.stop(event);
+								}
+							}
+
+						});
+
+						$('withdrawReason').observe('click', function() {
+							if (this.value=='MIO_IANDERS') {
+								$('withdraw_other_row').removeClassName('hidden');
+							} else {
+								$('withdraw_other_row').addClassName('hidden');
+								var theForm = document.forms[1];
+								theForm['withdrawReasonOther'].value = '';
+							}
+						});
+
+						$('close').observe('click', function() {
+							$('withdraw').addClassName('hidden');
+						});
+
+					});
+
+				})();
+			//]]>
+		</script>
+		<script type="text/javascript">
+			//<![CDATA[
+				var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+				g.src='//www.google-analytics.com/ga.js';
+				s.parentNode.insertBefore(g,s)}(document,'script'));
+			//]]>
+		</script>
+	</body>
+</html>

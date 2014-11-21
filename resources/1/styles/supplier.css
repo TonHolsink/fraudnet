@@ -1,0 +1,465 @@
+/*************************************************************************
+
+supplier.css voor Demo
+laatste wijziging Bas de Jong 21-04-2007
+
+*************************************************************************/
+
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	background : white;
+	color: black;
+}
+
+div#screen {
+	width: 750px;
+	min-height: 350px;
+	height: auto !important;
+	height: 350px;
+}
+
+div#screen a {
+	text-decoration: none;
+	color: darkblue;
+}
+
+div#screen a:hover {
+	text-decoration: underline;
+	color: darkblue;
+}
+
+div#screen a:visited {
+}
+
+div#barleft {
+}
+
+div#barright {
+}
+
+/************************************************************
+ * Headers
+ ************************************************************/
+
+div#header {
+	height: 98px;
+	background: #10193a;
+	background-image:url(../images/kop.jpg);
+	background-repeat: no-repeat;
+}
+
+div#subheader {
+	height: 20px;
+}
+
+div#subheaderleft {
+}
+
+div#subheadermidden {
+}
+
+div#subheaderright {
+}
+
+div#subheaderright span {
+}
+
+/************************************************************
+ * Menubar
+ ************************************************************/
+
+div#topMenu {
+	height: 18px;
+	font-size: 10px;
+	padding-top:5px;
+	padding-left: 10px;
+	background: #10193a;
+}
+
+/*div#topMenu span {
+	padding: 0px 40px 0px 0px;
+}*/
+
+div#topMenu a {
+	color: white;
+	text-decoration: none;
+}
+
+div#topMenu a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+div#topMenu a:visited {
+        color: white;
+}
+
+div#topMenu ul {
+	padding: 0;
+	margin: 0;
+}
+
+div#topMenu ul li {
+	height: 18px;
+	display: inline;
+	list-style-type: none;
+	padding: 0px 20px 0px 0px;
+}
+
+.menu {
+	background-color: #10193a;
+	color: white;
+	position: absolute;
+	visibility: hidden;
+	z-index: 5;
+	width: 140px;
+	font-size: 10px;
+}
+
+.menu li a {
+	line-height: 18px;
+	padding: 0px 10px 2px;
+	text-decoration: underline;
+}
+
+input#searchcriteria {
+	color: grey;
+}
+
+div#content {
+	background: white;
+}
+
+.headertext {
+    color: red;
+    margin-bottom: 20px;
+}
+
+div#titleBlock {
+}
+
+.title {			/* aanhef */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.text {				/* tekstblok na aanhef */
+    margin-bottom: 10px;
+}
+
+.contentHeader {		/* kopregel boven tabel */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/************************************************************
+ * listItems
+    div#title
+    div#itemTable	???? alleen info div ????
+ ************************************************************/
+
+div#listItems #title {
+    margin-bottom : 16px;
+}
+
+div#itemTable {
+}
+
+div#itemTable table {
+    table-layout: fixed;
+}
+
+#itemTable th#number {
+    width: 80px;
+}
+
+/*#itemTable th#customernumber {
+    width: 150px;
+}*/
+
+#itemTable th#companyname {
+    width: 80px;
+}
+
+#itemTable th#customerref {
+    width: 100px;
+}
+
+#itemTable th#date {
+    width: 100px;	
+}
+
+#itemTable th#text {
+    width: 120px;
+}
+
+#itemTable th#statusname {
+    width: 125px;
+}
+
+#itemTable th#contact {
+    width: 100px;
+}
+
+#itemTable th#freetexta {
+    width: 100px;
+}
+
+/************************************************************
+ * listCustomers
+ ************************************************************/
+
+div#listCustomers {
+}
+
+/************************************************************
+ * listItemDetails
+    div#title
+    div#itemDetailTable
+	div#customerData
+	div#itemData
+	div#statusTable
+ ************************************************************/
+
+div#itemDetailTable {
+}
+
+#itemDetailTable .col1 {
+    width: 150px;
+}
+
+#itemDetailTable .col2 {
+    width: 350px;
+}
+
+#itemDetailTable .col3 {
+    width: 150px;
+}
+
+#itemDetailTable .col4 {
+    display: none;
+}
+
+div#customerData {
+}
+
+#customerData th.col1 {
+    width: 150px;
+}
+
+div#itemData {
+}
+
+div#statusTable {
+}
+
+div#listItemDetails {
+}
+
+#actionlinks {
+    padding-top: 10px;
+}
+
+#actionlinks ul {
+    margin: 0;
+    padding: 0;
+}
+
+div#freeData {
+    margin-bottom: 8px;
+}
+
+div#customerTable {
+}
+
+div#customerTable table {
+    table-layout: fixed;
+}
+
+#customerTable th#customernumber {
+	width: 200px;	
+}
+
+#customerTable th#companyname {
+	width: 200px;	
+}
+
+#customerTable th#adress {
+	width: 150px;	
+	display: none;
+}
+
+#customerTable th#place {
+	width: 150px;	
+}
+
+#customerTable th#phone {
+	width: 125px;
+	display: none;
+}
+
+#customerTable th#email {
+	width: 50px;	
+}
+
+/************************************************************
+ * customerDetails
+ ************************************************************/
+
+table#customerInformation {
+    margin-bottom: 20px;
+}
+
+table#customerInformation td.col1 {
+	width: 200px;
+}
+
+table#customerInformation td.col2 {
+	width: 450px;
+}
+
+table#customerPreferences td.col1 {
+	width: 200px;
+}
+
+table#customerPreferences td.col2 {
+	width: 450px;
+}
+
+div#bottomNav {
+    margin-top: 50px;
+}
+
+/************************************************************
+ ************************************************************/
+
+div#listUsers {
+}
+
+div#userTable table {
+    table-layout: fixed;
+}
+
+/*****************************************************
+ beheer menu-items
+ *****************************************************/
+
+th.col1 {
+	width: 150px;
+}
+
+th.col2 {
+	width: 350px;
+}
+
+th.col3 {
+	width: 0px;
+}
+
+th.col4 {
+	width: 100px;
+}
+td.col1 {
+	width: 150px;
+}
+
+td.col2 {
+	width: 350px;
+}
+
+td.col3 {
+	width: 0px;
+}
+
+td.col4 {
+	width: 100px;
+}
+
+input {
+	font-size: 11px;
+	width: 350px;
+}
+
+textarea {
+	font-size: 11px;
+	width: 350px;
+}
+
+/* waarom is het nu weer #col1 en niet conform customerTabel .col1??*/
+
+#userTable #col1 {
+	width: 150px;
+}
+
+#userTable #col2 {
+	width: 350px;
+}
+
+#userTable #col3 {
+	width: 100px;
+}
+
+#userTable #col4 {
+	width: 100px;
+}
+
+#userTable #col5 {
+	width: 100px;
+}
+
+/************************************************************
+ ************************************************************/
+
+#nuttigeInfo {
+	display: none;
+}
+
+tr.odd {
+}
+
+tr.even {
+}
+
+/*----------Toegevoegd door Jakko op 13-10-2006 ---------*/
+div#contact_freetext {
+}
+
+div#contact_freetext .title {
+    font-weight: bold;
+}
+
+#title_message {
+    color: green;
+}
+
+div#search {
+    position: absolute;
+    top: -18px;
+    left: 495px;
+}
+
+div#search input {
+    font-size: 11px;
+    width: 200px;
+}
+
+#itemStatusFileTable {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 530px;
+    width: 200px;
+}
+
+div#messageBlock {
+    height: 15px;
+    color: red;
+    font-weight: bold;
+}
+
+#actionlinks li {
+    list-style-type: none;
+}
+

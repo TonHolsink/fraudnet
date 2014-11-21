@@ -1,0 +1,192 @@
+/*************************************************************
+ * colours
+ *************************************************************/
+ .fg-danger {color: @brand-danger;}
+ .fg-primary {color: @brand-primary;}
+/*************************************************************
+ * general
+ *************************************************************/
+.page-header {
+	margin-top: @line-height-computed;
+}
+table {border-collapse: collapse;}
+table.fixed {table-layout: fixed;}
+table.emptyRow td{padding-bottom: 1em;}
+caption {
+	text-align: left;
+	color: #FFFFFF;
+}
+caption {
+	margin-left: 1px;
+	margin-right: 1px;
+}
+td {vertical-align: top;}
+.center {text-align: center;}
+.right {text-align: right;}
+.float_left {float: left;}
+.float_right {float: right;}
+.clear {clear: both; font-size: 0; line-height: 0; min-height: 0; height: auto !important; height: 0;}
+.smaller {font-size: smaller;}
+.marginTop {margin-top: 1em;}
+.marginBottom {margin-bottom: 1em;}
+.marginTopBottom {margin-top: 1em; margin-bottom: 1em;}
+.hidden {display: none;}
+.pointer {cursor: pointer;}
+.default {cursor: default;}
+.under {text-decoration:underline;}
+.raquo {color: #866f3c;}
+
+a:hover .raquo {color: red;}
+img.float_left {
+	margin: 0 10px 0 0;
+	padding-top: 3px;
+}
+img.float_right {
+	margin: 0 0 0 10px;
+	padding-top: 3px;
+}
+.ietje {
+	.fa;
+	&:before{
+		content: @fa-var-info-circle;
+	}
+	.text-emphasis-variant(@state-info-text);
+	cursor: help;
+}
+.helphover{cursor: help;}
+/*************************************************************
+ * meldingen
+ *************************************************************/
+#messageBlock {
+	//// margin-top: 0;
+	// margin-left: 130px;
+	// margin-right: 20px;
+}
+div#messageBlock div.message, div#messageBlock div.error {
+	// line-height: 28px;
+	// padding-left: 20px;
+	font-weight: bold;
+}
+div#messageBlock div.message {background: url("../images/blue-gradient-hor.png") repeat-y;}
+div#messageBlock div.error{
+	background: url("../images/red-gradient-hor.png") repeat-y;
+	color: white;
+}
+.alert {
+	border: 1px solid red;
+	padding: 5px;
+	margin-top: 10px;
+}
+.popupMsg {
+	position: absolute;
+	z-index: 20;
+	border: 2px solid @brand-primary;
+	background: white;
+	width: 420px;
+	min-height: 100px;
+	height: auto !important;
+	_height: 100px;
+	top: 220px;
+	left: 142px;
+}
+.popupMsg .panel-headings {background-color: @theme-signal-color;}
+.popupMsg .panel-body {padding-bottom: 0;}
+/**********************************************
+.popupMsgHeader {
+	height: 22px;
+	background-color: #004380;
+	padding: 0 4px;
+}
+.popupMsgTitle {
+	font-weight: bold;
+	color: #FFF;
+	line-height: 20px;
+	float: left;
+}
+.popupMsgContent {
+	padding: 1em;
+}
+
+******************************************/
+
+div#close, div.close {
+	float: right;
+	width: 16px;
+	height: 16px;
+	display: block;
+	background: url("../images/close.png");
+	cursor: pointer;
+	margin-top: 3px;
+}
+
+// #messageBlock {height: 20px;}
+/*************************************************************
+ * menu
+ *************************************************************/
+#topMenu {
+	// margin-right: 20px;
+	// text-align: right;
+	margin-top: 1em;
+}
+/*************************************************************
+ * SERVICES ALGEMEEN
+ *************************************************************/
+/**********************************************************************
+ * MIO
+/**********************************************************************/
+.mioAlert {background: transparent url('../images/double_exclamation_mark_red.png') no-repeat right;}
+.mioForeignIBANAlert {background: transparent url('../images/exclamation_mark_orange.png') no-repeat right;}
+.mioOk {background: transparent url('../images/tick_gold.png') no-repeat right;}
+.mioBlank {background: none;}
+#miopreventionFormDiv{
+	min-height: 153px;
+	height: auto;
+}
+/**********************************************************************
+ * Formulieren
+/**********************************************************************/
+.panel-forms {
+	.forms-gradient;
+}
+.panel-forms .panel-heading {
+	font-size: @font-size-h4;
+}
+.panel-forms {
+ .panel-variant(@panel-forms-border; @panel-forms-text; @panel-forms-heading-bg; @panel-forms-border);
+}
+.panel-forms .panel-body, .panel-forms .panel-footer {
+	padding: 0;
+}
+.panel-forms .panel-header {
+	background-color: @formrow-header-bg;
+}
+.panel-forms td:first-child, .panel-forms th:first-child {
+	padding-left: 15px;
+}
+.panel-forms td:last-child, .panel-forms th:last-child {
+	padding-right: 15px;
+}
+/**********************************************************************
+ * linkList-hor
+/**********************************************************************/
+.linkList-hor {
+	list-style: none;
+	padding:0;
+
+	> li {
+		display: inline-block;
+
+		+ li:before {
+			content: "@{linklist-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+			padding: 0 5px;
+			color: @theme-signal-color;
+			font-weight: bold;
+		}
+	}
+}
+/**********************************************************************
+ * btn-signal
+/**********************************************************************/
+.btn-signal {
+	.button-variant(@btn-signal-color; @btn-signal-bg; @btn-signal-border);
+}

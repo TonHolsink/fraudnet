@@ -1,0 +1,109 @@
+body {
+	font-family: Verdana, Areal, Helvetica, sans-serif;
+	font-size: 10px;
+        background: white;
+        color: black;
+}
+
+div#screen {
+	top: 40px;
+	width: 500px;
+}
+	
+div#screen a {
+	color: darkblue;
+	text-decoration: none;
+}
+	
+div#screen a:hover {
+	text-decoration: underline;
+}
+	
+div#header {
+	height: 68px;
+	background: #10193a;
+	background-image: url(../images/kop_login.jpg);
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+}
+
+/***************************************************************/
+/* Login scherm                                                */
+/***************************************************************/
+
+div#loginContent {
+	min-height: 200px;
+	height : auto !important;
+	height : 200px;
+}
+
+div#loginContent h1 {
+        display: none;
+}
+
+input.button {
+	border: none;
+	background: #10193a;
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+td.col1 a {
+    display: none;
+}
+
+/***************************************************************/
+/* Wijzig scherm                                               */
+/***************************************************************/
+
+div#wijzigContent {
+	min-height: 200px;
+	height : auto !important;
+	height : 200px;
+}
+
+div#wijzigContent h1 {
+	display: none;
+}
+
+/***************************************************************/
+/* Logout scherm                                               */
+/***************************************************************/
+/*
+ *div#logoutContent {
+ *	min-height: 200px;
+ *	height : auto !important;
+ *	height : 200px;
+ *}
+
+ *div#logoutContent h1 {
+ *	font-size: 18px;
+ *	text-align: center;
+ *}
+ */
+
+div#main {
+}
+
+div#main table {
+}
+
+div#main table th {
+}
+
+div#main table td {
+    width: 230px;
+}
+
+div#footer {
+	background: lightblue;
+}
+
+div#footer a {
+    color: orange;
+    text-decoration: none;
+}
+
+div#footer a:hover {
+}
