@@ -24,106 +24,79 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body>
+	<body
+		>
 		<!--[if lt IE 7]>
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
-		<div class="container pageHeader">
-			<div class="clearfix">
-				<div class="pull-left">
-					<a class="" href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
-				</div>
-				<div class="pull-right">
-					<ul class="linkList-hor ">
-						<li><a href="index.html" title="Home">Home</a></li>
-						<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
-						<li><a href="information.html" title="Informatie">Informatie</a></li>
-					</ul>
-				</div> <!-- #topMenu -->
-			</div>
-			<div class="headerStripe"></div>
-		</div> <!-- container -->
-		<div class="container">
-			<div class="main-content">
-				<div class="content-area" style="min-height: 400px !important;">
-					<div id="messageBlock"></div>
-					<div class="page-header">
-						<h1 id="pageTitle">Melding doen</h1>
+		<div class="PageWrapper DefaultPage">
+			<a class="PageHeaderLogo" href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
+			<div class="PageContentWrapper">
+				<div class="PageHeader">
+					<div id="topMenu">
+						<ul class="linkList-hor">
+							<li><a href="index.html" title="Home">Home</a></li>
+							<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
+							<li><a href="information.html" title="Informatie">Informatie</a></li>
+						</ul>
 					</div>
-					U voelt zich opgelicht via internet. Om u goed van dienst te zijn is
-					het van belang dat u eerst de onderstaande vragen beantwoordt.
-					<h2>Hoe werkt het?</h2>
-					Aan de hand van een paar inleidende vragen bepaalt het systeem waar u het
-					beste terecht kunt met uw probleem. In sommige gevallen kunt u beter
-					geen melding doen. U kunt dan bijvoorbeeld geholpen worden door
-					het <a href="http://www.juridischloket.nl" target="_blank">
-					Juridisch loket</a> of de <a href="http://www.fraudehelpdesk.nl" target="_blank">
-					Fraudehelpdesk</a><br/>
-					In die gevallen verwijzen wij u naar de juiste externe site.
-					<p id="errorhandle"></p>
-					<form name="melding" id="dialog" class="form form-horizontal" method="post">
-						<input type="hidden" name="suppliercode" value="40114112001"/>
-						<input type="hidden" name="qId" id="currentQuestion"/>
-						<input type="hidden" name="qAnswer" id="currentAnswer"/>
-						<input type="hidden" name="dialogSessionId" value="cf85aacf-ac3c-4619-9461-110c1a98568f"/>
-						<div id="dialogBox" class="panel panel-forms">
-							<div class='form-group'>
-								<div class='col-sm-4'>U voelt zich opgelicht via internet. Wat is er gebeurd?</div>
-								<div class='col-sm-8'>
-									<select id='MIO_AANG'class="form-control" name='MIO_AANG'onChange='javascript:submitDialog(&#39;MIO_AANG&#39;);return true'>
-										<option class='selectoption' value=''>--Maak uw keuze--</option>
-										<option class='selectoption' value='OPLICHTING' id='OPLICHTING'>Ik ben slachtoffer geworden via een online handelsplaats  (b.v. Marktplaats, Speurders) of een webwinkel</option>
-										<option class='selectoption' value='SPOOK' id='SPOOK'>Ik heb een spookfactuur ontvangen (Acquisitiefraude)</option>
-										<option class='selectoption' value='LOTERIJ' id='LOTERIJ'>Ik ben mogelijk slachtoffer van loterij-, erfenis- of datingfraude of wil daar een melding van doen</option>
-										<option class='selectoption' value='PHISHING' id='PHISHING'>Ik ben het slachtoffer van phishing</option>
-									</select>
+					<!-- #topMenu -->
+					<div id="messageBlock">
+					</div>
+				</div>
+				<!-- PageHeader -->
+				<div id="PageContent" class="PageContent">
+					<div class="StandardPage">
+						<div class="PageContentColumn1">
+							<div id="flowcontainer" class="flowcontainer">
+							</div>
+							<div class="page-header">
+								<h1 id="pageTitle">Melding doen</h1>
+							</div>
+							U voelt zich opgelicht via internet. Om u goed van dienst te zijn is
+							het van belang dat u eerst de onderstaande vragen beantwoordt.
+							<h2>Hoe werkt het?</h2>
+							Aan de hand van een paar inleidende vragen bepaalt het systeem waar u het
+							beste terecht kunt met uw probleem. In sommige gevallen kunt u beter
+							geen melding doen. U kunt dan bijvoorbeeld geholpen worden door
+							het <a href="http://www.juridischloket.nl" target="_blank">
+							Juridisch loket</a> of de <a href="http://www.fraudehelpdesk.nl" target="_blank">
+							Fraudehelpdesk</a><br/>
+							In die gevallen verwijzen wij u naar de juiste externe site.
+							<p id="errorhandle"></p>
+							<form name="melding" id="dialog" method="post">
+								<input type="hidden" name="suppliercode" value="40114112001"/>
+								<input type="hidden" name="qId" id="currentQuestion"/>
+								<input type="hidden" name="qAnswer" id="currentAnswer"/>
+								<input type="hidden" name="dialogSessionId" value="cf85aacf-ac3c-4619-9461-110c1a98568f"/>
+								<div id="dialogBox" class="panel panel-forms">
+									<div class='formrow first'>
+										<div class='dialogquestion'>U voelt zich opgelicht via internet. Wat is er gebeurd?</div>
+										<div class='dialoganswer'>
+											<select id='MIO_AANG'name='MIO_AANG'onChange='javascript:submitDialog(&#39;MIO_AANG&#39;);return true'>
+												<option class='selectoption' value=''>--Maak uw keuze--</option>
+												<option class='selectoption' value='OPLICHTING' id='OPLICHTING'>Ik ben slachtoffer geworden via een online handelsplaats  (b.v. Marktplaats, Speurders) of een webwinkel</option>
+												<option class='selectoption' value='SPOOK' id='SPOOK'>Ik heb een spookfactuur ontvangen (Acquisitiefraude)</option>
+												<option class='selectoption' value='LOTERIJ' id='LOTERIJ'>Ik ben mogelijk slachtoffer van loterij-, erfenis- of datingfraude of wil daar een melding van doen</option>
+												<option class='selectoption' value='PHISHING' id='PHISHING'>Ik ben het slachtoffer van phishing</option>
+											</select>
+										</div>
+									</div>
+									<!-- row -->
 								</div>
-							</div> <!-- .form-group -->
-							<div class='form-group'>
-								<div class='col-sm-4'>Heeft u iets gekocht of verkocht?</div>
-								<div class='col-sm-8'>
-									<select id="MIO_OPL" class="form-control" name="MIO_OPL" onchange="javascript:submitDialog('MIO_OPL');return true">
-										<option class="selectoption" value="">--Maak uw keuze--</option>
-										<option class="selectoption" value="MIO_GEKA" id="MIO_GEKA" selected="selected">Ik heb iets gekocht en betaald</option>
-										<option class="selectoption" value="MIO_VERKA" id="MIO_VERKA">Ik heb iets verkocht</option>
-									</select>
-								</div>
-							</div> <!-- .form-group -->
-							<div class='form-group'>
-								<div class='col-sm-4'>Kunt u aangeven wat de situatie nu is?</div>
-								<div class='col-sm-8'>
-									<select id="MIO_GEK" class="form-control" name="MIO_GEK" onchange="javascript:submitDialog('MIO_GEK');return true">
-										<option class="selectoption" value="">--Maak uw keuze--</option>
-										<option class="selectoption" value="MIO_GNIET" id="MIO_GNIET">Ik heb 5 dagen gewacht, na toegezegde leveringsdatum, en niets geleverd gekregen</option>
-										<option class="selectoption" value="MIO_GONT" id="MIO_GONT" selected="selected">Ik heb iets (onder rembours) toegezonden gekregen / Ik heb iets opgehaald</option>
-									</select>
-								</div>
-							</div> <!-- .form-group -->
-							<div class='form-group'>
-								<div class='col-sm-4'>Wat is er mis met het product?</div>
-								<div class='col-sm-8'>
-									<select id="MIO_KEUZE" class="form-control" name="MIO_KEUZE" onchange="javascript:submitDialog('MIO_KEUZE');return true">
-										<option class="selectoption" value="">--Maak uw keuze--</option>
-										<option class="selectoption" value="MIO_KNAF" id="MIO_KNAF" selected="selected">Ik heb iets gekregen maar het is niet volgens de afspraak</option>
-										<option class="selectoption" value="MIO_KKAP" id="MIO_KKAP">Het product was in eerste instantie goed maar ging later kapot</option>
-										<option class="selectoption" value="MIO_KVER" id="MIO_KVER">Het product voldeed niet aan mijn verwachtingen</option>
-										<option class="selectoption" value="MIO_KNEP" id="MIO_KNEP">Het product wat ik toezonden kreeg/opgehaald heb bleek nep te zijn, ik ben overduidelijk bedrogen</option>
-									</select>
-								</div>
-							</div> <!-- .form-group -->
-							<div class="form-group">
-								<div class="col-sm-12">
-									Dit is geen oplichting, probeer een oplossing te vinden met de verkoper. Mogelijk kan het Juridisch Loket u van dienst zijn.
-									<p><a href="http://www.juridischloket.nl" target="_blank"><img src="resources/images/juridisch_loket.gif"></a></p>
-								</div>
-							</div> <!-- .form-group -->
+							</form>
 						</div>
-					</form>
-				</div> <!-- .content-area -->
-			</div> <!-- .main-content -->
-		</div> <!-- .container -->
-		<div class="container">
-			<footer>
+						<!-- PageContentColumn1 -->
+					</div>
+					<!-- StandardPage -->
+				</div>
+				<!-- PageContent -->
+			</div>
+			<!-- PageContentWrapper -->
+		</div>
+		<!-- PageWrapper -->
+		<div class="PageFooter">
+			<div class="PageFooterContent">
 				<div class="clearfix">
 					<div class="pull-left">
 						<ul class="linkList-hor">
@@ -144,16 +117,18 @@
 					</div>
 				</div>
 				<div id="cookieStatus"></div>
-			</footer>
-		</div> <!-- footer -->
+			</div>
+			<!-- PageFooterContent -->
+		</div>
+		<!-- PageFooter -->
 		<script src="resources/scripts/prototype.js"></script>
 		<script src="resources/scripts/yrtools.js"></script>
 		<script src="resources/scripts/yrsession.js"></script>
 		<script src="resources/scripts/validation.js"></script>
 		<script src="resources/scripts/yr-cookiebar.js"></script>
-		<script src="resources/40114112001/eforms/eforms.js"> </script>
-		<script src="resources/40114112001/eforms/formatDate.js"> </script>
-		<script src="resources/40114112001/eforms/util.js"> </script>
+		<script src="/f/resources/40114112001/eforms/eforms.js"> </script>
+		<script src="/f/resources/40114112001/eforms/formatDate.js"> </script>
+		<script src="/f/resources/40114112001/eforms/util.js"> </script>
 		<script type="text/javascript">
 			//<![CDATA[
 				(function() {

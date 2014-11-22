@@ -1,486 +1,377 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!DOCTYPE html>
 <html lang="nl">
 	<head>
 		<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- HTTP 1.1 -->
-	<meta http-equiv="Cache-Control" content="no-store"/>
-	<!-- HTTP 1.0 -->
-	<meta http-equiv="Pragma" content="no-cache"/>
-	<!-- Prevents caching at the Proxy Server -->
-	<meta http-equiv="Expires" content="0"/>
-	<meta name="robots" content="noindex"/>
-	<meta name="author" content="YourRequest BV"/>
-	<link rel="icon" href="resources/images/favicon.ico"/>
-<title>FraudNet</title>
-
-		<link rel="stylesheet" type="text/css" media="all" href="/fraudnet/resources/styles/style.css" />
-		<link rel="stylesheet" type="text/css" media="all" href="/fraudnet/resources/styles/eforms.css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- HTTP 1.1 -->
+		<meta http-equiv="Cache-Control" content="no-store"/>
+		<!-- HTTP 1.0 -->
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<!-- Prevents caching at the Proxy Server -->
+		<meta http-equiv="Expires" content="0"/>
+		<meta name="robots" content="noindex"/>
+		<meta name="author" content="YourRequest BV"/>
+		<link rel="icon" href="resources/images/favicon.ico"/>
+		<title>FraudNet</title>
+		<link rel="stylesheet" type="text/css" media="all" href="resources/styles/style.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="resources/styles/eforms.css" />
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-
-		</head>
-	<body
-	>
+	</head>
+	<body>
 		<!--[if lt IE 7]>
-			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
-		<div class="PageWrapper DefaultPage">
-			<a class="PageHeaderLogo" href="/f/index.html"><img src="/fraudnet/resources/images/fraudnet-logo.png" /></a>
-			<div class="PageContentWrapper">
-				<div class="PageHeader">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="topMenu">
-	<ul class="linkList-hor">
-		<li><a href="index.html" title="Home">Home</a></li>
-		<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
-		<li><a href="information.html" title="Informatie">Informatie</a></li>
-	</ul>
-</div> <!-- #topMenu -->
-<div id="messageBlock">
-	</div>
-</div> <!-- PageHeader -->
-				<div id="PageContent" class="PageContent">
-					<div class="StandardPage">
-						<div class="PageContentColumn1">
-							<div id="flowcontainer" class="flowcontainer">
-								<span class="label current">
-												Uw gegevens</span>
-										<span class="label">
-												Gegevens wederpartij</span>
-										<span class="label">
-												Transactiegegevens</span>
-										<span class="label">
-												Controleren en verzenden</span>
-										</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript">
-//<![CDATA[
-	(function() {
-
-		this.entsub = function(event,ourform) {
-			if (window.event && window.event.keyCode == 13) {
-				doSubmit('','');
-				return false;
-			} else if (event && event.which == 13) {
-				doSubmit('','');
-				return false;
-			} else {
-				return true;
-			}
-		};
-
-	})();
-//]]>
-</script>
-
-<div id="tabs"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="eformsContent" class="eformsContent">
-	<form  id="dialog" class="form-inline" action="formPage.html" method="post" enctype="multipart/form-data" name="eform">
-		<input type="hidden" name="supplier" value="20107101901"/>
-		<div class="page-header">
-			<h1 id="pageTitle">Melding Internetoplichting</h1>
-		</div>
-		<p id="errorhandle"></p>
-		<input type="hidden" name="dialogSessionId" value="9523e402-12ba-48b6-9c46-68fdba5bf006"/>
-		<input type="hidden" name="formName" value="ifaangifte"/>
-		<input type="hidden" name="pageNumber" value="1"/>
-		<input type="hidden" name="formCode" value=""/>
-
-		<div class="panel panel-forms">
-			<div class="panel-header">
-				<div class="panel-heading">Uw gegevens</div>
+		<div class="container pageHeader">
+			<div class="clearfix">
+				<div class="pull-left">
+					<a class="" href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
+				</div>
+				<div class="pull-right">
+					<ul class="linkList-hor ">
+						<li><a href="index.html" title="Home">Home</a></li>
+						<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
+						<li><a href="information.html" title="Informatie">Informatie</a></li>
+					</ul>
+				</div> <!-- #topMenu -->
 			</div>
+			<div class="headerStripe"></div>
+		</div> <!-- container -->
+		<div class="container">
+			<div class="main-content">
+				<div class="content-area" style="min-height: 400px !important;">
+					<div id="messageBlock"></div>
 
-			<div class="panel-body">
-				<div class="formrow">
-					<span class="infotext">
-						Vul onderstaande velden zo volledig en accuraat als mogelijk in. Wij
-						wijzen u erop dat de melding correct en naar waarheid dient te worden
-						ingevuld.
-						<br/><br/>
-						Velden met een <i class="mandatory"></i> zijn verplicht.
-						Door met de muis op de <i class="ietje"></i> te staan, krijgt
-						u extra informatie die u kan helpen bij het invullen van het antwoord.
-					</span>
+					<div id="flowcontainer" class="flowcontainer">
+						<span class="label current">
+						Uw gegevens</span>
+						<span class="label">
+						Gegevens wederpartij</span>
+						<span class="label">
+						Transactiegegevens</span>
+						<span class="label">
+						Controleren en verzenden</span>
+					</div>
+					<script type="text/javascript">
+						//<![CDATA[
+							(function() {
+
+								this.entsub = function(event,ourform) {
+									if (window.event && window.event.keyCode == 13) {
+										doSubmit('','');
+										return false;
+									} else if (event && event.which == 13) {
+										doSubmit('','');
+										return false;
+									} else {
+										return true;
+									}
+								};
+
+							})();
+						//]]>
+					</script>
+					<div id="tabs"></div>
+					<div id="eformsContent" class="eformsContent">
+						<form id="dialog" class="form form-horizontal" action="formPage.html" method="post" enctype="multipart/form-data" name="eform">
+							<input type="hidden" name="supplier" value="20107101901"/>
+							<div class="page-header">
+								<h1 id="pageTitle">Melding Internetoplichting</h1>
+							</div>
+							<p id="errorhandle"></p>
+							<input type="hidden" name="dialogSessionId" value="9523e402-12ba-48b6-9c46-68fdba5bf006"/>
+							<input type="hidden" name="formName" value="ifaangifte"/>
+							<input type="hidden" name="pageNumber" value="1"/>
+							<input type="hidden" name="formCode" value=""/>
+							<div class="panel panel-forms">
+								<div class="panel-header">
+									<div class="panel-heading">Uw gegevens</div>
+								</div>
+								<div class="panel-body">
+									<div class="form-group form-inline">
+										<div class="col-sm-12">
+											<span class="infotext">
+											Vul onderstaande velden zo volledig en accuraat als mogelijk in. Wij
+											wijzen u erop dat de melding correct en naar waarheid dient te worden
+											ingevuld.
+											<br/><br/>
+											Velden met een <i class="mandatory"></i> zijn verplicht.
+											Door met de muis op de <i class="ietje"></i> te staan, krijgt
+											u extra informatie die u kan helpen bij het invullen van het antwoord.
+											</span>
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_bsn"></span>
+										<div class="col-sm-4">
+											Burgerservicenummer
+											<i class="ietje" title="Iedere Nederlandse burgers heeft een burgerservicenummer (BSN). Dit bsn is een persoonsnummer. Uw BSN vindt u bijvoorbeeld op uw rijbewijs of verzekeringspas. Indien u geen BSN nummer heeft, kunt u aangifte doen bij uw lokale politiebureau"></i>
+											<i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="bsn" size="10" maxlength="9" value=""
+												onkeypress="return AllowOnlyNumeric(event)" title="" type="text" class="form-control required validate-bsn">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_firstname"></span>
+										<div class="col-sm-4">
+											Voorna(a)m(en) <i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="firstname" size="50" maxlength="100" value="" title="" type="text" class="form-control required">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<div class="col-sm-4">
+											Tussenvoegsel(s)
+											<i class="ietje" title="Bijvoorbeeld de, van, van der of el."></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="middlename" size="10" maxlength="10" value="" title="Bijvoorbeeld de, van, van der of el." type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_lastname"></span>
+										<div class="col-sm-4">
+											Achternaam<i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="lastname" size="50" maxlength="100" value="" title="" type="text" class="form-control required">
+										</div>
+									</div>
+									<div class="form-group form-inline" id="gender">
+										<span class="errortext" id="error_gender"></span>
+										<div class="col-sm-4">
+											Geslacht <i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<label class="radio-inline">
+											<input name="gender" value="M" type="radio" class="s20 validate-one-required">
+											Man
+											</label>
+											<label class="radio-inline">
+											<input name="gender" value="V" type="radio" class="s20 validate-one-required">
+											Vrouw
+											</label>
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_b_country">
+										</span>
+										<div class="col-sm-4">
+											Geboorteland  <i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="b_country" size="50" maxlength="50"
+												value=""
+												title="" type="text" class="form-control required">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_b_date">
+										</span>
+										<div class="col-sm-4">
+											Geboortedatum  <i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="b_date" size="10" maxlength="10"
+												value=""
+												title="" type="text" class="form-control required validate-date">
+											&nbsp;<span class="grayed">(dd-mm-jjjj)</span>
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_b_place">
+										</span>
+										<div class="col-sm-4">
+											Geboorteplaats <i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="b_place" size="50" maxlength="40"
+												value=""
+												title="" type="text" class="form-control required">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_username"></span>
+										<div class="col-sm-4">
+											Gebruikersnaam handelssite
+											<i class="ietje" title="gebruikersnaam die u hanteert op de handelssite"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="username" size="30" maxlength="30" value=""
+												title="" type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_email"></span>
+										<div class="col-sm-4">
+											E-mailadres <i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="email" size="50" maxlength="50" value="" title="" type="text" class="form-control required validate-email">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_postal"></span>
+										<div class="col-sm-4">
+											Postcode
+											<i class="ietje" title="Gebruik geen spatie. Bijvoorbeeld 1234AB."></i>
+											<i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="postal" size="6" maxlength="6" value="" title="Gebruik geen spatie. Bijvoorbeeld 1234AB."
+												type="text" onChange="getAddress()" class="form-control required validate-postal">&nbsp;<span class="grayed">(1234AA)</span>
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_housenumber"></span>
+										<div class="col-sm-4">
+											Huisnummer
+											<i class="ietje" title="Vul alleen cijfers in."></i>
+											<i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="housenumber" size="10" maxlength="5" value="" title="Vul alleen cijfers in."
+												onkeypress="return AllowOnlyNumeric(event)" type="text" onBlur="getAddress()" class="form-control required validate-digits">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_housenumber_addon"></span>
+										<div class="col-sm-4">
+											Huisnummer toevoeging
+											<i class="ietje" title="Bijvoorbeeld II of bis."></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="housenumber_addon" size="5" maxlength="4"
+												onkeypress="return AllowAlphaNumeric(event)"
+												value=""
+												title="Bijvoorbeeld II of bis." type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_street"></span>
+										<div class="col-sm-4">
+											Straat <i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="street" size="30" maxlength="35" value="" title="" type="text" class="form-control required">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_place"></span>
+										<div class="col-sm-4">
+											Woonplaats <i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="place" size="30" maxlength="24" value="" title="" type="text" class="form-control required">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_country"></span>
+										<div class="col-sm-4">
+											Land <i class="mandatory"></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="country" size="15" maxlength="20" value="" title="" type="text" class="form-control required">
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_phone"></span>
+										<div class="col-sm-4">
+											Telefoonnummer
+											<i class="ietje" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="phone" size="10" maxlength="10" value=""
+												onkeypress="return AllowOnlyNumeric(event)"
+												title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."
+												type="text" class="form-control validate-phone" />
+											<span class="grayed">(0201234567)</span>
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<span class="errortext" id="error_mobile"></span>
+										<div class="col-sm-4">
+											Mobiele telefoonnummer
+											<i class="ietje" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."></i>
+										</div>
+										<div class="col-sm-8">
+											<input name="mobile" size="10" maxlength="10" value=""
+												onkeypress="return AllowOnlyNumeric(event)"
+												title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."
+												type="text" class="form-control validate-phone"/>
+											<span class="grayed">(0612345678)</span>
+										</div>
+									</div>
+								</div>
+								<!-- .panel-body -->
+								<div class="panel-footer">
+									<div class="form-group form-inline" id="general_error" class="hidden">
+										<div class="col-sm-12">
+											<span class="errortext" id="error_street">
+											! U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.
+											</span>
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<div class=" col-sm-12">
+											<span class="formbuttons">
+											<button class="btn btn-primary" name="submit_action" value="Volgende" id="submit" type="submit">
+											Volgende
+											</button>
+											</span>
+										</div>
+									</div>
+								</div>
+								<!-- .panel-footer -->
+							</div>
+							<!-- .panel -->
+						</form>
+					</div> <!-- #eformsContent -->
+
+				</div> <!-- .content-area -->
+			</div> <!-- .main-content -->
+		</div> <!-- .container -->
+		<div class="container">
+			<footer>
+				<div class="clearfix">
+					<div class="pull-left">
+						<ul class="linkList-hor">
+							<li><a href="services.html">Diensten</a></li>
+							<li><a href="partners.html">Partners</a></li>
+							<li><a href="about_us.html">Over ons</a></li>
+						</ul>
+					</div>
+					<div class="pull-right">
+						<ul class="linkList-hor">
+							<li><a href="disclaimer.html">Privacy en voorwaarden</a></li>
+							<li>
+								&copy;
+								2014
+								<a href="http://www.yourrequest.nl" class="targetblank">YourRequest</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_bsn"></span>
-					<div class="dialogquestion">
-						Burgerservicenummer
-						<i class="ietje" title="Iedere Nederlandse burgers heeft een burgerservicenummer (BSN). Dit bsn is een persoonsnummer. Uw BSN vindt u bijvoorbeeld op uw rijbewijs of verzekeringspas. Indien u geen BSN nummer heeft, kunt u aangifte doen bij uw lokale politiebureau"></i>
-						<i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="bsn" size="10" maxlength="9" value=""
-								 onkeypress="return AllowOnlyNumeric(event)" title="" type="text" class="required validate-bsn">
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_firstname"></span>
-					<div class="dialogquestion">
-						Voorna(a)m(en) <i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="firstname" size="50" maxlength="100" value="" title="" type="text" class="required">
-					</div>
-				</div>
-				<div class="formrow">
-					<div class="dialogquestion">
-					Tussenvoegsel(s)
-					<i class="ietje" title="Bijvoorbeeld de, van, van der of el."></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="middlename" size="10" maxlength="10" value="" title="Bijvoorbeeld de, van, van der of el." type="text">
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_lastname"></span>
-					<div class="dialogquestion">
-						Achternaam<i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="lastname" size="50" maxlength="100" value="" title="" type="text" class="required">
-					</div>
-				</div>
-				<div class="formrow" id="gender">
-					<span class="errortext" id="error_gender"></span>
-					<div class="dialogquestion">
-						Geslacht <i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<label class="radio-inline">
-
-
-									<input name="gender" value="M" type="radio" class="s20 validate-one-required">
-
-							Man
-						</label>
-						<label class="radio-inline">
-
-
-								<input name="gender" value="V" type="radio" class="s20 validate-one-required">
-
-							Vrouw
-						</label>
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_b_country">
-
-					</span>
-					<div class="dialogquestion">
-						Geboorteland  <i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="b_country" size="50" maxlength="50"
-								 value=""
-								 title="" type="text" class="required">
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_b_date">
-
-					</span>
-					<div class="dialogquestion">
-						Geboortedatum  <i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="b_date" size="10" maxlength="10"
-								 value=""
-								 title="" type="text" class="required validate-date">
-								 &nbsp;<span class="grayed">(dd-mm-jjjj)</span>
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_b_place">
-
-					</span>
-					<div class="dialogquestion">
-						Geboorteplaats <i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="b_place" size="50" maxlength="40"
-								 value=""
-								 title="" type="text" class="required">
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_username"></span>
-					<div class="dialogquestion">
-						Gebruikersnaam handelssite
-						<i class="ietje" title="gebruikersnaam die u hanteert op de handelssite"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="username" size="30" maxlength="30" value=""
-								 title="" type="text">
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_email"></span>
-					<div class="dialogquestion">
-						E-mailadres <i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="email" size="50" maxlength="50" value="" title="" type="text" class="required validate-email">
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_postal"></span>
-					<div class="dialogquestion">
-						Postcode
-						<i class="ietje" title="Gebruik geen spatie. Bijvoorbeeld 1234AB."></i>
-						<i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="postal" size="6" maxlength="6" value="" title="Gebruik geen spatie. Bijvoorbeeld 1234AB."
-							type="text" onChange="getAddress()" class="required validate-postal">&nbsp;<span class="grayed">(1234AA)</span>
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_housenumber"></span>
-					<div class="dialogquestion">
-						Huisnummer
-						<i class="ietje" title="Vul alleen cijfers in."></i>
-						<i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="housenumber" size="10" maxlength="5" value="" title="Vul alleen cijfers in."
-							 onkeypress="return AllowOnlyNumeric(event)"  type="text" onBlur="getAddress()" class="required validate-digits">
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_housenumber_addon"></span>
-					<div class="dialogquestion">
-						Huisnummer toevoeging
-						<i class="ietje" title="Bijvoorbeeld II of bis."></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="housenumber_addon" size="5" maxlength="4"
-										onkeypress="return AllowAlphaNumeric(event)"
-										value=""
-									title="Bijvoorbeeld II of bis." type="text">
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_street"></span>
-					<div class="dialogquestion">
-						Straat <i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="street" size="30" maxlength="35" value="" title="" type="text" class="required">
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_place"></span>
-					<div class="dialogquestion">
-						Woonplaats <i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="place" size="30" maxlength="24" value="" title="" type="text" class="required">
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_country"></span>
-					<div class="dialogquestion">
-						Land <i class="mandatory"></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="country" size="15" maxlength="20" value="" title="" type="text" class="required">
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_phone"></span>
-					<div class="dialogquestion">
-							Telefoonnummer
-							<i class="ietje" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="phone" size="10" maxlength="10" value=""
-								onkeypress="return AllowOnlyNumeric(event)"
-								title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."
-								type="text" class="validate-phone" />
-								<span class="grayed">(0201234567)</span>
-					</div>
-				</div>
-				<div class="formrow">
-					<span class="errortext" id="error_mobile"></span>
-					<div class="dialogquestion">
-						Mobiele telefoonnummer
-						<i class="ietje" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."></i>
-					</div>
-					<div class="dialoganswer">
-						<input name="mobile" size="10" maxlength="10" value=""
-								onkeypress="return AllowOnlyNumeric(event)"
-								title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."
-								type="text" class="validate-phone"/>
-								<span class="grayed">(0612345678)</span>
-					</div>
-				</div>
-			</div> <!-- .panel-body -->
-
-			<div class="panel-footer">
-
-					<div class="formrow" id="general_error" style="display:none;">
-						<span class="errortext" id="error_street">
-						! U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.
-				 		</span>
-					</div>
-
-
-
-				<div class="formrow">
-					<span class="formbuttons">
-						<button class="btn btn-primary" name="submit_action" value="Volgende" id="submit" type="submit">
-							Volgende
-						</button>
-					</span>
-				</div>
-			</div> <!-- .panel-footer -->
-
-		</div> <!-- .panel -->
-	</form>
-</div> <!-- contentarea -->
-
-
-
-
-</div> <!-- PageContentColumn1 -->
-					</div> <!-- StandardPage -->
-				</div> <!-- PageContent -->
-			</div> <!-- PageContentWrapper -->
-		</div> <!-- PageWrapper -->
-		<div class="PageFooter">
-			<div class="PageFooterContent">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="clearfix">
-	<div class="pull-left">
-		<ul class="linkList-hor">
-			<li><a href="services.html">Diensten</a></li>
-			<li><a href="partners.html">Partners</a></li>
-			<li><a href="about_us.html">Over ons</a></li>
-		</ul>
-	</div>
-	<div class="pull-right">
-		<ul class="linkList-hor">
-			<li><a href="disclaimer.html">Privacy en voorwaarden</a></li>
-			<li>
-				&copy;
-				2014
-				<a href="http://www.yourrequest.nl" class="targetblank">YourRequest</a>
-			</li>
-		</ul>
-	</div>
-</div>
-<div id="cookieStatus"></div>
-</div> <!-- PageFooterContent -->
-		</div> <!-- PageFooter -->
-
-		<script src="/fraudnet/resources/scripts/prototype.js"></script>
-		<script src="/fraudnet/resources/scripts/yrtools.js"></script>
-		<script src="/fraudnet/resources/scripts/yrsession.js"></script>
-		<script src="/fraudnet/resources/scripts/validation.js"></script>
-		<script src="/fraudnet/resources/scripts/yr-cookiebar.js"></script>
-
-		<script src="/f/resources/40114112001/eforms/eforms.js"> </script>
-		<script src="/f/resources/40114112001/eforms/formatDate.js"> </script>
-		<script src="/f/resources/40114112001/eforms/util.js"> </script>
-
+				<div id="cookieStatus"></div>
+			</footer>
+		</div> <!-- footer -->
+		<script src="resources/scripts/prototype.js"></script>
+		<script src="resources/scripts/yrtools.js"></script>
+		<script src="resources/scripts/yrsession.js"></script>
+		<script src="resources/scripts/validation.js"></script>
+		<script src="resources/scripts/yr-cookiebar.js"></script>
+		<script src="resources/40114112001/eforms/eforms.js"> </script>
+		<script src="resources/40114112001/eforms/formatDate.js"> </script>
+		<script src="resources/40114112001/eforms/util.js"> </script>
 		<script type="text/javascript">
 			//<![CDATA[
 				(function() {
@@ -492,84 +383,77 @@
 				})();
 			//]]>
 		</script>
-
 		<!-- local script to bottom -->
-
-
-
-
-<script type="text/javascript">
-// <![CDATA[
-	setTimeout('showSessionAlert()',3300000);
-	function showSessionAlert()	{
-		var now=new Date();
-		var newdate=new Date();
-		var newtimems=newdate.getTime()+(5*60*1000);
-		newdate.setTime(newtimems);
-		alert('U bent meer dan 55 minuten bezig met het invullen van dit scherm. Klik op een knop onderin het invulscherm. ' +
-				'U heeft hiervoor nog 5 minuten (tot ' + newdate.formatDate("H:i") + '). Anders moet u alle gegevens opnieuw invullen.');
-	}
-// ]]></script>
-
-
-<script type="text/javascript">
-// <![CDATA[
-	/**
-	 * Call the backend to retrieve a street/place combi.
-	 */
-	function getAddress() {
-		//UITGEZET
-		return;
-		var postalCode = this.document.eform.postal.value;
-		var houseNumber = this.document.eform.housenumber.value;
-		if (postalCode != '' && houseNumber != '') {
-			if (postalCode.length == 6) {
-				var url='retrieveAddress.html';
-				new Ajax.Request
-				(
-					url,
-					{
-						method: 'get',
-						parameters: 'supplierid=20107101901&postal=' + postalCode + "|" + houseNumber,
-					 	onComplete: setAddress
+		<script type="text/javascript">
+			// <![CDATA[
+				setTimeout('showSessionAlert()',3300000);
+				function showSessionAlert()	{
+					var now=new Date();
+					var newdate=new Date();
+					var newtimems=newdate.getTime()+(5*60*1000);
+					newdate.setTime(newtimems);
+					alert('U bent meer dan 55 minuten bezig met het invullen van dit scherm. Klik op een knop onderin het invulscherm. ' +
+							'U heeft hiervoor nog 5 minuten (tot ' + newdate.formatDate("H:i") + '). Anders moet u alle gegevens opnieuw invullen.');
+				}
+			// ]]>
+		</script>
+		<script type="text/javascript">
+			// <![CDATA[
+				/**
+				 * Call the backend to retrieve a street/place combi.
+				 */
+				function getAddress() {
+					//UITGEZET
+					return;
+					var postalCode = this.document.eform.postal.value;
+					var houseNumber = this.document.eform.housenumber.value;
+					if (postalCode != '' && houseNumber != '') {
+						if (postalCode.length == 6) {
+							var url='retrieveAddress.html';
+							new Ajax.Request
+							(
+								url,
+								{
+									method: 'get',
+									parameters: 'supplierid=20107101901&postal=' + postalCode + "|" + houseNumber,
+								 	onComplete: setAddress
+								}
+							);
+						}
 					}
-				);
-			}
-		}
-	}
+				}
 
-	/**
-	 * Process the result of the call to the address retrieval.
-	 */
-	function setAddress(request) {
-			var pcData = request.responseText;
-		var jsonData = eval('(' + pcData + ')');
-		var error = jsonData.error;
-		if (error == '') {
-			var street = jsonData.street;
-			var place = jsonData.place;
-			if (street != undefined && place != undefined) {
-				this.document.eform.street.value = street;
-				this.document.eform.place.value = place;
-				this.document.eform.country.value='NEDERLAND';
-			}
-		}
-	}
-// ]]>
-</script>
-
-<script type="text/javascript">
-// <![CDATA[
-	new Validation('dialog', {immediate : true, useTitles : true}); // OR new Validation(document.forms[0]);
-// ]]></script>
-
-<script type="text/javascript">
-//<![CDATA[
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-	g.src='//www.google-analytics.com/ga.js';
-	s.parentNode.insertBefore(g,s)}(document,'script'));
-//]]>
-</script>
-</body>
+				/**
+				 * Process the result of the call to the address retrieval.
+				 */
+				function setAddress(request) {
+						var pcData = request.responseText;
+					var jsonData = eval('(' + pcData + ')');
+					var error = jsonData.error;
+					if (error == '') {
+						var street = jsonData.street;
+						var place = jsonData.place;
+						if (street != undefined && place != undefined) {
+							this.document.eform.street.value = street;
+							this.document.eform.place.value = place;
+							this.document.eform.country.value='NEDERLAND';
+						}
+					}
+				}
+			// ]]>
+		</script>
+		<script type="text/javascript">
+			// <![CDATA[
+				new Validation('dialog', {immediate : true, useTitles : true}); // OR new Validation(document.forms[0]);
+			// ]]>
+		</script>
+		<script type="text/javascript">
+			//<![CDATA[
+				var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+				g.src='//www.google-analytics.com/ga.js';
+				s.parentNode.insertBefore(g,s)}(document,'script'));
+			//]]>
+		</script>
+	</body>
 </html>

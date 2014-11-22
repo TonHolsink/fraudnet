@@ -7792,6 +7792,11 @@ button.close {
 .pageHeader {
   margin-top: 15px;
 }
+.headerStripe {
+  border-bottom: 10px solid #000099;
+  margin-left: 66px;
+  margin-top: -10px;
+}
 .main-content .content-area {
   line-height: 1.2em;
 }
@@ -8153,6 +8158,13 @@ fieldset[disabled] .btn-signal.active {
 .btn-signal .badge {
   color: #ffcc00;
   background-color: #ffffff;
+}
+/**********************************************************************
+ * radio-inline
+/**********************************************************************/
+.radio-inline input[type="radio"],
+.radio-inline input[type="checkbox"] {
+  margin-top: 2px;
 }
 /*************************************************************
  * Cookies

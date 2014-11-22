@@ -40,6 +40,7 @@
 					</ul>
 				</div> <!-- #topMenu -->
 			</div>
+			<div class="headerStripe"></div>
 		</div> <!-- container -->
 		<div class="container">
 			<div class="main-content">
@@ -58,7 +59,7 @@
 						<div id="miopreventionFormDiv" class="col-md-10 panel panel-default bg-info-forced">
 							<div class="panel-body">
 								<form id="miopreventionForm" method="post" action="/f/index.html" class="form form-horizontal" onsubmit="return false">
-									<div class="form-group form-group-sm form-inline">
+									<div class="form-group form-inline">
 										<select name="checkCategory" onkeypress="return entsub(event);" id="checkCategory" class="form-control">
 											<option value="">Kies categorie</option>
 											<option value="2">Categorie_1</option>
@@ -66,10 +67,10 @@
 										</select>
 										<i class="ietje" title="Dit veld is niet verplicht, maar helpt ons bij het onderzoek naar internetoplichting."></i>
 									</div>
-									<div class="form-group form-group-sm form-inline">
+									<div class="form-group form-inline">
 										<label for="sTerm">Controleer op</label> <input type="text" id="sTerm" class="form-control" size="40" maxlength="40" onkeyup="return entsub(this)" name="searchTerm"/>
 									</div>
-									<div class="form-group form-group-sm form-inline">
+									<div class="form-group form-inline">
 										<label for="result">Toon aan dat u een persoon bent, bereken:</label> <span id="mioCalculation">6 + 5</span> = <input type="text" id="result" class="form-control" size="5" maxlength="5" onkeyup="return entsub(this)" name="result"/>
 									</div>
 									<div class="form-group">
