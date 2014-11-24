@@ -1,0 +1,6 @@
+
+<div style="color: orange; font-weight: bold;" id="mioPreventionResult" class="marginTop">Wees altijd alert bij overboekingen naar buitenlandse IBAN rekeningen. Bij twijfel kunt u advies inwinnen bij de Fraudehelpdesk (<a href="http://www.fraudehelpdesk.nl">www.fraudehelpdesk.nl</a>) De Fraudehelpdesk is de landelijke vraagbaak omtrent fraude en kan uitstekend advies geven of doorverwijzen. Fraudehelpdesk verricht geen opsporingsactiviteiten. Voor aangifte van strafbare handelingen wordt u doorverwezen naar de politie.</div>
+
+<div style="color: red; font-weight: bold;" id="mioPreventionResult" class="marginTop">Er zijn meldingen over deze verkoper. <span title="Als u het niet eens bent met de vermelding dat er meldingen bij de politie bekend zijn, kunt u een klacht zenden naar het e-mailadres LMIOcheck@kennemerland.politie.nl." class="helptext">i</span></div>
+
+<div style="color: blue; font-weight: bold;" id="mioPreventionResult" class="marginTop">Het betreft hier een verzamelrekening van een Payment Service Provider, hier komen betalingen binnen van meerdere webshops. <span style="color: red;">Wees alert bij het betalen aan deze rekeningen en ga eerst na of de betreffende webshop te vertrouwen is.</span></div>

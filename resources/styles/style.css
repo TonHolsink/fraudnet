@@ -2475,7 +2475,8 @@ fieldset[disabled] .checkbox label {
   padding-right: 0;
 }
 .input-sm,
-.form-horizontal .form-group-sm .form-control {
+.form-horizontal .form-group-sm .form-control,
+form#dialog .form-group-sm .form-control {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -2491,7 +2492,8 @@ select[multiple].input-sm {
   height: auto;
 }
 .input-lg,
-.form-horizontal .form-group-lg .form-control {
+.form-horizontal .form-group-lg .form-control,
+form#dialog .form-group-lg .form-control {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -5898,7 +5900,9 @@ button.close {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+form#dialog .form-group:before,
+form#dialog .form-group:after {
   content: " ";
   display: table;
 }
@@ -5916,7 +5920,8 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer:after,
+form#dialog .form-group:after {
   clear: both;
 }
 .center-block {
@@ -7732,9 +7737,9 @@ button.close {
   content: "\f1e2";
 }
 .forms-gradient {
-  background-image: -webkit-linear-gradient(left, white 40%, #ececec 80%);
-  background-image: -o-linear-gradient(left, white 40%, #ececec 80%);
-  background-image: linear-gradient(to right, white 40%, #ececec 80%);
+  background-image: -webkit-linear-gradient(left, #ffffff 40%, #ececec 80%);
+  background-image: -o-linear-gradient(left, #ffffff 40%, #ececec 80%);
+  background-image: linear-gradient(to right, #ffffff 40%, #ececec 80%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffececec', GradientType=1);
 }
@@ -8057,9 +8062,9 @@ div.close {
  * Formulieren
 /**********************************************************************/
 .panel-forms {
-  background-image: -webkit-linear-gradient(left, white 40%, #ececec 80%);
-  background-image: -o-linear-gradient(left, white 40%, #ececec 80%);
-  background-image: linear-gradient(to right, white 40%, #ececec 80%);
+  background-image: -webkit-linear-gradient(left, #ffffff 40%, #ececec 80%);
+  background-image: -o-linear-gradient(left, #ffffff 40%, #ececec 80%);
+  background-image: linear-gradient(to right, #ffffff 40%, #ececec 80%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffececec', GradientType=1);
 }
@@ -8165,6 +8170,199 @@ fieldset[disabled] .btn-signal.active {
 .radio-inline input[type="radio"],
 .radio-inline input[type="checkbox"] {
   margin-top: 2px;
+}
+#dialog .validation-advice {
+  color: red;
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+#dialog .validation-failed {
+  border: 1px solid red;
+}
+.mandatory {
+  color: #31708f;
+}
+.mandatory:before {
+  content: "*";
+}
+a.mandatory:hover {
+  color: #245269;
+}
+.errortext {
+  font-size: 1.0em;
+  font-weight: bold;
+  font-style: normal;
+  color: red;
+}
+/*************************************************************
+ * flowcontainer eforms
+ *************************************************************/
+#flowcontainer {
+  margin-top: 15px;
+}
+.flowcontainer .label {
+  display: inline-block;
+  background-color: grey;
+}
+.flowcontainer .label.current {
+  background-color: #ffcc00;
+}
+/*************************************************************
+ * formrow in panel
+ *************************************************************/
+form#dialog .radio,
+form#dialog .checkbox,
+form#dialog .radio-inline,
+form#dialog .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+form#dialog .radio,
+form#dialog .checkbox {
+  min-height: 27px;
+}
+form#dialog .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media (min-width: 768px) {
+  form#dialog .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+form#dialog .has-feedback .form-control-feedback {
+  top: 0;
+  right: 15px;
+}
+@media (min-width: 768px) {
+  form#dialog .form-group-lg .control-label {
+    padding-top: 14.3px;
+  }
+}
+@media (min-width: 768px) {
+  form#dialog .form-group-sm .control-label {
+    padding-top: 6px;
+  }
+}
+form#dialog .form-group {
+  margin: 0;
+}
+.formrow {
+  margin-bottom: 15px;
+}
+.formrow input,
+.formrow select,
+.formrow textarea {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.formrow input:focus,
+.formrow select:focus,
+.formrow textarea:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.formrow input::-moz-placeholder,
+.formrow select::-moz-placeholder,
+.formrow textarea::-moz-placeholder {
+  color: #777777;
+  opacity: 1;
+}
+.formrow input:-ms-input-placeholder,
+.formrow select:-ms-input-placeholder,
+.formrow textarea:-ms-input-placeholder {
+  color: #777777;
+}
+.formrow input::-webkit-input-placeholder,
+.formrow select::-webkit-input-placeholder,
+.formrow textarea::-webkit-input-placeholder {
+  color: #777777;
+}
+.formrow input[disabled],
+.formrow select[disabled],
+.formrow textarea[disabled],
+.formrow input[readonly],
+.formrow select[readonly],
+.formrow textarea[readonly],
+fieldset[disabled] .formrow input,
+fieldset[disabled] .formrow select,
+fieldset[disabled] .formrow textarea {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+textarea.formrow input,
+textarea.formrow select,
+textarea.formrow textarea {
+  height: auto;
+}
+form#dialog .formrow:after {
+  clear: both;
+}
+form#dialog .formrow:before,
+form#dialog .formrow:after {
+  content: " ";
+  display: table;
+}
+.dialogquestion {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .dialogquestion {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.dialoganswer {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .dialoganswer {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+.panel-forms .form-group,
+.panel-forms .formrow {
+  margin: 0;
+  padding: 10px 0;
+  border-top: 1px solid #dddddd;
+}
+.panel-forms .form-group:first-child {
+  border: none;
+}
+.panel-forms .form-group {
+  margin: 0;
+  padding: 10px 0;
+  border-top: 1px solid #dddddd;
+}
+.panel-forms .form-group:first-child {
+  border: none;
 }
 /*************************************************************
  * Cookies

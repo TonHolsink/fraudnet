@@ -16,7 +16,6 @@
 		<link rel="icon" href="resources/images/favicon.ico"/>
 		<title>FraudNet</title>
 		<link rel="stylesheet" type="text/css" media="all" href="resources/styles/style.css" />
-		<link rel="stylesheet" type="text/css" media="all" href="resources/styles/eforms.css" />
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -61,40 +60,74 @@
 							geen melding doen. U kunt dan bijvoorbeeld geholpen worden door
 							het <a href="http://www.juridischloket.nl" target="_blank">
 							Juridisch loket</a> of de <a href="http://www.fraudehelpdesk.nl" target="_blank">
-							Fraudehelpdesk</a><br/>
+							Fraudehelpdesk</a><br>
 							In die gevallen verwijzen wij u naar de juiste externe site.
 							<p id="errorhandle"></p>
 							<form name="melding" id="dialog" method="post">
-								<input type="hidden" name="suppliercode" value="40114112001"/>
-								<input type="hidden" name="qId" id="currentQuestion"/>
-								<input type="hidden" name="qAnswer" id="currentAnswer"/>
-								<input type="hidden" name="dialogSessionId" value="cf85aacf-ac3c-4619-9461-110c1a98568f"/>
+								<input name="suppliercode" value="40114112001" type="hidden">
+								<input value="MIO_KEUZE" name="qId" id="currentQuestion" type="hidden">
+								<input value="MIO_KNAF" name="qAnswer" id="currentAnswer" type="hidden">
+								<input name="dialogSessionId" value="b94d463c-01f8-4b91-89d9-3d56760e32a3" type="hidden">
 								<div id="dialogBox" class="panel panel-forms">
-									<div class='formrow first'>
-										<div class='dialogquestion'>U voelt zich opgelicht via internet. Wat is er gebeurd?</div>
-										<div class='dialoganswer'>
-											<select id='MIO_AANG'name='MIO_AANG'onChange='javascript:submitDialog(&#39;MIO_AANG&#39;);return true'>
-												<option class='selectoption' value=''>--Maak uw keuze--</option>
-												<option class='selectoption' value='OPLICHTING' id='OPLICHTING'>Ik ben slachtoffer geworden via een online handelsplaats  (b.v. Marktplaats, Speurders) of een webwinkel</option>
-												<option class='selectoption' value='SPOOK' id='SPOOK'>Ik heb een spookfactuur ontvangen (Acquisitiefraude)</option>
-												<option class='selectoption' value='LOTERIJ' id='LOTERIJ'>Ik ben mogelijk slachtoffer van loterij-, erfenis- of datingfraude of wil daar een melding van doen</option>
-												<option class='selectoption' value='PHISHING' id='PHISHING'>Ik ben het slachtoffer van phishing</option>
+									<div class="formrow">
+										<div class="dialogquestion">U voelt zich opgelicht via internet. Wat is er gebeurd?</div>
+										<div class="dialoganswer">
+											<select id="MIO_AANG" name="MIO_AANG" onchange="javascript:submitDialog('MIO_AANG');return true">
+												<option class="selectoption" value="">--Maak uw keuze--</option>
+												<option class="selectoption" value="OPLICHTING" id="OPLICHTING" selected="selected">Ik ben slachtoffer geworden via een online handelsplaats  (b.v. Marktplaats, Speurders) of een webwinkel</option>
+												<option class="selectoption" value="SPOOK" id="SPOOK">Ik heb een spookfactuur ontvangen (Acquisitiefraude)</option>
+												<option class="selectoption" value="LOTERIJ" id="LOTERIJ">Ik ben mogelijk slachtoffer van loterij-, erfenis- of datingfraude of wil daar een melding van doen</option>
+												<option class="selectoption" value="PHISHING" id="PHISHING">Ik ben het slachtoffer van phishing</option>
 											</select>
 										</div>
 									</div>
 									<!-- row -->
+									<div class="formrow">
+										<div class="dialogquestion">Heeft u iets gekocht of verkocht?</div>
+										<div class="dialoganswer">
+											<select id="MIO_OPL" name="MIO_OPL" onchange="javascript:submitDialog('MIO_OPL');return true">
+												<option class="selectoption" value="">--Maak uw keuze--</option>
+												<option class="selectoption" value="MIO_GEKA" id="MIO_GEKA" selected="selected">Ik heb iets gekocht en betaald</option>
+												<option class="selectoption" value="MIO_VERKA" id="MIO_VERKA">Ik heb iets verkocht</option>
+											</select>
+										</div>
+									</div>
+									<!-- row -->
+									<div class="formrow">
+										<div class="dialogquestion">Kunt u aangeven wat de situatie nu is?</div>
+										<div class="dialoganswer">
+											<select id="MIO_GEK" name="MIO_GEK" onchange="javascript:submitDialog('MIO_GEK');return true">
+												<option class="selectoption" value="">--Maak uw keuze--</option>
+												<option class="selectoption" value="MIO_GNIET" id="MIO_GNIET">Ik heb 5 dagen gewacht, na toegezegde leveringsdatum, en niets geleverd gekregen</option>
+												<option class="selectoption" value="MIO_GONT" id="MIO_GONT" selected="selected">Ik heb iets (onder rembours) toegezonden gekregen / Ik heb iets opgehaald</option>
+											</select>
+										</div>
+									</div>
+									<!-- row -->
+									<div class="formrow">
+										<div class="dialogquestion">Wat is er mis met het product?</div>
+										<div class="dialoganswer">
+											<select id="MIO_KEUZE" name="MIO_KEUZE" onchange="javascript:submitDialog('MIO_KEUZE');return true">
+												<option class="selectoption" value="">--Maak uw keuze--</option>
+												<option class="selectoption" value="MIO_KNAF" id="MIO_KNAF" selected="selected">Ik heb iets gekregen maar het is niet volgens de afspraak</option>
+												<option class="selectoption" value="MIO_KKAP" id="MIO_KKAP">Het product was in eerste instantie goed maar ging later kapot</option>
+												<option class="selectoption" value="MIO_KVER" id="MIO_KVER">Het product voldeed niet aan mijn verwachtingen</option>
+												<option class="selectoption" value="MIO_KNEP" id="MIO_KNEP">Het product wat ik toezonden kreeg/opgehaald heb bleek nep te zijn, ik ben overduidelijk bedrogen</option>
+											</select>
+										</div>
+									</div>
+									<!-- row -->
+									<div class="formrow">
+										Dit is geen oplichting, probeer een oplossing te vinden met de verkoper. Mogelijk kan het Juridisch Loket u van dienst zijn.
+										<p><a href="www.juridischloket.nl" target="_blank"><img src="resources/images/juridisch_loket.gif"></a></p>
+									</div>
 								</div>
 							</form>
-						</div>
-						<!-- PageContentColumn1 -->
-					</div>
-					<!-- StandardPage -->
-				</div>
-				<!-- PageContent -->
-			</div>
-			<!-- PageContentWrapper -->
-		</div>
-		<!-- PageWrapper -->
+						</div> <!-- PageContentColumn1 -->
+					</div> <!-- StandardPage -->
+				</div> <!-- PageContent -->
+			</div> <!-- PageContentWrapper -->
+		</div> <!-- PageWrapper -->
 		<div class="PageFooter">
 			<div class="PageFooterContent">
 				<div class="clearfix">
@@ -117,18 +150,16 @@
 					</div>
 				</div>
 				<div id="cookieStatus"></div>
-			</div>
-			<!-- PageFooterContent -->
-		</div>
-		<!-- PageFooter -->
+			</div> <!-- PageFooterContent -->
+		</div> <!-- PageFooter -->
 		<script src="resources/scripts/prototype.js"></script>
 		<script src="resources/scripts/yrtools.js"></script>
 		<script src="resources/scripts/yrsession.js"></script>
 		<script src="resources/scripts/validation.js"></script>
 		<script src="resources/scripts/yr-cookiebar.js"></script>
-		<script src="/f/resources/40114112001/eforms/eforms.js"> </script>
-		<script src="/f/resources/40114112001/eforms/formatDate.js"> </script>
-		<script src="/f/resources/40114112001/eforms/util.js"> </script>
+		<script src="resources/40114112001/eforms/eforms.js"> </script>
+		<script src="resources/40114112001/eforms/formatDate.js"> </script>
+		<script src="resources/40114112001/eforms/util.js"> </script>
 		<script type="text/javascript">
 			//<![CDATA[
 				(function() {
