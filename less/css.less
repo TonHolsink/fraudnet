@@ -31,6 +31,7 @@ td {vertical-align: top;}
 .marginTop {margin-top: 1em;}
 .marginBottom {margin-bottom: 1em;}
 .marginTopBottom {margin-top: 1em; margin-bottom: 1em;}
+.noPaddingTop {padding-top: 0 !important;}
 .hidden {display: none;}
 .pointer {cursor: pointer;}
 .default {cursor: default;}
@@ -63,19 +64,12 @@ img.float_right {
  * meldingen
  *************************************************************/
 #messageBlock {
-	//// margin-top: 0;
-	// margin-left: 130px;
-	// margin-right: 20px;
-}
-div#messageBlock div.message, div#messageBlock div.error {
-	// line-height: 28px;
-	// padding-left: 20px;
 	font-weight: bold;
-}
-div#messageBlock div.message {background: url("../images/blue-gradient-hor.png") repeat-y;}
-div#messageBlock div.error{
-	background: url("../images/red-gradient-hor.png") repeat-y;
-	color: white;
+	.message {background: url("../images/blue-gradient-hor.png") repeat-y;}
+	.error{
+		background: url("../images/red-gradient-hor.png") repeat-y;
+		color: white;
+	}
 }
 .alert {
 	border: 1px solid red;
@@ -93,9 +87,9 @@ div#messageBlock div.error{
 	_height: 100px;
 	top: 220px;
 	left: 142px;
+	.panel-headings {background-color: @theme-signal-color;}
+	.panel-body {padding-bottom: 0;}
 }
-.popupMsg .panel-headings {background-color: @theme-signal-color;}
-.popupMsg .panel-body {padding-bottom: 0;}
 /**********************************************
 .popupMsgHeader {
 	height: 22px;
@@ -147,24 +141,22 @@ div#close, div.close {
 /**********************************************************************/
 .panel-forms {
 	.forms-gradient;
-}
-.panel-forms .panel-heading {
-	font-size: @font-size-h4;
-}
-.panel-forms {
- .panel-variant(@panel-forms-border; @panel-forms-text; @panel-forms-heading-bg; @panel-forms-border);
-}
-.panel-forms .panel-body, .panel-forms .panel-footer {
-	padding: 0;
-}
-.panel-forms .panel-header {
-	background-color: @formrow-header-bg;
-}
-.panel-forms td:first-child, .panel-forms th:first-child {
-	padding-left: 15px;
-}
-.panel-forms td:last-child, .panel-forms th:last-child {
-	padding-right: 15px;
+	.panel-variant(@panel-forms-border; @panel-forms-text; @panel-forms-heading-bg; @panel-forms-border);
+	.panel-heading {
+		font-size: @font-size-h4;
+	}
+	.panel-body, .panel-footer {
+		padding: 0;
+	}
+	.panel-header {
+		background-color: @formrow-header-bg;
+	}
+	td:first-child, th:first-child {
+		padding-left: 15px;
+	}
+	td:last-child, th:last-child {
+		padding-right: 15px;
+	}
 }
 /**********************************************************************
  * linkList-hor
@@ -193,4 +185,6 @@ div#close, div.close {
 /**********************************************************************
  * radio-inline
 /**********************************************************************/
-.radio-inline input[type="radio"],.radio-inline input[type="checkbox"] { margin-top: 2px;}
+.radio-inline {
+	input[type="radio"], input[type="checkbox"] { margin-top: 2px;}
+}
