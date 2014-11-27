@@ -7854,6 +7854,12 @@ button.close {
 a.bg-info-forced:hover {
   background-color: #afd9ee !important;
 }
+.bg-signal {
+  background-color: #ffeb99;
+}
+.bg-brand {
+  background-color: #e5e5ff;
+}
 /*************************************************************
  * general
  *************************************************************/
@@ -7906,6 +7912,10 @@ td {
 .marginTop {
   margin-top: 1em;
 }
+.marginLeftRight {
+  margin-left: 15px;
+  margin-right: 15px;
+}
 .marginBottom {
   margin-bottom: 1em;
 }
@@ -7915,6 +7925,9 @@ td {
 }
 .noPaddingTop {
   padding-top: 0 !important;
+}
+.fullPadding {
+  padding: 15px;
 }
 .hidden {
   display: none;
@@ -7971,6 +7984,14 @@ a.ietje:hover {
 .margin-leftright-negative {
   margin-left: -15px;
   margin-right: -15px;
+}
+/*************************************************************
+ * utils
+ *************************************************************/
+@media (min-width: 768px) {
+  .hide-screen-sm-min {
+    display: none;
+  }
 }
 /*************************************************************
  * meldingen
@@ -8044,21 +8065,23 @@ div.close {
 /**********************************************************************
  * MIO
 /**********************************************************************/
-.mioAlert {
-  background: transparent url('../images/double_exclamation_mark_red.png') no-repeat right;
+@media (min-width: 768px) {
+  .mioAlert {
+    background: transparent url('../images/double_exclamation_mark_red.png') no-repeat right top;
+  }
 }
-.mioForeignIBANAlert {
-  background: transparent url('../images/exclamation_mark_orange.png') no-repeat right;
+@media (min-width: 768px) {
+  .mioForeignIBANAlert {
+    background: transparent url('../images/exclamation_mark_orange.png') no-repeat right top;
+  }
 }
-.mioOk {
-  background: transparent url('../images/tick_gold.png') no-repeat right;
+@media (min-width: 768px) {
+  .mioOk {
+    background: transparent url('../images/tick_green.png') no-repeat right top;
+  }
 }
 .mioBlank {
   background: none;
-}
-#miopreventionFormDiv {
-  min-height: 153px;
-  height: auto;
 }
 /**********************************************************************
  * Formulieren
@@ -8184,7 +8207,11 @@ a.mandatory:hover {
   font-size: 1.0em;
   font-weight: bold;
   font-style: normal;
-  color: red;
+  color: #a94442;
+}
+.grayed {
+  color: gray;
+  font-size: smaller;
 }
 /*************************************************************
  * flowcontainer eforms
@@ -8204,6 +8231,9 @@ a.mandatory:hover {
  *************************************************************/
 label {
   font-size: 13px;
+}
+.form-horizontal .control-label {
+  text-align: left;
 }
 .formrow {
   margin-bottom: 15px;
@@ -8326,6 +8356,9 @@ textarea.formrow textarea {
 #dialog .validation-failed {
   border: 1px solid red;
 }
+#dialog .control-label {
+  text-align: left;
+}
 .dialogquestion {
   position: relative;
   min-height: 1px;
@@ -8374,4 +8407,22 @@ textarea.formrow textarea {
   text-align: left;
   background-color: #ffcc00;
   padding: 15px;
+}
+.demo {
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
+#equalheight {
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  /* top row */
+  .col {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+  }
+  /* bottom row */
+}
+.col-wrap {
+  overflow: hidden;
 }
