@@ -1,13 +1,13 @@
 @fa-font-path: "../fonts";
 
 @brand-primary: rgb(0, 0, 153);
+@brand-signal: rgb(255, 204, 0); //yellow
 
-@theme-signal-color: rgb(255, 204, 0); //yellow
-@btn-signal-bg: @theme-signal-color;
+@btn-signal-bg: @brand-signal;
 @btn-signal-color: @btn-primary-color;
 @btn-signal-border: darken(@btn-signal-bg, 5%);
 
-@bg-signal-color: lighten(@theme-signal-color, 30%); //lightyellow
+@bg-signal-color: lighten(@brand-signal, 30%); //lightyellow
 @bg-brand-color: lighten(@brand-primary, 65%); //lightblue
 
 // Unicode greater-than
@@ -24,7 +24,7 @@
 @panel-forms-border: @panel-default-border;
 
 //Page header
-@page-header-border-color: lighten(@theme-signal-color, 35%);
+@page-header-border-color: lighten(@brand-signal, 35%);
 
 // @padding-base-vertical:     3px;
 // @padding-base-horizontal:   6px;

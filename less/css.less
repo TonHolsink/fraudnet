@@ -12,6 +12,15 @@
 .page-header {
 	margin-top: @line-height-computed;
 }
+.text-left {
+	text-align: left !important;
+}
+.text-center {
+	text-align: center !important;
+}
+.text-right {
+	text-align: right !important;
+}
 table {border-collapse: collapse;}
 table.fixed {table-layout: fixed;}
 table.emptyRow td{padding-bottom: 1em;}
@@ -76,10 +85,15 @@ img.float_right {
  * meldingen
  *************************************************************/
 #messageBlock {
+	margin-top: .5em;
 	font-weight: bold;
-	.message {background: url("../images/blue-gradient-hor.png") repeat-y;}
+	.message {
+		padding-left: 4px;
+		background-color: @brand-success;
+	}
 	.error{
-		background: url("../images/red-gradient-hor.png") repeat-y;
+		padding-left: 4px;
+		background-color: @brand-danger;
 		color: white;
 	}
 }
@@ -99,7 +113,7 @@ img.float_right {
 	_height: 100px;
 	top: 220px;
 	left: 142px;
-	.panel-headings {background-color: @theme-signal-color;}
+	.panel-headings {background-color: @brand-signal;}
 	.panel-body {padding-bottom: 0;}
 }
 /**********************************************
@@ -159,17 +173,37 @@ div#close, div.close {
 /**********************************************************************
  * Formulieren
 /**********************************************************************/
-.panel-forms {
-	.forms-gradient;
-	.panel-variant(@panel-forms-border; @panel-forms-text; @panel-forms-heading-bg; @panel-forms-border);
+.make-panel(@border; @heading-text-color; @heading-bg-color; @heading-border) {
+	.panel-variant(@border; @heading-text-color; @heading-bg-color; @heading-border);
 	.panel-heading {
 		font-size: @font-size-h4;
 	}
+}
+
+.make-basic-panel(@heading-bg-color, @bg-color, @heading-border, @border) {
+	background-color: @bg-color;
+	.make-panel(@border; @panel-forms-text; @heading-bg-color; @heading-border);
 	.panel-body, .panel-footer {
-		padding: 0;
+		padding: 15px;
 	}
+}
+
+.panel-brand {
+	.make-basic-panel(lighten(@brand-primary, 65%), lighten(@brand-primary, 67%), lighten(@brand-primary, 60%), lighten(@brand-primary, 60%));
+}
+
+.panel-signal {
+	.make-basic-panel(lighten(@brand-signal, 30%), lighten(@brand-signal, 35%), lighten(@brand-signal, 25%), lighten(@brand-signal, 25%));
+}
+
+.panel-forms {
+	.forms-gradient;
+	.make-panel(@panel-forms-border; @panel-forms-text; @panel-forms-heading-bg; @panel-forms-border);
 	.panel-header {
 		background-color: @formrow-header-bg;
+	}
+	.panel-body, .panel-footer {
+		padding: 0;
 	}
 	td:first-child, th:first-child {
 		padding-left: 15px;
@@ -191,7 +225,7 @@ div#close, div.close {
 		+ li:before {
 			content: "@{linklist-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
 			padding: 0 5px;
-			color: @theme-signal-color;
+			color: @brand-signal;
 			font-weight: bold;
 		}
 	}
@@ -207,4 +241,32 @@ div#close, div.close {
 /**********************************************************************/
 .radio-inline {
 	input[type="radio"], input[type="checkbox"] { margin-top: 2px;}
+}
+/**********************************************************************
+ * Checkfunctie panelen even groot bij groot scherm
+/**********************************************************************/
+#miopreventionFormDiv {
+	min-height: 498px;
+}
+@media (min-width: 480px) {
+	#miopreventionFormDiv {
+		min-height: 380px;
+	}
+}
+@media (min-width: 768px) {
+	#miopreventionFormDiv {
+		min-height: 284px;
+	}
+}
+@media (min-width: 992px) {
+	.checkPanel,
+	#miopreventionFormDiv {
+		min-height: 380px;
+	}
+}
+@media (min-width: 1200px) {
+	.checkPanel,
+	#miopreventionFormDiv {
+		min-height: 360px;
+	}
 }
