@@ -57,63 +57,65 @@
 							zijn gedaan. Ook kunt een melding doen via de knop "Doe melding".
 						</p>
 
-					<div class="row">
-						<div class="col-md-6">
-							<div id="miopreventionFormDiv" class="panel checkPanel panel-brand">
-								<div class="panel-heading">Check</div>
-								<div class="panel-body">
-									<form id="miopreventionForm" method="post" action="/f/index.html" class="form form-horizontal" onsubmit="return false">
-										<div class="form-group">
-											<div class="col-sm-4">
-												<label class="control-label">Categorie</label>
-												<i class="ietje" title="Deze informatie helpt ons bij het onderzoek naar internetoplichting."></i>
+						<div class="row">
+							<div class="col-md-6">
+								<div id="miopreventionFormDiv" class="panel checkPanel panel-brand">
+									<div class="panel-heading">Check</div>
+									<div class="panel-body">
+										<form id="miopreventionForm" method="post" action="/f/index.html" class="form form-horizontal" onsubmit="return false">
+											<div class="form-group">
+												<div class="col-sm-4">
+													<label class="control-label">Categorie</label>
+													<i class="ietje" title="Deze informatie helpt ons bij het onderzoek naar internetoplichting."></i>
+												</div>
+												<div class="col-sm-8">
+													<select name="checkCategory" onkeypress="return entsub(event);" id="checkCategory" class="form-control">
+														<option value="">Kies categorie</option>
+														<option value="2">Categorie_1</option>
+														<option value="3">Categorie_2</option>
+													</select>
+												</div>
 											</div>
-											<div class="col-sm-8">
-												<select name="checkCategory" onkeypress="return entsub(event);" id="checkCategory" class="form-control">
-													<option value="">Kies categorie</option>
-													<option value="2">Categorie_1</option>
-													<option value="3">Categorie_2</option>
-												</select>
+											<div class="form-group">
+												<label class="col-sm-4" for="sTerm">Controleer op</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" maxlength="40" id="sTerm" onkeyup="return entsub(this)" name="searchTerm"/>
+												</div>
 											</div>
-										</div>
-										<div class="form-group">
-											<label class="col-sm-4" for="sTerm">Controleer op</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" maxlength="40" id="sTerm" onkeyup="return entsub(this)" name="searchTerm"/>
+											<div class="form-group hidden">
+												<label class="col-sm-4" for="result">
+													Toon aan dat u een persoon bent, bereken:
+													<span id="mioCalculation">6+5</span> =
+												</label>
+												<div class="col-sm-8">
+													<input type="text" class="form-control" size="5" maxlength="5" id="result" onkeyup="return entsub(this)" name="result"/>
+												</div>
 											</div>
-										</div>
-										<div class="form-group hidden">
-											<label class="col-sm-4" for="result">
-												Toon aan dat u een persoon bent, bereken:
-												<span id="mioCalculation">6+5</span> =
-											</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" size="5" maxlength="5" id="result" onkeyup="return entsub(this)" name="result"/>
+											<div class="clearfix marginBottom">
+												<button class="pull-right btn btn-primary" onclick="javascript:checkOrNot()">controleer</button>
 											</div>
+											<div id="mioPreventionResult" role="alert">
+												<i id="resultIcon"></i>
+												<span id="mioPreventionResultText"></span>
+											</div>
+										</form>
+									</div> <!-- .panel-body -->
+								</div> <!-- .panel -->
+							</div>
+							<div class="col-md-6">
+								<div class="panel checkPanel panel-signal">
+									<div class="panel-heading">Melding</div>
+									<div class="panel-body">
+										<p>
+											Hier moet tekst komen die betrekking heef top het doen van een melding. Blaat leuter lorum ipsum en wel hierom.
+										</p>
+										<div class="text-right">
+											<button id="mioMelding" class="btn btn-primary" type="button">Doe melding</button>
 										</div>
-										<div class="clearfix">
-											<i id="resultIcon" style="font-style: italic; vertical-align: middle;"></i>
-											<button class="pull-right btn btn-primary" onclick="javascript:checkOrNot()">controleer</button>
-										</div>
-										<div id="mioPreventionResult" class="marginTop"></div>
-									</form>
-								</div> <!-- .panel-body -->
-							</div> <!-- .panel -->
-						</div>
-						<div class="col-md-6">
-							<div class="panel checkPanel panel-signal">
-								<div class="panel-heading">Melding</div>
-								<div class="panel-body">
-									<p>
-										Hier moet tekst komen die betrekking heef top het doen van een melding. Blaat leuter lorum ipsum en wel hierom.
-									</p>
-									<div class="text-right">
-										<button id="mioMelding" class="btn btn-primary" type="button">Doe melding</button>
-									</div>
-								</div> <!-- .panel-body -->
+									</div> <!-- .panel-body -->
+								</div>
 							</div>
 						</div>
-					</div>
 
 						<div class="">
 							<button id="mioInfo" class="btn btn-default text-left overflow-x-hidden" type="button">
@@ -190,9 +192,10 @@
 					};
 
 					clearResult = function() {
-						$('mioPreventionResult').update('');
-						$('mioPreventionResult').setStyle({color: 'black'});
-						$('mioPreventionResult').setStyle({fontWeight: 'normal'});
+						$('mioPreventionResultText').update('');
+						$('mioPreventionResult').className = "alert alert-info"
+						// $('mioPreventionResult').setStyle({color: 'black'});
+						// $('mioPreventionResult').setStyle({fontWeight: 'normal'});
 						$('miopreventionForm').className = formBaseClass + " " + "mioBlank";
 						$('resultIcon').className = " ";
 					};
@@ -203,7 +206,7 @@
 						// if (($('sTerm').value != "") && ($('checkCategory').selectedIndex != 0) && ($('result').value != "")) {
 						if (($('sTerm').value != "") && ($('checkCategory').selectedIndex != 0)) {
 						// EINDE GEEN SOMMETJE HACK
-							$('mioPreventionResult').update('Een ogenblik geduld aub...');
+							$('mioPreventionResultText').update('Een ogenblik geduld aub...');
 							var url='/f/mioprevention.html';
 							var pars = $('miopreventionForm').serialize(true);
 							new Ajax.Request
@@ -217,6 +220,38 @@
 						}
 					};
 
+					resultMessage = function(txt, type) {
+						var typ = type || "";
+						var resultIconClassName = "";
+						switch(typ.toLowerCase()) {
+							case 'danger':
+								$('mioPreventionResult').className = "clearfix alert alert-danger";
+								resultIconClassName = "fa-warning";
+								break;
+							case 'warning':
+								$('mioPreventionResult').className = "clearfix alert alert-warning";
+								resultIconClassName = "fa-warning";
+								break;
+							case 'info':
+								$('mioPreventionResult').className = "clearfix alert alert-info";
+								resultIconClassName = "fa-info-circle";
+								break;
+							case 'success':
+								$('mioPreventionResult').className = "clearfix alert alert-success";
+								resultIconClassName = "fa-check-circle";
+								break;
+							default:
+								$('mioPreventionResult').className = "";
+								resultIconClassName = "";
+						}
+						if (resultIconClassName) {
+							$('resultIcon').className += "fa fa-2x pull-left fa-border" + " " + resultIconClassName;
+						} else {
+							$('resultIcon').className += "hidden";
+						}
+						$('mioPreventionResultText').update(txt);
+					};
+
 					processMioFormResult = function(response) {
 						var json = response.responseText.evalJSON();
 
@@ -226,38 +261,50 @@
 						var error = json.error;
 						var text = json.resultText;
 						var calculation = json.calculation;
+						var className = "";
 						if (error) {
 							text = error;
-							$('mioPreventionResult').setStyle({color:'red'});
+							className = "danger";
+							// $('mioPreventionResult').className = "alert alert-danger";
+							// $('mioPreventionResult').setStyle({color:'red'});
 						} else {
 							if (compound) {
-								$('mioPreventionResult').setStyle({color:'blue'});
+								className = "info";
+								// $('mioPreventionResult').className = "alert alert-info";
+								// $('mioPreventionResult').setStyle({color:'blue'});
 							} else {
-								var className = "";
-								var iconClassName = "";
+								// var className = "";
+								// var iconClassName = "";
 								if (foreignIBANAlert) {
-									$('mioPreventionResult').setStyle({color:'orange'});
-									iconClassName= "fa-exclamation-circle";
-									$('resultIcon').setStyle({color:'orange'});
-									className = "mioForeignIBANAlert";
+									className = "warning";
+									// $('mioPreventionResult').className = "alert alert-warning";
+									// $('mioPreventionResult').setStyle({color:'orange'});
+									// iconClassName= "fa-exclamation-circle";
+									// $('resultIcon').setStyle({color:'orange'});
+									// className = "mioForeignIBANAlert";
 								} else if (state) {
-									$('mioPreventionResult').setStyle({color:'red'});
-									iconClassName= "fa-exclamation-circle";
-									$('resultIcon').setStyle({color:'red'});
-									className = "mioAlert";
+									className = "danger";
+									// $('mioPreventionResult').className = "alert alert-danger";
+									// $('mioPreventionResult').setStyle({color:'red'});
+									// iconClassName= "fa-exclamation-circle";
+									// $('resultIcon').setStyle({color:'red'});
+									// className = "mioAlert";
 								} else {
-									$('mioPreventionResult').setStyle({color:'green'});
-									iconClassName= "fa-check-circle";
-									$('resultIcon').setStyle({color:'green'});
-									className = "mioOk";
+									className = "success";
+									// $('mioPreventionResult').className = "alert alert-success";
+									// $('mioPreventionResult').setStyle({color:'green'});
+									// iconClassName= "fa-check-circle";
+									// $('resultIcon').setStyle({color:'green'});
+									// className = "mioOk";
 								}
-								$('resultIcon').className = "fa fa-2x" + " " + iconClassName;
+								// $('resultIcon').className = "fa fa-2x" + " " + iconClassName;
 								// $('miopreventionForm').className = formBaseClass + " " + className;
-								$('miopreventionForm').className = formBaseClass;
+								// $('miopreventionForm').className = formBaseClass;
 							}
 						}
 						// $('mioPreventionResult').setStyle({fontWeight: 'bold'});
-						$('mioPreventionResult').update(text);
+						// $('mioPreventionResultText').update(text);
+						resultMessage(text, className);
 						$('mioCalculation').update(calculation);
 						$("result").value = "";
 					};
@@ -271,13 +318,17 @@
 							if (doProceed() == true) {
 								submitMIOForm();
 							} else {
-								$('mioPreventionResult').setStyle({color: 'red'});
-								var s = "Wegens grote drukte kunnen wij uw verzoek op dit moment niet afhandelen.";
-								$('mioPreventionResult').update(s);
+								// $('mioPreventionResult').className = "alert alert-danger";
+								// $('mioPreventionResult').setStyle({color: 'red'});
+								// var s = "Wegens grote drukte kunnen wij uw verzoek op dit moment niet afhandelen.";
+								// $('mioPreventionResultText').update(s);
+								resultMessage("Wegens grote drukte kunnen wij uw verzoek op dit moment niet afhandelen.", "danger");
 							}
 						} else {
-							$('mioPreventionResult').setStyle({color: 'red'});
-							$('mioPreventionResult').update("Niet alle velden zijn ingevuld");
+							// $('mioPreventionResult').className = "alert alert-danger";
+							// $('mioPreventionResult').setStyle({color: 'red'});
+							// $('mioPreventionResultText').update("Niet alle velden zijn ingevuld");
+							resultMessage("Niet alle velden zijn ingevuld.", "danger");
 						}
 					};
 

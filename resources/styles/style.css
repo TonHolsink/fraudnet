@@ -8018,11 +8018,6 @@ a.ietje:hover {
   background-color: #d9534f;
   color: white;
 }
-.alert {
-  border: 1px solid red;
-  padding: 5px;
-  margin-top: 10px;
-}
 .popupMsg {
   position: absolute;
   z-index: 20;
