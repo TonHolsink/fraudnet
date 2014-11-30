@@ -206,7 +206,8 @@
 						// if (($('sTerm').value != "") && ($('checkCategory').selectedIndex != 0) && ($('result').value != "")) {
 						if (($('sTerm').value != "") && ($('checkCategory').selectedIndex != 0)) {
 						// EINDE GEEN SOMMETJE HACK
-							$('mioPreventionResultText').update('Een ogenblik geduld aub...');
+							resultMessage('Een ogenblik geduld aub...', 'info');
+							// $('mioPreventionResultText').update('Een ogenblik geduld aub...');
 							var url='/f/mioprevention.html';
 							var pars = $('miopreventionForm').serialize(true);
 							new Ajax.Request
