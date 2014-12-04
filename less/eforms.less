@@ -1,3 +1,6 @@
+/*************************************************************
+ * EFORMS
+ *************************************************************/
 .mandatory {
 	&:before{
 		content: "*";
@@ -17,6 +20,11 @@
 	font-size: smaller;
 }
 
+label, #dialogBox .dialogquestion{
+	font-size: 13px;
+	font-weight: bold;
+}
+
 /*************************************************************
  * flowcontainer eforms
  *************************************************************/
@@ -32,10 +40,6 @@
 /*************************************************************
  * formrow in panel
  *************************************************************/
-label {
-	font-size: 13px;
-}
-
 .form-horizontal .control-label {
 	text-align: left;
 }
@@ -70,7 +74,6 @@ label {
 	.control-label {
 		text-align: left;
 	}
-
 }
 
 .dialogquestion {
@@ -86,15 +89,37 @@ label {
 		padding: 10px 0;
 		border-top: 1px solid @formrow-border;
 	}
-	.form-group:first-child{
+	.form-group-sm {
+		padding: 6px 0;
+		@media(min-width: @screen-sm-min) {
+			label {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.form-group:first-child, .formrow:first-child{
 		border: none;
 	}
-	.form-group {
-		margin: 0;
-		padding: 10px 0;
-		border-top: 1px solid @formrow-border;
+	.formrowtext {
+		padding: 10px 15px;
 	}
-	.form-group:first-child {
-		border: none;
+	.errortext {
+		margin: 0 15px;
 	}
+}
+
+//Input placeholder
+.form-control::-webkit-input-placeholder, ::-webkit-input-placeholder { /* WebKit browsers */
+	color: @placeholder-color;
+}
+.form-control:-moz-placeholder, :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: @placeholder-color;
+opacity: 1;
+}
+.form-control::-moz-placeholder, ::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: @placeholder-color;
+opacity: 1;
+}
+.form-control:-ms-input-placeholder, :-ms-input-placeholder { /* Internet Explorer 10+ */
+color: @placeholder-color;
 }

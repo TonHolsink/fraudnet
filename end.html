@@ -14,7 +14,7 @@
 		<meta name="robots" content="noindex"/>
 		<meta name="author" content="YourRequest BV"/>
 		<link rel="icon" href="resources/images/favicon.ico"/>
-		<title>FraudNet</title>
+		<title>Fraudnet</title>
 		<link rel="stylesheet" type="text/css" media="all" href="resources/styles/style.css" />
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,30 +23,33 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body>
+	<body
+		>
 		<!--[if lt IE 7]>
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 		<div class="container pageHeader">
 			<div class="clearfix">
 				<div class="pull-left">
-					<a class="" href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
+					<a href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
 				</div>
+				<!-- .pull-left -->
 				<div class="pull-right">
-					<ul class="linkList-hor ">
+					<ul class="linkList-hor">
 						<li><a href="index.html" title="Home">Home</a></li>
-						<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
 						<li><a href="information.html" title="Informatie">Informatie</a></li>
 					</ul>
-				</div> <!-- #topMenu -->
+				</div>
+				<!-- .pull-right -->
 			</div>
 			<div class="headerStripe"></div>
-		</div> <!-- container -->
+			<div id="messageBlock">
+			</div>
+		</div>
+		<!-- container -->
 		<div class="container">
 			<div class="main-content">
-				<div class="content-area" style="min-height: 400px !important;">
-					<div id="messageBlock"></div>
-
+				<div class="content-area">
 					<div id="flowcontainer" class="flowcontainer">
 						<span class="label saved">
 						Uw gegevens</span>
@@ -79,20 +82,20 @@
 					<div id="tabs"></div>
 					<div id="eformsContent" class="eformsContent">
 						<form action="eforms.html" method="post" enctype="multipart/form-data" name="eform" id="eform">
-							<input type="hidden" name="supplier" value="20107101901"/>
+							<input type="hidden" name="supplier" value="40114112001"/>
 							<div class="page-header">
 								<h1 id="pageTitle">Afronden</h1>
 							</div>
 							<input type="hidden" name="formDefinitionCode" value=""/>
 							<input type="hidden" name="pageNumber" value="4"/>
-							<input type="hidden" name="formCode" value="43d37a48-b01a-4579-8583-a54f339816b6"/>
+							<input type="hidden" name="formCode" value="a3500c1a-c674-4501-a2a3-74a387dbfbf3"/>
 							<div class="formrow" id="row_">
 								<p>
-									Hartelijk dank voor uw aangifte.
+									Hartelijk dank voor uw melding.
 								</p>
 								<p>
-									De politie zal uw aangifte beoordelen en gebruiken in een eventueel strafrechtelijk onderzoek.
-									Ook kan uw aangifte aanleiding zijn tot blokkade van de bankrekening, het IP-adres en/of het account van de adverteerder op de handelssite.
+									De politie zal uw melding beoordelen en gebruiken in een eventueel strafrechtelijk onderzoek.
+									Ook kan uw melding aanleiding zijn tot blokkade van de bankrekening, het IP-adres en/of het account van de adverteerder op de handelssite.
 								</p>
 							</div>
 							<div class="eformsHeader">
@@ -100,32 +103,32 @@
 							</div>
 							<div class="formrow">
 								<p>
-									U ontvangt vandaag een bevestiging per e-mail. Indien nodig neemt de Politie naar aanleiding van uw aangifte contact met u op.<br/>
+									U ontvangt vandaag een bevestiging per e-mail. Indien nodig neemt de Politie naar aanleiding van uw melding contact met u op.<br/>
 									Vooralsnog hoeft u geen nadere actie te ondernemen.
 								</p>
 								<p>
 									U kunt uw melding voor uw eigen archief afdrukken. Kies hiervoor onderstaande link.
 								</p>
 								<p>
-									<a class="morelink" href='getPDF.html?formDefinitionCode=ifaangifte&amp;formCode=43d37a48-b01a-4579-8583-a54f339816b6&amp;supCode=20107101901'/>
+									<a class="morelink" href='getPDF.html?formDefinitionCode=ifaangifte&amp;formCode=a3500c1a-c674-4501-a2a3-74a387dbfbf3&amp;supCode=40114112001'/>
 									PDF openen
 									</a>
 								</p>
 							</div>
 						</form>
-					</div> <!-- contentarea -->
-
-
-				</div> <!-- .content-area -->
-			</div> <!-- .main-content -->
-		</div> <!-- .container -->
-		<div class="container">
+					</div>
+					<!-- contentarea -->
+				</div>
+				<!-- .content-area -->
+			</div>
+			<!-- .main-content -->
+		</div>
+		<!-- .container -->
+		<div class="container marginTop">
 			<footer>
 				<div class="clearfix">
 					<div class="pull-left">
 						<ul class="linkList-hor">
-							<li><a href="services.html">Diensten</a></li>
-							<li><a href="partners.html">Partners</a></li>
 							<li><a href="about_us.html">Over ons</a></li>
 						</ul>
 					</div>
@@ -142,15 +145,16 @@
 				</div>
 				<div id="cookieStatus"></div>
 			</footer>
-		</div> <!-- footer -->
+		</div>
+		<!-- .container -->
 		<script src="resources/scripts/prototype.js"></script>
 		<script src="resources/scripts/yrtools.js"></script>
 		<script src="resources/scripts/yrsession.js"></script>
 		<script src="resources/scripts/validation.js"></script>
 		<script src="resources/scripts/yr-cookiebar.js"></script>
-		<script src="resources/40114112001/eforms/eforms.js"> </script>
-		<script src="resources/40114112001/eforms/formatDate.js"> </script>
-		<script src="resources/40114112001/eforms/util.js"> </script>
+		<script src="/f/resources/40114112001/eforms/eforms.js"> </script>
+		<script src="/f/resources/40114112001/eforms/formatDate.js"> </script>
+		<script src="/f/resources/40114112001/eforms/util.js"> </script>
 		<script type="text/javascript">
 			//<![CDATA[
 				(function() {
@@ -180,10 +184,13 @@
 		</script>
 		<script type="text/javascript">
 			//<![CDATA[
-				var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-				g.src='//www.google-analytics.com/ga.js';
-				s.parentNode.insertBefore(g,s)}(document,'script'));
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-57246761-1', 'auto');
+				ga('send', 'pageview');
 			//]]>
 		</script>
 	</body>

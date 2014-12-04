@@ -4,7 +4,7 @@
 	<meta http-equiv="Pragma" content="no-cache"/>
 	<meta http-equiv="Expires" content="0"/>
 	<meta http-equiv="refresh"
-	    content="0;url=https://www.mijnpolitiebureau.nl/yourrequest/home.html?supplierid=20107101201"/> 
+	    content="0;url=https://www.fraudnet.nl"/> 
     </head>
 </html>
 	    

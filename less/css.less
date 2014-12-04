@@ -1,26 +1,33 @@
 /*************************************************************
+ * CSS
+ *************************************************************/
+/*************************************************************
  * colours
  *************************************************************/
  .fg-danger {color: @brand-danger;}
  .fg-primary {color: @brand-primary;}
  .bg-info-forced {.bg-info !important;}
- .bg-signal { background-color: @bg-signal-color;}
- .bg-brand { background-color: @bg-brand-color;}
+ .bg-signal-forced {background-color: lighten(@brand-signal, 30%) !important;}
+
 /*************************************************************
  * general
  *************************************************************/
 .page-header {
 	margin-top: @line-height-computed;
 }
+
 .text-left {
 	text-align: left !important;
 }
+
 .text-center {
 	text-align: center !important;
 }
+
 .text-right {
 	text-align: right !important;
 }
+
 table {border-collapse: collapse;}
 table.fixed {table-layout: fixed;}
 table.emptyRow td{padding-bottom: 1em;}
@@ -33,18 +40,12 @@ caption {
 	margin-right: 1px;
 }
 td {vertical-align: top;}
-.center {text-align: center;}
-.right {text-align: right;}
-.float_left {float: left;}
 .float_right {float: right;}
 .clear {clear: both; font-size: 0; line-height: 0; min-height: 0; height: auto !important; height: 0;}
-.smaller {font-size: smaller;}
 .marginTop {margin-top: 1em;}
-.marginLeftRight{margin-left: 15px; margin-right: 15px;}
 .marginBottom {margin-bottom: 1em;}
 .marginTopBottom {margin-top: 1em; margin-bottom: 1em;}
 .noPaddingTop {padding-top: 0 !important;}
-.fullPadding {padding: 15px;}
 .hidden {display: none;}
 .pointer {cursor: pointer;}
 .default {cursor: default;}
@@ -80,7 +81,6 @@ img.float_right {
 		display: none;
 	}
 }
-
 /*************************************************************
  * meldingen
  *************************************************************/
@@ -97,11 +97,6 @@ img.float_right {
 		color: white;
 	}
 }
-// .alert {
-// 	border: 1px solid red;
-// 	padding: 5px;
-// 	margin-top: 10px;
-// }
 .popupMsg {
 	position: absolute;
 	z-index: 20;
@@ -116,24 +111,6 @@ img.float_right {
 	.panel-headings {background-color: @brand-signal;}
 	.panel-body {padding-bottom: 0;}
 }
-/**********************************************
-.popupMsgHeader {
-	height: 22px;
-	background-color: #004380;
-	padding: 0 4px;
-}
-.popupMsgTitle {
-	font-weight: bold;
-	color: #FFF;
-	line-height: 20px;
-	float: left;
-}
-.popupMsgContent {
-	padding: 1em;
-}
-
-******************************************/
-
 div#close, div.close {
 	float: right;
 	width: 16px;
@@ -183,7 +160,7 @@ div#close, div.close {
 	}
 }
 
-.make-panel(@heading-bg-color, @bg-color, @heading-border, @border) {
+.make-panel(@heading-bg-color, @bg-color, @heading-border: @panel-forms-border, @border: @panel-forms-border) {
 	background-color: @bg-color;
 	.make-basic-panel(@border; @panel-forms-text; @heading-bg-color; @heading-border);
 	.panel-body, .panel-footer {
@@ -194,20 +171,12 @@ div#close, div.close {
 .panel-brand {
 	.make-panel(lighten(@brand-primary, 65%), lighten(@brand-primary, 67%), lighten(@brand-primary, 60%), lighten(@brand-primary, 60%));
 }
-
 .panel-signal {
 	.make-panel(lighten(@brand-signal, 30%), lighten(@brand-signal, 35%), lighten(@brand-signal, 25%), lighten(@brand-signal, 25%));
 }
-
 .panel-forms {
 	.forms-gradient;
-	.make-basic-panel(@panel-forms-border; @panel-forms-text; @panel-forms-heading-bg; @panel-forms-border);
-	.panel-header {
-		background-color: @formrow-header-bg;
-	}
-	.panel-body, .panel-footer {
-		padding: 0;
-	}
+	.make-basic-panel(@panel-forms-border; @panel-forms-text; @formrow-header-bg; @panel-forms-border);
 	td:first-child, th:first-child {
 		padding-left: 15px;
 	}
@@ -245,31 +214,24 @@ div#close, div.close {
 .radio-inline {
 	input[type="radio"], input[type="checkbox"] { margin-top: 2px;}
 }
+
 /**********************************************************************
  * Checkfunctie panelen even groot bij groot scherm
 /**********************************************************************/
 #miopreventionFormDiv {
-	min-height: 498px;
-}
-@media (min-width: 480px) {
-	#miopreventionFormDiv {
-		min-height: 380px;
+	min-height: 480px;
+	@media(min-width: @screen-xs-min) {
+		min-height: 394px;
 	}
-}
-@media (min-width: 768px) {
-	#miopreventionFormDiv {
+	@media(min-width: @screen-sm-min) {
 		min-height: 284px;
 	}
 }
-@media (min-width: 992px) {
-	.checkPanel,
-	#miopreventionFormDiv {
-		min-height: 380px;
+.checkPanel, #miopreventionFormDiv {
+	@media(min-width: @screen-md-min) {
+		min-height: 386px;
 	}
-}
-@media (min-width: 1200px) {
-	.checkPanel,
-	#miopreventionFormDiv {
-		min-height: 360px;
+	@media(min-width: @screen-lg-min) {
+		min-height: 364px;
 	}
 }

@@ -33,10 +33,10 @@
 			<div class="clearfix">
 				<div class="pull-left">
 					<c:if test="${pageContext.request.remoteUser != null}">
-						<a class="PageHeaderLogo" href="<c:url value='/index.html'/>"><img src="/fraudnet/resources/images/fraudnet-logo.png" /></a>
+						<a href="<c:url value='/index.html'/>"><img src="/fraudnet/resources/images/fraudnet-logo.png" /></a>
 					</c:if>
 					<c:if test="${pageContext.request.remoteUser == null}">
-						<a class="PageHeaderLogo" href="<c:url value='/index.html'/>"><img src="/fraudnet/resources/images/fraudnet-logo.png" /></a>
+						<a href="<c:url value='/index.html'/>"><img src="/fraudnet/resources/images/fraudnet-logo.png" /></a>
 					</c:if>
 				</div> <!-- .pull-left -->
 				<div class="pull-right">
@@ -59,12 +59,14 @@
 			</div> <!-- .main-content -->
 		</div> <!-- .container -->
 
+		<!-- footer -->
 		<c:if test="${pageContext.request.remoteUser != null}">
 			<jsp:include page="/common/footer.jsp"/>
 		</c:if>
 		<c:if test="${pageContext.request.remoteUser == null}">
 			<jsp:include page="/common/footer_blanco.jsp"/>
 		</c:if>
+		<!-- footer -->
 
 		<script src="/fraudnet/resources/scripts/prototype.js"></script>
 		<script src="/fraudnet/resources/scripts/yrtools.js"></script>

@@ -18,7 +18,7 @@ function getAddress() {
 				url,
 				{
 					method: 'get',
-					parameters: 'supplierid=20107101901&postal=' + postalCode + "|" + houseNumber,
+					parameters: 'supplierid=40114112001&postal=' + postalCode + "|" + houseNumber,
 				 	onComplete: setAddress
 				}
 			);
@@ -58,7 +58,7 @@ function checkSubmitCount(pagenumber)
 
 	if (submitcount == 1){
 		var params = $('eform').serialize();
-		var url='/b/eforms.html?submit_action=jump&jumpNumber=' + pagenumber + '&' + params;
+		var url='/f/eforms.html?submit_action=jump&jumpNumber=' + pagenumber + '&' + params;
 		window.location = url;
 		return true;
 	}
@@ -71,7 +71,7 @@ function checkDialogSubmitCount(pagenumber)
 
 	if (submitcount == 1){
 		var params = $('dialog').serialize();
-		var url='/b/formPage.html?submit_action=jump&jumpNumber=' + pagenumber + '&' + params;
+		var url='/f/formPage.html?submit_action=jump&jumpNumber=' + pagenumber + '&' + params;
 		window.location = url;
 		return true;
 	}
@@ -84,7 +84,7 @@ function checkSecSubmitCount(pagenumber)
 
 	if (submitcount == 1){
 		var params = $('eform').serialize();
-		var url='/b/seforms.html?submit_action=jump&jumpNumber=' + pagenumber + '&' + params;
+		var url='/f/seforms.html?submit_action=jump&jumpNumber=' + pagenumber + '&' + params;
 		window.location = url;
 		return true;
 	}
@@ -502,7 +502,7 @@ function retrieveHandle(id) {
 	}
 
 	function showGeneralError() {
-		$("general_error").removeClassName('hidden');
+		document.getElementById("general_error").style.display = 'block';
 	}
 
 	function noenter() {

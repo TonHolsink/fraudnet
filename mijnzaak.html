@@ -14,7 +14,7 @@
 		<meta name="robots" content="noindex"/>
 		<meta name="author" content="YourRequest BV"/>
 		<link rel="icon" href="resources/images/favicon.ico"/>
-		<title>FraudNet</title>
+		<title>Fraudnet</title>
 		<link rel="stylesheet" type="text/css" media="all" href="resources/styles/style.css" />
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,812 +28,413 @@
 		<!--[if lt IE 7]>
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
-		<div class="PageWrapper DefaultPage">
-			<a class="PageHeaderLogo" href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
-			<div class="PageContentWrapper">
-				<div class="PageHeader">
-					<div id="topMenu">
-						<ul class="linkList-hor">
-							<li><a href="index.html" title="Home">Home</a></li>
-							<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
-							<li><a href="information.html" title="Informatie">Informatie</a></li>
-						</ul>
-					</div>
-					<!-- #topMenu -->
-					<div id="messageBlock">
-					</div>
+		<div class="container pageHeader">
+			<div class="clearfix">
+				<div class="pull-left">
+					<a href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
 				</div>
-				<!-- PageHeader -->
-				<div id="PageContent" class="PageContent">
-					<div class="StandardPage">
-						<div class="PageContentColumn1">
-							<link rel="stylesheet" type="text/css" media="all" href="resources/styles/eforms.css" />
-							<div class="page-header">
-								<h1 id="pageTitle">MELDINGDETAILS</h1>
-							</div>
-							<p>
-								Hier vindt u de details van de door u ingezonden melding en krijgt u een overzicht van de status van de melding.
-							</p>
-							<div class="panel panel-forms">
-								<div class="panel-header">
-									<div class="panel-heading">Gegevens</div>
+				<!-- .pull-left -->
+				<div class="pull-right">
+					<ul class="linkList-hor">
+						<li><a href="index.html" title="Home">Home</a></li>
+						<li><a href="information.html" title="Informatie">Informatie</a></li>
+					</ul>
+				</div>
+				<!-- .pull-right -->
+			</div>
+			<div class="headerStripe"></div>
+			<div id="messageBlock">
+			</div>
+		</div>
+		<!-- container -->
+		<div class="container">
+			<div class="main-content">
+				<div class="content-area">
+					<div class="page-header">
+						<h1 id="pageTitle">Meldingdetails</h1>
+					</div>
+					<p>
+						Hier vindt u de details van de door u ingezonden melding en krijgt u een overzicht van de status van de melding.
+					</p>
+					<!-- Alleen als de melding niet is ingetrokken -->
+					<div id="intrekkenEnAanvullen">
+						<p>
+							Indien u de melding wilt aanvullen, dan kunt u dit doen via de volgende knop:
+							<button id="btnToggleAanvullen" class="btn btn-primary btn-xs">Aanvullen</button>
+						<div id="pnlAanvullen" class="panel panel-forms hidden">
+							<form id="frmAanvullen" class="form" >
+								<div class="panel-heading">Uw aanvulling</div>
+								<div class="panel-body">
+									<textarea id="txtAanvullen" name="supplement" class="form-control" cols="55" rows="8" ></textarea>
 								</div>
-								<table class="table table-condensed fixed">
-									<tbody>
-										<tr>
-											<td class="col1">
-												Regnr
-											</td>
-											<td class="col2">
-												012850000005362
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Klantnummer
-											</td>
-											<td class="col2">
-												123456782
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Incident
-											</td>
-											<td class="col2">
-												Internetoplichting
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Categorie
-											</td>
-											<td class="col2">
-												ingetrokken
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Datum
-											</td>
-											<td class="col2">
-												19-04-2013
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-											</td>
-											<td class="col2">
-												<a class="textlink targetblank" href="fetchPDF.html?formDefinitionCode=ifaangifte
-													&formCode=a2f70802-0c77-4b15-bb0b-97bdda1e3059
-													&supCode=20107101901" target="_blank">
-												012850000005362.pdf&nbsp;&nbsp;
-												</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<!-- .panel -->
-							<div class="panel panel-forms">
-								<div class="panel-header">
-									<div class="panel-heading">Uw gegevens</div>
-								</div>
-								<table class="table table-condensed fixed">
-									<tbody>
-										<tr>
-											<td class="col1">
-												Aangiftenummer
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Burgerservicenummer
-											</td>
-											<td class="col2">
-												123456782
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Voornaam
-											</td>
-											<td class="col2">
-												Jakko
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Tussenvoegsels
-											</td>
-											<td class="col2">
-												Van der
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Achternaam
-											</td>
-											<td class="col2">
-												Vos
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Geslacht
-											</td>
-											<td class="col2">
-												M
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Geboorteland
-											</td>
-											<td class="col2">
-												Nederland
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Geboortedatum
-											</td>
-											<td class="col2">
-												03-10-1970
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Geboorteplaats
-											</td>
-											<td class="col2">
-												Ede
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Gebruikersnaam
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												E-mailadres
-											</td>
-											<td class="col2">
-												jakko.vos@yourrequest.nl
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Postcode
-											</td>
-											<td class="col2">
-												3823HT
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Huisnummer
-											</td>
-											<td class="col2">
-												28
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Huisnummer toevoeging
-											</td>
-											<td class="col2">
-												a
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Straatnaam
-											</td>
-											<td class="col2">
-												Amerikaring
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Woonplaats
-											</td>
-											<td class="col2">
-												AMERSFOORT
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Land
-											</td>
-											<td class="col2">
-												NEDERLAND
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Telefoonnummer
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Mobiele telefoonnummer
-											</td>
-											<td class="col2">
-												0629032493
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<!-- .panel -->
-							<div class="panel panel-forms">
-								<div class="panel-header">
-									<div class="panel-heading">Gegevens wederpartij</div>
-								</div>
-								<table class="table table-condensed fixed">
-									<tbody>
-										<tr>
-											<td class="col1">
-												Voornaam
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Tussenvoegsels
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Achternaam
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Gebruikersnaam
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												E-mailadres
-											</td>
-											<td class="col2">
-												jakkovos@gmail.com
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Uw e-mail verstrekken aan wederpartij
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Postcode
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Huisnummer
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Huisnummer toevoeging
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Straatnaam
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Woonplaats
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Land
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Telefoonnummer
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Mobiele telefoonnummer
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												IP adres
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<!-- .panel -->
-							<div class="panel panel-forms">
-								<div class="panel-header">
-									<div class="panel-heading">Transactiegegevens</div>
-								</div>
-								<table class="table table-condensed fixed">
-									<tbody>
-										<tr>
-											<td class="col1">
-												Website
-											</td>
-											<td class="col2">
-												www.marktplaats.nl
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Website (Overig)
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Hier gekomen via
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Telefoonnummer mag doorgegeven aan Marktplaats indien van toepassing
-											</td>
-											<td class="col2">
-												Nee
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Advertentietitel
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Advertentienummer
-											</td>
-											<td class="col2">
-												454545
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Omschrijving geschil in maximaal 750 woorden
-											</td>
-											<td class="col2">
-												Vrijdag test 7
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Omschrijving geschil in maximaal 750 woorden
-											</td>
-											<td class="col2">
-												BLAAT LEUTERBLATER LEUTERERaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaqqqqqaaaaEN WEL DAAROM DOE IK AANGIFTEBLaat blaatvvvv vvvvaaaaaaaaa
-												Nieuwe aanvulling
-												fffffff
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Datum betaling
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Bedrag aankoop
-											</td>
-											<td class="col2">
-												21
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Betalingsmethode
-											</td>
-											<td class="col2">
-												rembours
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Anders
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Bankrekeningnummer wederpartij
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Naam rekeninghouder wederpartij
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Paypal gebruikersnaam wederpartij
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Datum aangifte
-											</td>
-											<td class="col2">
-												19-04-2013
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												Tijdstip aangifte
-											</td>
-											<td class="col2">
-												11:59:56
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-											</td>
-											<td class="col2">
-												-
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<!-- .panel -->
-							<h2>Historie van deze melding</h2>
-							<div class="panel panel-forms">
-								<div class="panel-header">
-									<div class="panel-heading">Status</div>
-								</div>
-								<table class="table table-condensed fixed">
-									<tbody>
-										<tr>
-											<td class="col1">
-												19-04-2013
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Nieuwe aangifte
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4367" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												19-04-2013
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Melding ingetrokken, goed ontvangen
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4413" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												17-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												17-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												18-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												18-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												18-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												18-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												18-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												18-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												18-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												18-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												18-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												18-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												18-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												19-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												19-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-										<tr>
-											<td class="col1">
-												19-11-2014
-											</td>
-											<td class="col2">
-												<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-													Aanvulling op melding gedaan
-													<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
-													meer
-													</a>
-												</form>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<!-- .panel -->
-							<div id="statusDetailsBlock" class="panel panel-default popupMsg hidden">
-								<div class="panel-headings">
-									<div class="panel-heading">
-										<strong>Voortgangsinformatie</strong>
-										<button	id="close" type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<!--.panel-body -->
+								<div class="panel-footer">
+									<div class="formrow formrowtext">
+										<input type="hidden" name="number" value="012860000000229" />
+										<input type="hidden" name="hash" value="c4f125d0f27e2bd7e3b70c913e9dca17e21a024e0f4ed96c53b2853696621fa8" />
+										<button type="submit" class="btn btn-primary">Aanvulling opslaan</button>
 									</div>
 								</div>
-								<div id="statusDetails" class="panel-body"></div>
-							</div>
-							<!-- #statusDetailsBlock -->
+								<!-- .panel-footer -->
+							</form>
 						</div>
-						<!-- PageContentColumn1 -->
+						<!-- #pnlAanvullen -->
+						</p>
+						<p>
+							U kunt de melding intrekken middels deze knop:
+							<button id="btnToggleIntrekken" class="btn btn-primary btn-xs">Intrekken</button>
+						<div id="pnlIntrekken" class="panel panel-forms hidden">
+							<div class="panel-heading">Uw melding internetoplichting intrekken</div>
+							<form id="frmIntrekken" class="form-horizontal">
+								<div class="panel-body">
+									<div class="form-group form-inline">
+										<label class="col-sm-2 control-label" for="withdrawReason">Reden</label>
+										<div class="col-sm-10">
+											<select id="withdrawReason" name="withdrawReason" class="form-control">
+												<option value="">Kies</option>
+												<option value="MIO_IGOED">Goederen geleverd</option>
+												<option value="MIO_IGELD">Geld teruggekregen</option>
+												<option value="MIO_IANDERS">Anders...</option>
+											</select>
+										</div>
+									</div>
+									<div id="withdraw_other_row" class="form-group form-inline hidden">
+										<label class="col-sm-2 control-label" for="withdrawReasonOther">Reden intrekken</label>
+										<div class="col-sm-10">
+											<input id="withdrawReasonOther" type="text" name="withdrawReasonOther" class="form-control" size="40" maxlength="200" />
+										</div>
+									</div>
+								</div>
+								<!--.panel-body -->
+								<div class="panel-footer">
+									<div class="formrow formrowtext">
+										<input type="hidden" name="number" value="012860000000229" />
+										<input type="hidden" name="hash" value="c4f125d0f27e2bd7e3b70c913e9dca17e21a024e0f4ed96c53b2853696621fa8" />
+										<button type="submit" class="btn btn-primary">Intrekken</button>
+									</div>
+								</div>
+								<!-- .panel-footer -->
+							</form>
+						</div>
+						<!-- #pnlIntrekken -->
+						</p>
 					</div>
-					<!-- StandardPage -->
+					<!-- intrekkenEnAanvullen -->
+					<div class="panel panel-forms form-horizontal">
+						<div class="panel-heading">Gegevens</div>
+						<div class="panel-body">
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Regnr</label>
+								<div class="col-sm-8">012860000000229</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Klantnummer</label>
+								<div class="col-sm-8">
+									068211764
+								</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Categorie</label>
+								<div class="col-sm-8">Internetoplichting</div>
+							</div>
+							<!--  Category voorlopig niet nodig -- staat in description
+								<div class="form-group form-group-sm">
+									<label class="col-sm-4">Categorie</label>
+									<div class="col-sm-8"></div>
+								</div>
+								-->
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Datum</label>
+								<div class="col-sm-8">04-12-2014</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Pdf</label>
+								<div class="col-sm-8">
+									<a class="textlink targetblank" href="fetchPDF.html?formDefinitionCode=ifaangifte
+										&formCode=a3500c1a-c674-4501-a2a3-74a387dbfbf3
+										&supCode=20107101901
+										&hash=c4f125d0f27e2bd7e3b70c913e9dca17e21a024e0f4ed96c53b2853696621fa8" target="_blank">
+									012860000000229.pdf
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- .panel-body -->
+					</div>
+					<!-- .panel -->
+					<div class="panel panel-forms form-horizontal">
+						<div class="panel-heading">Uw gegevens</div>
+						<div class="panel-body">
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Meldingnummer</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Burgerservicenummer</label>
+								<div class="col-sm-8">068211764</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Voornaam</label>
+								<div class="col-sm-8">Ton</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Tussenvoegsels</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Achternaam</label>
+								<div class="col-sm-8">Holsink</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Geslacht</label>
+								<div class="col-sm-8">M</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Geboorteland</label>
+								<div class="col-sm-8">NEDERLAND</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Geboortedatum</label>
+								<div class="col-sm-8">31-07-1960</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Geboorteplaats</label>
+								<div class="col-sm-8">Hilversum</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Gebruikersnaam</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">E-mailadres</label>
+								<div class="col-sm-8">ton.holsink@yourrequest.nl</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Postcode</label>
+								<div class="col-sm-8">3771MB</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Huisnummer</label>
+								<div class="col-sm-8">22</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Huisnummer toevoeging</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Straatnaam</label>
+								<div class="col-sm-8">Harselaarseweg</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Woonplaats</label>
+								<div class="col-sm-8">Barneveld</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Land</label>
+								<div class="col-sm-8">NEDERLAND</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Telefoonnummer</label>
+								<div class="col-sm-8">0342440439</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Mobiele telefoonnummer</label>
+								<div class="col-sm-8">-</div>
+							</div>
+						</div>
+						<!-- .panel-body -->
+					</div>
+					<!-- .panel -->
+					<div class="panel panel-forms form-horizontal">
+						<div class="panel-heading">Gegevens wederpartij</div>
+						<div class="panel-body">
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Voornaam</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Tussenvoegsels</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Achternaam</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Gebruikersnaam</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">E-mailadres</label>
+								<div class="col-sm-8">a@b.nl</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Uw e-mail verstrekken aan wederpartij</label>
+								<div class="col-sm-8">Y</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Postcode</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Huisnummer</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Huisnummer toevoeging</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Straatnaam</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Woonplaats</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Land</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Telefoonnummer</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Mobiele telefoonnummer</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">IP adres</label>
+								<div class="col-sm-8">-</div>
+							</div>
+						</div>
+						<!-- .panel-body -->
+					</div>
+					<!-- .panel -->
+					<div class="panel panel-forms form-horizontal">
+						<div class="panel-heading">Transactiegegevens</div>
+						<div class="panel-body">
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Website</label>
+								<div class="col-sm-8">Overige</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Website (Overig)</label>
+								<div class="col-sm-8">www.a.b.nl</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Hier gekomen via</label>
+								<div class="col-sm-8">Rechstreeks</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Telefoonnummer mag doorgegeven aan Marktplaats indien van toepassing</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Advertentietitel</label>
+								<div class="col-sm-8">Koopie van de eeuw</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Advertentienummer</label>
+								<div class="col-sm-8">1234567890</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Omschrijving geschil in maximaal 750 woorden</label>
+								<div class="col-sm-8">Blaat</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Omschrijving geschil in maximaal 750 woorden</label>
+								<div class="col-sm-8">Aanvullend geblaat</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Datum betaling</label>
+								<div class="col-sm-8">03-12-2014</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Bedrag aankoop</label>
+								<div class="col-sm-8">33,56</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Betalingsmethode</label>
+								<div class="col-sm-8">rembours</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Anders</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Bankrekeningnummer wederpartij</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Naam rekeninghouder wederpartij</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Paypal gebruikersnaam wederpartij</label>
+								<div class="col-sm-8">-</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Datum melding</label>
+								<div class="col-sm-8">4-12-2014</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">Tijdstip melding</label>
+								<div class="col-sm-8">10:04:25</div>
+							</div>
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4"></label>
+								<div class="col-sm-8">-</div>
+							</div>
+						</div>
+						<!-- .panel-body -->
+					</div>
+					<!-- .panel -->
+					<h2>Historie van deze melding</h2>
+					<div class="panel panel-forms table-responsive">
+						<div class="panel-heading">Status</div>
+						<table class="table table-condensed">
+							<tbody>
+								<tr>
+									<td class="col1">
+										04-12-2014
+									</td>
+									<td class="col2">
+										<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
+											Nieuwe aangifte
+											<a data-url="/f/retrieveStatusDetails.html?statusID=4367" class="morelink sendRequest" href="javascript:void(0)">
+											&#187; meer
+											</a>
+										</form>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- .panel -->
+					<div id="statusDetailsBlock" class="panel panel-default popupMsg hidden">
+						<div class="panel-headings">
+							<div class="panel-heading">
+								<strong>Voortgangsinformatie</strong>
+								<button	id="close" type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							</div>
+						</div>
+						<div id="statusDetails" class="panel-body"></div>
+					</div>
+					<!-- #statusDetailsBlock -->
 				</div>
-				<!-- PageContent -->
+				<!-- .content-area -->
 			</div>
-			<!-- PageContentWrapper -->
+			<!-- .main-content -->
 		</div>
-		<!-- PageWrapper -->
-		<div class="PageFooter">
-			<div class="PageFooterContent">
+		<!-- .container -->
+		<!-- footer -->
+		<div class="container marginTop">
+			<footer>
 				<div class="clearfix">
 					<div class="pull-left">
 						<ul class="linkList-hor">
-							<li><a href="services.html">Diensten</a></li>
-							<li><a href="partners.html">Partners</a></li>
 							<li><a href="about_us.html">Over ons</a></li>
 						</ul>
 					</div>
@@ -849,10 +450,10 @@
 					</div>
 				</div>
 				<div id="cookieStatus"></div>
-			</div>
-			<!-- PageFooterContent -->
+			</footer>
 		</div>
-		<!-- PageFooter -->
+		<!-- .container -->
+		<!-- footer -->
 		<script src="resources/scripts/prototype.js"></script>
 		<script src="resources/scripts/yrtools.js"></script>
 		<script src="resources/scripts/yrsession.js"></script>
@@ -869,7 +470,7 @@
 			//]]>
 		</script>
 		<!-- local script to bottom -->
-		<script src="resources/20107101901/eforms/eforms.js"></script>
+		<script src="/f/resources/40114112001/eforms/eforms.js"> </script>
 		<script type="text/javascript">
 			//<![CDATA[
 				(function() {
@@ -949,7 +550,10 @@
 											parameters: pars,
 											onComplete: function(response){
 												var json = response.responseText.evalJSON();
-												var loc = "/f/mijnzaak.html?itemID=" + json.itemID;
+												if (json.generalError) {
+													location.href="/f/errorAjax.html?err=" + json.generalError;
+												}
+												var loc = "/f/mijnzaak.html?number=" + json.itemID + "&code=" + json.code + "&hash=" + json.hash;
 												if (json.result.length == 0) {
 													location.href= loc + "&msg=SUPL_OK";
 												} else {
@@ -988,7 +592,10 @@
 											parameters: pars,
 											onComplete: function(response){
 												var json = response.responseText.evalJSON();
-												var loc = "/f/mijnzaak.html?itemID=" + json.itemID;
+												if (json.generalError) {
+													location.href="/f/errorAjax.html?err=" + json.generalError;
+												}
+												var loc = "/f/mijnzaak.html?number=" + json.itemID + "&code=" + json.code + "&hash=" + json.hash;
 												if (json.result.length == 0) {
 													location.href= loc + "&msg=WITH_OK";
 												} else {
@@ -1016,10 +623,13 @@
 		</script>
 		<script type="text/javascript">
 			//<![CDATA[
-				var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-				g.src='//www.google-analytics.com/ga.js';
-				s.parentNode.insertBefore(g,s)}(document,'script'));
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-57246761-1', 'auto');
+				ga('send', 'pageview');
 			//]]>
 		</script>
 	</body>

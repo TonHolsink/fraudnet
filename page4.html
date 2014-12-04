@@ -14,7 +14,7 @@
 		<meta name="robots" content="noindex"/>
 		<meta name="author" content="YourRequest BV"/>
 		<link rel="icon" href="resources/images/favicon.ico"/>
-		<title>FraudNet</title>
+		<title>Fraudnet</title>
 		<link rel="stylesheet" type="text/css" media="all" href="resources/styles/style.css" />
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,30 +23,33 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body>
+	<body
+		>
 		<!--[if lt IE 7]>
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 		<div class="container pageHeader">
 			<div class="clearfix">
 				<div class="pull-left">
-					<a class="" href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
+					<a href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
 				</div>
+				<!-- .pull-left -->
 				<div class="pull-right">
-					<ul class="linkList-hor ">
+					<ul class="linkList-hor">
 						<li><a href="index.html" title="Home">Home</a></li>
-						<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
 						<li><a href="information.html" title="Informatie">Informatie</a></li>
 					</ul>
-				</div> <!-- #topMenu -->
+				</div>
+				<!-- .pull-right -->
 			</div>
 			<div class="headerStripe"></div>
-		</div> <!-- container -->
+			<div id="messageBlock">
+			</div>
+		</div>
+		<!-- container -->
 		<div class="container">
 			<div class="main-content">
-				<div class="content-area" style="min-height: 400px !important;">
-					<div id="messageBlock"></div>
-
+				<div class="content-area">
 					<div id="flowcontainer" class="flowcontainer">
 						<span class="label saved">
 						<a class="innermenuitem" href="#" onclick="javascript:checkDialogSubmitCount(1);">
@@ -85,92 +88,94 @@
 					<div id="tabs"></div>
 					<div id="eformsContent" class="eformsContent">
 						<form  id="dialog" class="form form-horizontal" action="formPage.html" method="post" enctype="multipart/form-data" name="eform">
-							<input type="hidden" name="supplier" value="20107101901"/>
+							<input type="hidden" name="supplier" value="40114112001"/>
 							<div class="page-header">
 								<h1 id="pageTitle">Melding Internetoplichting</h1>
 							</div>
-							<input type="hidden" name="dialogSessionId" value="9523e402-12ba-48b6-9c46-68fdba5bf006"/>
+							<input type="hidden" name="dialogSessionId" value="262602a3-a1a2-406c-8732-f65ee928c236"/>
 							<input type="hidden" name="formDefinitionCode" value=""/>
 							<input type="hidden" name="pageNumber" value="4"/>
 							<input type="hidden" name="formCode" value=""/>
 							<h2>Controleren en verzenden</h2>
-							Hieronder ziet u uw aangifte zoals u deze heeft ingevuld. Wij verzoeken u deze gegevens te controleren.
-							Als de aangifte correct is moet u dit onderaan het scherm bevestigen en op "verzenden" klikken.
 							<p>
-								Uw aangifte wordt dan direct naar de politie gestuurd, en u ontvangt een ontvangstbevestiging op het e-mailadres dat u heeft ingevoerd.
+								Hieronder ziet u uw melding zoals u deze heeft ingevuld. Wij verzoeken u deze gegevens te controleren.
+							<p>
+							<p>
+								Als de melding correct is moet u dit onderaan het scherm bevestigen en op "verzenden" klikken.<br/>
+								Uw melding wordt dan direct naar de politie gestuurd, en u ontvangt een ontvangstbevestiging op het e-mailadres dat u heeft ingevoerd.
 							</p>
 							<div class="panel panel-forms">
 								<div class="panel-heading">Uw ingevulde gegevens zijn:</div>
 								<div class="panel-body">
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Burgerservice nummer</label>
 										<div class="dialoganswer">068211764</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Voorna(a)am(en)</label>
 										<div class="dialoganswer">Ton</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Tussenvoegsels</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Achternaam</label>
 										<div class="dialoganswer">Holsink</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Geslacht</label>
 										<div class="dialoganswer">M</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Geboorteland</label>
-										<div class="dialoganswer">Nederland</div>
+										<div class="dialoganswer">NEDERLAND</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Geboortedatum</label>
 										<div class="dialoganswer">31-07-1960</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Geboorteplaats</label>
 										<div class="dialoganswer">Hilversum</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Gebruikersnaam</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">E-mailadres </label>
 										<div class="dialoganswer">ton.holsink@yourrequest.nl</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Straatnaam</label>
 										<div class="dialoganswer">Harselaarseweg</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Huisnummer</label>
 										<div class="dialoganswer">22</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Huisnummer toevoeging</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Postcode</label>
 										<div class="dialoganswer">3771MB</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Woonplaats</label>
 										<div class="dialoganswer">Barneveld</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Land</label>
 										<div class="dialoganswer">NEDERLAND</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Telefoonnummer</label>
 										<div class="dialoganswer">0342440439</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Mobiele telefoonnummer</label>
 										<div class="dialoganswer"></div>
 									</div>
@@ -179,63 +184,61 @@
 							</div>
 							<!-- .panel -->
 							<div class="panel panel-forms">
-								<div class="panel-header">
-									<div class="panel-heading">Gegevens wederpartij</div>
-								</div>
+								<div class="panel-heading">Gegevens wederpartij</div>
 								<div class="panel-body">
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Voorna(a)m(en)</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Tussenvoegsels</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Achternaam</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Gebruikersnaam</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">E-mailadres </label>
 										<div class="dialoganswer">a@b.nl</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Straatnaam</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Huisnummer</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Huisnummer toevoeging</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Postcode</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Woonplaats</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Land</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Telefoonnummer</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Mobiele telefoonnummer</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">IP adres</label>
 										<div class="dialoganswer"></div>
 									</div>
@@ -244,19 +247,17 @@
 							</div>
 							<!-- .panel -->
 							<div class="panel panel-forms">
-								<div class="panel-header">
-									<div class="panel-heading">Transactiegegevens</div>
-								</div>
+								<div class="panel-heading">Transactiegegevens</div>
 								<div class="panel-body">
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">URL website</label>
 										<div class="dialoganswer">Overige</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">URL website (overig)</label>
 										<div class="dialoganswer">www.a.b.nl</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Hier gekomen via</label>
 										<div class="dialoganswer">Rechstreeks</div>
 									</div>
@@ -267,63 +268,63 @@
 										************************************************************************************************* -->
 									<!-- ******************************************************************************************** -->
 									<!-- ******************************************************************************************** -->
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Advertentietitel</label>
-										<div class="dialoganswer"></div>
+										<div class="dialoganswer">Koopie van de eeuw</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Advertentienummer</label>
 										<div class="dialoganswer">1234567890</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Omschrijving</label>
 										<div class="dialoganswer">Blaat</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Aanvullende gegevens</label>
-										<div class="dialoganswer">Leuter</div>
+										<div class="dialoganswer">Aanvullend geblaat</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Datum betaling</label>
-										<div class="dialoganswer">20-11-2014</div>
+										<div class="dialoganswer">03-12-2014</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Bedrag aankoop</label>
-										<div class="dialoganswer">333</div>
+										<div class="dialoganswer">33,56</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Betalingsmethode</label>
 										<div class="dialoganswer">rembours</div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Bankrekeningnummer wederpartij</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
+									<div class="form-group form-group-sm">
 										<label class="dialogquestion">Naam rekeninghouder wederpartij</label>
 										<div class="dialoganswer"></div>
 									</div>
-									<div class="form-group">
-										<label class="dialogquestion">Datum aangifte</label>
-										<div class="dialoganswer">21-11-2014</div>
+									<div class="form-group form-group-sm">
+										<label class="dialogquestion">Datum melding</label>
+										<div class="dialoganswer">4-12-2014</div>
 									</div>
 								</div>
 								<!-- .panel-body -->
 							</div>
 							<!-- .panel -->
 							<div class="panel panel-forms">
-								<div class="form-group" id="row_ep_formulier_accoord">
-									<span class="errortext" id="error_form_ok"> </span>
-									<label class="dialogquestion">
-										Zijn de gegevens correct en naar waarheid ingevuld?
+								<div class="form-group form-inline" id="row_ep_formulier_accoord">
+									<div class="errortext" id="error_form_ok"></div>
+									<div class="dialogquestion">
+										<label class="control-label">Zijn de gegevens correct en naar waarheid ingevuld?</label>
 										<i class="mandatory"></i>
-									</label>
+									</div>
 									<div id="radio_ep_formulier_accoord" class="dialoganswer">
-										<label class="radio-inline noPaddingTop">
+										<label class="radio-inline">
 										<input name="form_ok" value="J" onclick="checkForm_ok()" type="radio" class="s20">
 										Ja
 										</label>
-										<label class="radio-inline noPaddingTop">
+										<label class="radio-inline">
 										<input name="form_ok" value="N" onclick="checkForm_nok()" type="radio" class="s20">
 										Nee
 										</label>
@@ -332,36 +333,34 @@
 							</div>
 							<!-- .panel -->
 							<div class="panel panel-forms">
-								<div class="form-group hidden" id="general_error">
-									<div class="col-md-12">
-										<span class="errortext" id="error_street">
-										! Er zijn fouten op deze pagina geconstateerd. Los deze eerst op voordat u verder kunt gaan.
-										</span>
-									</div>
+								<div class="form-group form-inline hidden" id="general_error">
+									<div class="errortext">! Er zijn fouten op deze pagina geconstateerd. Los deze eerst op voordat u verder kunt gaan.</div>
 								</div>
-								<div class="form-group">
+								<div class="form-group form-inline">
 									<div class="col-md-12">
 										<div class="formbuttons" id="buttonBar">
 											<input class="btn btn-primary" name="submit_action" value="Vorige" onclick="return validate();" type="submit"/>
 											<input class="btn btn-signal hidden" name="submit_action" value="Verzenden" onclick="return validate();" type="submit" id="buttonNext">
-											<img src="resources/images/spinner.gif" id="spinner" class="hidden" />
+											<img src="/resources/images/spinner.gif" id="spinner" class="hidden" />
 										</div>
 									</div>
 								</div>
-							</div> <!-- .panel -->
+							</div>
+							<!-- .panel -->
 						</form>
-					</div> <!-- contentarea -->
-
-				</div> <!-- .content-area -->
-			</div> <!-- .main-content -->
-		</div> <!-- .container -->
-		<div class="container">
+					</div>
+					<!-- contentarea -->
+				</div>
+				<!-- .content-area -->
+			</div>
+			<!-- .main-content -->
+		</div>
+		<!-- .container -->
+		<div class="container marginTop">
 			<footer>
 				<div class="clearfix">
 					<div class="pull-left">
 						<ul class="linkList-hor">
-							<li><a href="services.html">Diensten</a></li>
-							<li><a href="partners.html">Partners</a></li>
 							<li><a href="about_us.html">Over ons</a></li>
 						</ul>
 					</div>
@@ -378,15 +377,16 @@
 				</div>
 				<div id="cookieStatus"></div>
 			</footer>
-		</div> <!-- footer -->
+		</div>
+		<!-- .container -->
 		<script src="resources/scripts/prototype.js"></script>
 		<script src="resources/scripts/yrtools.js"></script>
 		<script src="resources/scripts/yrsession.js"></script>
 		<script src="resources/scripts/validation.js"></script>
 		<script src="resources/scripts/yr-cookiebar.js"></script>
-		<script src="resources/40114112001/eforms/eforms.js"> </script>
-		<script src="resources/40114112001/eforms/formatDate.js"> </script>
-		<script src="resources/40114112001/eforms/util.js"> </script>
+		<script src="/f/resources/40114112001/eforms/eforms.js"> </script>
+		<script src="/f/resources/40114112001/eforms/formatDate.js"> </script>
+		<script src="/f/resources/40114112001/eforms/util.js"> </script>
 		<script type="text/javascript">
 			//<![CDATA[
 				(function() {
@@ -462,10 +462,13 @@
 		</script>
 		<script type="text/javascript">
 			//<![CDATA[
-				var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-				g.src='//www.google-analytics.com/ga.js';
-				s.parentNode.insertBefore(g,s)}(document,'script'));
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-57246761-1', 'auto');
+				ga('send', 'pageview');
 			//]]>
 		</script>
 	</body>

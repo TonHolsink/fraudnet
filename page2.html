@@ -14,7 +14,7 @@
 		<meta name="robots" content="noindex"/>
 		<meta name="author" content="YourRequest BV"/>
 		<link rel="icon" href="resources/images/favicon.ico"/>
-		<title>FraudNet</title>
+		<title>Fraudnet</title>
 		<link rel="stylesheet" type="text/css" media="all" href="resources/styles/style.css" />
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,30 +23,33 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body>
+	<body
+		>
 		<!--[if lt IE 7]>
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 		<div class="container pageHeader">
 			<div class="clearfix">
 				<div class="pull-left">
-					<a class="" href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
+					<a href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
 				</div>
+				<!-- .pull-left -->
 				<div class="pull-right">
-					<ul class="linkList-hor ">
+					<ul class="linkList-hor">
 						<li><a href="index.html" title="Home">Home</a></li>
-						<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
 						<li><a href="information.html" title="Informatie">Informatie</a></li>
 					</ul>
-				</div> <!-- #topMenu -->
+				</div>
+				<!-- .pull-right -->
 			</div>
 			<div class="headerStripe"></div>
-		</div> <!-- container -->
+			<div id="messageBlock">
+			</div>
+		</div>
+		<!-- container -->
 		<div class="container">
 			<div class="main-content">
-				<div class="content-area" style="min-height: 400px !important;">
-					<div id="messageBlock"></div>
-
+				<div class="content-area">
 					<div id="flowcontainer" class="flowcontainer">
 						<span class="label saved">
 						<a class="innermenuitem" href="#" onclick="javascript:checkDialogSubmitCount(1);">
@@ -80,178 +83,171 @@
 					</script>
 					<div id="tabs"></div>
 					<div id="eformsContent" class="eformsContent">
-						<form id="dialog" class="form form-horizontal" action="formPage.html" method="post" enctype="multipart/form-data" name="eform">
-							<input type="hidden" name="supplier" value="20107101901"/>
+						<form  id="dialog" class="form form-horizontal" action="formPage.html" method="post" enctype="multipart/form-data" name="eform">
+							<input type="hidden" name="supplier" value="40114112001"/>
 							<div class="page-header">
 								<h1 id="pageTitle">Melding Internetoplichting</h1>
 							</div>
 							<p id="errorhandle"></p>
-							<input type="hidden" name="dialogSessionId" value="9523e402-12ba-48b6-9c46-68fdba5bf006"/>
+							<input type="hidden" name="dialogSessionId" value="262602a3-a1a2-406c-8732-f65ee928c236"/>
 							<input type="hidden" name="formName" value="ifaangifte"/>
 							<input type="hidden" name="pageNumber" value="2"/>
 							<input type="hidden" name="formCode" value=""/>
 							<div class="panel panel-forms">
 								<div class="panel-heading">Gegevens wederpartij</div>
 								<div class="panel-body">
-									<div class="form-group form-inline">
-										<div class="col-sm-12">
-											<span class="infotext">
-											Met wederpartij wordt de tegenpartij bedoeld: de persoon die zijn of haar afspraken met u niet is nagekomen.<br/>
-											</span>
+									<div class="form-group formrowtext">
+										<div class="infotext">
+											Met wederpartij wordt de tegenpartij bedoeld: de persoon die zijn of haar afspraken met u niet is nagekomen.
+										</div>
+									</div>
+									<div class="form-group formrowtext">
+										<div class="infotext">
+											<p>
+												Vul onderstaande velden zo volledig en accuraat als mogelijk in. Wij wijzen u erop dat de melding correct en naar waarheid dient te worden ingevuld.
+											</p>
+											<p>
+												Velden met een <i class="mandatory"></i> zijn verplicht. Door met de muis op de <i class="ietje"></i> te staan, krijgt u extra informatie die u kan helpen bij het invullen van het antwoord.
+											</p>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="col-sm-12">
-											<span class="infotext">
-											Vul onderstaande velden zo volledig en accuraat als mogelijk in. Wij wijzen u erop dat de melding correct en naar waarheid dient te worden ingevuld.<br/><br/>
-											Velden met een <i class="mandatory"></i> zijn verplicht. Door met de muis op de <i class="ietje"></i> te staan, krijgt u extra informatie die u kan helpen bij het invullen van het antwoord.
-											</span>
-										</div>
-									</div>
-									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_firstname"></span>
-										<div class="col-sm-4">
+										<div class="errortext" id="error_wp_firstname"></div>
+										<div class="dialogquestion">
 											<label class="control-label">Voorna(a)m(en)</label>
 										</div>
-										<div class="col-sm-8">
+										<div class="dialoganswer">
 											<input name="wp_firstname" size="50" maxlength="100" value="" title="" type="text" class="form-control"/>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="col-sm-4">
+										<div class="dialogquestion">
 											<label class="control-label">Tussenvoegsel(s)</label>
 											<i title="Bijvoorbeeld de, van, van der of el." class="ietje"></i>
 										</div>
-										<div class="col-sm-8">
+										<div class="dialoganswer">
 											<input name="wp_middlename" size="10" maxlength="10" value="" title="Bijvoorbeeld de, van, van der of el." type="text" class="form-control"/>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_lastname"></span>
-										<div class="col-sm-4">
+										<div class="errortext" id="error_wp_lastname"></div>
+										<div class="dialogquestion">
 											<label class="control-label">Achternaam</label>
 										</div>
-										<div class="col-sm-8">
+										<div class="dialoganswer">
 											<input name="wp_lastname" size="50" maxlength="100" value="" title="" type="text" class="form-control"/>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_username"></span>
-										<div class="col-sm-4">
+										<div class="errortext" id="error_wp_username"></div>
+										<div class="dialogquestion">
 											<label class="control-label">Gebruikersnaam handelssite</label>
 										</div>
-										<div class="col-sm-8">
+										<div class="dialoganswer">
 											<input name="wp_username" size="30" maxlength="30" value="" title="" type="text" class="form-control"/>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_email"></span>
-										<div class="col-sm-4">
+										<div class="errortext" id="error_wp_email"></div>
+										<div class="dialogquestion">
 											<label class="control-label">E-mailadres wederpartij</label>
 											<i title="Als u het e-mailadres niet meer weet kunt u hier 'onbekend@onbekend.nl' invullen." class="ietje"></i>
 											<i class="mandatory"></i>
 										</div>
-										<div class="col-sm-8">
+										<div class="dialoganswer">
 											<input name="wp_email" size="50" maxlength="50" value="" title="" type="text" class="form-control required validate-email"/>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_postal"></span>
-										<div class="col-sm-4">
-											<label class="control-label">Postcode</label>
-											<i title="Gebruik geen spatie. Bijvoorbeeld 1234AB." class="ietje"></i>
-										</div>
-										<div class="col-sm-8">
-											<input name="wp_postal" size="6" maxlength="6" value="" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" class="form-control validate-postal"/>
-											&nbsp;<span class="grayed">(1234AA)</span>
-										</div>
-									</div>
-									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_housenumber"></span>
-										<div class="col-sm-4">
-											<label class="control-label">Huisnummer</label>
-											<i title="Vul alleen cijfers in." class="ietje"></i>
-										</div>
-										<div class="col-sm-8">
-											<input name="wp_housenumber" size="10" maxlength="5" value="" title="Vul alleen cijfers in." onkeypress="return AllowOnlyNumeric(event)" type="text" onBlur="getAddress()" class="form-control"/>
-										</div>
-									</div>
-									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_housenumber_addon"></span>
-										<div class="col-sm-4">
-											<label class="control-label">Huisnummer toevoeging</label>
-											<i title="Bijvoorbeeld II of bis." class="ietje"></i>
-										</div>
-										<div class="col-sm-8">
-											<input name="wp_housenumber_addon" size="5" maxlength="4" onkeypress="return AllowAlphaNumeric(event)" value="" title="Bijvoorbeeld II of bis." type="text" class="form-control"/>
-										</div>
-									</div>
-									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_street"></span>
-										<div class="col-sm-4">
+										<div class="errortext" id="error_wp_street"></div>
+										<div class="dialogquestion">
 											<label class="control-label">Straat</label>
 										</div>
-										<div class="col-sm-8">
+										<div class="dialoganswer">
 											<input name="wp_street" size="30" maxlength="35" value="" title="" type="text" class="form-control"/>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_place"></span>
-										<div class="col-sm-4">
-											<label class="control-label">Woonplaats</label>
+										<div class="errortext" id="error_wp_housenumber"></div>
+										<div class="dialogquestion">
+											<label class="control-label">Huisnummer</label>
+											<i title="Vul alleen cijfers in." class="ietje"></i>
 										</div>
-										<div class="col-sm-8">
-											<input name="wp_place" size="30" maxlength="24" value="" title="" type="text" class="form-control"/>
+										<div class="dialoganswer">
+											<input name="wp_housenumber" size="10" maxlength="5" value="" title="Vul alleen cijfers in." onkeypress="return AllowOnlyNumeric(event)" type="text" onBlur="getAddress()" class="form-control"/>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_country"></span>
-										<div class="col-sm-4">
+										<div class="errortext" id="error_wp_housenumber_addon"></div>
+										<div class="dialogquestion">
+											<label class="control-label">Huisnummer toevoeging</label>
+											<i title="Bijvoorbeeld II of bis." class="ietje"></i>
+										</div>
+										<div class="dialoganswer">
+											<input name="wp_housenumber_addon" size="5" maxlength="4" onkeypress="return AllowAlphaNumeric(event)" value="" title="Bijvoorbeeld II of bis." type="text" class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<div class="errortext" id="error_wp_postal"></div>
+										<div class="errortext" id="error_wp_place"></div>
+										<div class="dialogquestion">
+											<label class="control-label">Postcode en woonplaats</label>
+											<i title="Postcode: Gebruik geen spatie. Bijvoorbeeld 1234AB." class="ietje"></i>
+										</div>
+										<div class="dialoganswer">
+											<input name="wp_postal" size="6" maxlength="6" value="" placeholder="Postcode" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" class="form-control validate-postal"/>
+											<span class="grayed">(1234AA)</span>
+											<input name="wp_place" size="30" maxlength="24" value="" placeholder="Woonplaats" title="" type="text" class="form-control"/>
+										</div>
+									</div>
+									<div class="form-group form-inline">
+										<div class="errortext" id="error_wp_country"></div>
+										<div class="dialogquestion">
 											<label class="control-label">Land</label>
 										</div>
-										<div class="col-sm-8">
+										<div class="dialoganswer">
 											<input name="wp_country" size="10" maxlength="10" value="" title="" type="text" class="form-control"/>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_phone"></span>
-										<div class="col-sm-4">
+										<div class="errortext" id="error_wp_phone"></div>
+										<div class="dialogquestion">
 											<label class="control-label">Telefoonnummer</label>
 											<i title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." class="ietje"></i>
 										</div>
-										<div class="col-sm-8">
+										<div class="dialoganswer">
 											<input name="wp_phone" size="10" maxlength="10" value="" onkeypress="return AllowOnlyNumeric(event)" title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" class="form-control validate-phone"/>
 											<span class="grayed">(0201234567)</span>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_mobile"></span>
-										<div class="col-sm-4">
+										<div class="errortext" id="error_wp_mobile"></div>
+										<div class="dialogquestion">
 											<label class="control-label">Mobiele telefoonnummer</label>
 											<i title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." class="ietje"></i>
 										</div>
-										<div class="col-sm-8">
+										<div class="dialoganswer">
 											<input name="wp_mobile" size="10" maxlength="10" value="" onkeypress="return AllowOnlyNumeric(event)" title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" class="form-control validate-phone"/>
 											<span class="grayed">(0612345678)</span>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_wp_ipaddress"></span>
-										<div class="col-sm-4">
+										<div class="errortext" id="error_wp_ipaddress"></div>
+										<div class="dialogquestion">
 											<label class="control-label">IP adres</label>
 											<i title="Dit is een nummer waarmee elke computer die verbonden is met het internet, zichtbaar is voor alle andere computers die online zijn. Bijvoorbeeld: 145.119.165.102. De volgende adressen invullen heeft geen zin, omdat dit bekende mailservers zijn : 10.X.X.X, 65.54.X.X, 65.55.X.X, 195.78.85.X, 209.85.X.X, 212.54.42.X" class="ietje"></i>
 										</div>
-										<div class="col-sm-8">
+										<div class="dialoganswer">
 											<input name="wp_ipaddress" size="15" maxlength="15" value="" title="Vul een up nummer in, bijvoorbeeld : 192.168.0.1. Gebruik alleen cijfers en punten. De volgende adressen invullen heeft geen zin, omdat dit bekende mailservers zijn : 10.X.X.X, 65.54.X.X, 65.55.X.X, 195.78.85.X, 209.85.X.X, 212.54.42.X " type="text" class="form-control validate-ip"/>
 										</div>
 									</div>
 									<div class="form-group form-inline" id="feedback_wederpartij">
-										<span class="errortext" id="error_feedback_wederpartij"></span>
-										<div class="col-sm-4">
+										<div class="errortext" id="error_feedback_wederpartij"></div>
+										<div class="dialogquestion">
 											<label class="control-label">Mogen wij uw e-mailadres verstrekken aan de wederpartij zodat zij het geschil met u op kunnen lossen? Als u "nee" kiest krijgt de wederpartij geen melding van de door u gedane aangifte.</label>
 											<i class="mandatory"></i>
 										</div>
-										<div class="col-sm-8">
+										<div class="dialoganswer">
 											<label class="radio-inline">
 											<input name="feedback_wederpartij" value="Y" type="radio" class="s20 validate-one-required">
 											Ja
@@ -266,11 +262,7 @@
 								<!-- .panel-body -->
 								<div class="panel-footer">
 									<div class="form-group form-inline hidden" id="general_error">
-										<div class="col-sm-12">
-											<span class="errortext" id="error_street">
-											! U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.
-											</span>
-										</div>
+										<div class="errortext">! U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.</div>
 									</div>
 									<div class="form-group form-inline">
 										<div class="forminput">
@@ -284,20 +276,22 @@
 									</div>
 								</div>
 								<!-- .panel-footer -->
-							</div> <!-- .panel -->
+							</div>
+							<!-- .panel -->
 						</form>
-					</div> <!-- contentarea -->
-
-				</div> <!-- .content-area -->
-			</div> <!-- .main-content -->
-		</div> <!-- .container -->
-		<div class="container">
+					</div>
+					<!-- contentarea -->
+				</div>
+				<!-- .content-area -->
+			</div>
+			<!-- .main-content -->
+		</div>
+		<!-- .container -->
+		<div class="container marginTop">
 			<footer>
 				<div class="clearfix">
 					<div class="pull-left">
 						<ul class="linkList-hor">
-							<li><a href="services.html">Diensten</a></li>
-							<li><a href="partners.html">Partners</a></li>
 							<li><a href="about_us.html">Over ons</a></li>
 						</ul>
 					</div>
@@ -314,15 +308,16 @@
 				</div>
 				<div id="cookieStatus"></div>
 			</footer>
-		</div> <!-- footer -->
+		</div>
+		<!-- .container -->
 		<script src="resources/scripts/prototype.js"></script>
 		<script src="resources/scripts/yrtools.js"></script>
 		<script src="resources/scripts/yrsession.js"></script>
 		<script src="resources/scripts/validation.js"></script>
 		<script src="resources/scripts/yr-cookiebar.js"></script>
-		<script src="resources/40114112001/eforms/eforms.js"> </script>
-		<script src="resources/40114112001/eforms/formatDate.js"> </script>
-		<script src="resources/40114112001/eforms/util.js"> </script>
+		<script src="/f/resources/40114112001/eforms/eforms.js"> </script>
+		<script src="/f/resources/40114112001/eforms/formatDate.js"> </script>
+		<script src="/f/resources/40114112001/eforms/util.js"> </script>
 		<script type="text/javascript">
 			//<![CDATA[
 				(function() {
@@ -366,7 +361,7 @@
 								url,
 								{
 									method: 'get',
-									parameters: 'supplierid=20107101901&postal=' + postalCode + "|" + houseNumber,
+									parameters: 'supplierid=40114112001&postal=' + postalCode + "|" + houseNumber,
 								 	onComplete: setAddress
 								}
 							);
@@ -419,10 +414,13 @@
 		</script>
 		<script type="text/javascript">
 			//<![CDATA[
-				var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-				g.src='//www.google-analytics.com/ga.js';
-				s.parentNode.insertBefore(g,s)}(document,'script'));
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-57246761-1', 'auto');
+				ga('send', 'pageview');
 			//]]>
 		</script>
 	</body>

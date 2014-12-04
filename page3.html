@@ -14,7 +14,7 @@
 		<meta name="robots" content="noindex"/>
 		<meta name="author" content="YourRequest BV"/>
 		<link rel="icon" href="resources/images/favicon.ico"/>
-		<title>FraudNet</title>
+		<title>Fraudnet</title>
 		<link rel="stylesheet" type="text/css" media="all" href="resources/styles/style.css" />
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,31 +23,33 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body>
+	<body
+		>
 		<!--[if lt IE 7]>
 		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
 		<div class="container pageHeader">
 			<div class="clearfix">
 				<div class="pull-left">
-					<a class="" href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
+					<a href="/f/index.html"><img src="resources/images/fraudnet-logo.png" /></a>
 				</div>
+				<!-- .pull-left -->
 				<div class="pull-right">
-					<ul class="linkList-hor ">
+					<ul class="linkList-hor">
 						<li><a href="index.html" title="Home">Home</a></li>
-						<li><a href="zaken.html?serviceID=200" title="Meldingen">Meldingen</a></li>
 						<li><a href="information.html" title="Informatie">Informatie</a></li>
 					</ul>
-				</div> <!-- #topMenu -->
+				</div>
+				<!-- .pull-right -->
 			</div>
 			<div class="headerStripe"></div>
-		</div> <!-- container -->
+			<div id="messageBlock">
+			</div>
+		</div>
+		<!-- container -->
 		<div class="container">
 			<div class="main-content">
-				<div class="content-area" style="min-height: 400px !important;">
-					<div id="messageBlock"></div>
-
-
+				<div class="content-area">
 					<div id="flowcontainer" class="flowcontainer">
 						<span class="label saved">
 						<a class="innermenuitem" href="#" onclick="javascript:checkDialogSubmitCount(1);">
@@ -84,30 +86,32 @@
 					<div id="tabs"></div>
 					<div id="eformsContent" class="eformsContent">
 						<form  id="dialog" class="form form-horizontal" action="formPage.html" method="post" enctype="multipart/form-data" name="eform">
-							<input type="hidden" name="supplier" value="20107101901"/>
+							<input type="hidden" name="supplier" value="40114112001"/>
 							<div class="page-header">
 								<h1 id="pageTitle">Melding Internetoplichting</h1>
 							</div>
 							<p id="errorhandle"></p>
-							<input type="hidden" name="dialogSessionId" value="9523e402-12ba-48b6-9c46-68fdba5bf006"/>
+							<input type="hidden" name="dialogSessionId" value="262602a3-a1a2-406c-8732-f65ee928c236"/>
 							<input type="hidden" name="formName" value="ifaangifte"/>
 							<input type="hidden" name="pageNumber" value="3"/>
 							<input type="hidden" name="formCode" value=""/>
 							<div class="panel panel-forms">
 								<div class="panel-heading">Transactiegegevens</div>
 								<div class="panel-body">
-									<div class="form-group form-inline">
-										<div class="col-sm-12">
-											<span class="infotext">
-											Vul onderstaande velden zo volledig en accuraat als mogelijk in. Wij wijzen u erop dat de melding correct en naar waarheid dient te worden ingevuld.<br/><br/>
-											Velden met een <i class="mandatory"></i> zijn verplicht. Door met de muis op de <i class="ietje"></i> te staan, krijgt u extra informatie die u kan helpen bij het invullen van het antwoord.
-											</span>
+									<div class="form-group formrowtext">
+										<div class="infotext">
+											<p>
+												Vul onderstaande velden zo volledig en accuraat als mogelijk in. Wij wijzen u erop dat de melding correct en naar waarheid dient te worden ingevuld.
+											</p>
+											<p>
+												Velden met een <i class="mandatory"></i> zijn verplicht. Door met de muis op de <i class="ietje"></i> te staan, krijgt u extra informatie die u kan helpen bij het invullen van het antwoord.
+											</p>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_site_url"></span>
+										<div class="errortext" id="error_site_url"></div>
 										<div class="dialogquestion">
-											Betreft het een handelssite?
+											<label class="control-label">Betreft het een handelssite?</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
@@ -135,13 +139,13 @@
 										</div>
 									</div>
 									<div class="form-group form-inline" id="referrer_row" style="display:none">
-										<span class="errortext" id="error_referrer"></span>
+										<div class="errortext" id="error_referrer"></div>
 										<div class="dialogquestion">
-											Hoe bent u hier terechtgekomen?
+											<label class="control-label">Hoe bent u hier terechtgekomen?</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<select class="form-control" name="referrer" size="" onchange="javascript:check_referrer_url(this)">
+											<select name="referrer" size="" onchange="javascript:check_referrer_url(this)" class="form-control">
 												<option class="input" value="">Kies...</option>
 												<option class="input" value="Rechstreeks" id="Rechstreeks">Rechstreeks</option>
 												<option class="input" value="">--------------------</option>
@@ -169,23 +173,25 @@
 									<!-- mag worden doorgegeven mogelijk later weer nodig. ****************************************** -->
 									<!-- OOK GEDEELTE PAG 4 UITGEREMD ***************************************************************
 										<div class="form-group form-inline" id="phone_mp" style="display:none;">
-											<span class="errortext" id="error_phone_mp"></span>
+											<div class="errortext" id="error_phone_mp"></div>
 											<div class="dialogquestion">
 												Mogen wij uw telefoonnummer doorgeven aan Marktplaats.nl zodat zij indien nodig contact met u kunnen opnemen?
 											</div>
 											<div class="dialoganswer">
-												<span class="optionSpan">
+												<label class="radio-inline">
 
 
 														<input name="phone_mp" value="Ja" type="radio" class="s20 validate-one-required"/>
 
-													<label class="optionhor">Ja</label>
+													Ja
+												</label>
+												<label class="radio-inline">
 
 
 														<input name="phone_mp" value="Nee" type="radio" class="s20 validate-one-required"/>
 
-													<label class="phone_mp">Nee</label>
-												</span>
+													Nee
+												</label>
 											</div>
 										</div>
 
@@ -193,9 +199,9 @@
 									<!-- ******************************************************************************************** -->
 									<!-- ******************************************************************************************** -->
 									<div class="form-group form-inline" id="otherurl" style="display:none;">
-										<span class="errortext" id="error_site_url_other"></span>
+										<div class="errortext" id="error_site_url_other"></div>
 										<div class="dialogquestion">
-											De webshop URL
+											<label class="control-label">De webshop URL</label>
 											<i class="ietje" title="Vul hier de domeinnaam van de webwinkel in. Doe dit zo volledig mogelijk maar zonder een specifieke pagina op te geven. Dus bv. www.eenwinkel.nl of www.winkels.nl/mijnwinkel."></i>
 											<i class="mandatory"></i>
 										</div>
@@ -204,33 +210,33 @@
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_adverttitle"></span>
+										<div class="errortext" id="error_adverttitle"></div>
 										<div class="dialogquestion">
-											Advertentietitel
+											<label class="control-label">Advertentietitel</label>
 										</div>
 										<div class="dialoganswer">
 											<input name="adverttitle" size="50" maxlength="50" value="" type="text" class="form-control"/>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_advertnumber"></span>
+										<div class="errortext" id="error_advertnumber"></div>
 										<div class="dialogquestion" id="advertnum_required">
-											Advertentienummer
+											<label class="control-label">Advertentienummer</label>
 											<i class="ietje" title="Het advertentienummer is het unieke nummer waarmee u een advertentie kunt herkennen. Bij Marktplaats.nl staat het advertentienummer bijvoorbeeld rechts bovenaan de pagina. Als u het advertentienummer niet meer heeft, kunt u hier 'onbekend' invullen."></i>
 											<i class="mandatory" id="adnumreqstar"></i>
 										</div>
 										<div class="dialogquestion" id="advertnum_notrequired">
-											Advertentienummer
+											<label class="control-label">Advertentienummer</label>
 											<i class="ietje" title="Het advertentienummer is het unieke nummer waarmee u een advertentie kunt herkennen. Bij Marktplaats.nl staat het advertentienummer bijvoorbeeld rechts bovenaan de pagina. Als u het advertentienummer niet meer heeft, kunt u hier 'onbekend' invullen."></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="advertnumber" size="30" maxlength="30" value="" type="text" onkeypress="return AllowAlphaNumeric(event)" id="advertnum_input" class="form-control" />
+											<input name="advertnumber" size="30" maxlength="30" value="" type="text" onkeypress="return AllowAlphaNumeric(event)" id="advertnum_input" class="form-control"/>
 										</div>
 									</div>
-									<div class="form-group form-inline">
-										<span class="errortext" id="error_description"></span>
+									<div class="form-group">
+										<div class="errortext" id="error_description"></div>
 										<div class="dialogquestion">
-											Omschrijving conflict in maximaal 750 tekens
+											<label class="control-label">Omschrijving conflict in maximaal 750 tekens</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
@@ -238,43 +244,46 @@
 										</div>
 										<div id="description_wordcount"></div>
 									</div>
-									<div class="form-group form-inline">
-										<span class="errortext" id="error_description_extra"></span>
+									<div class="form-group">
+										<div class="errortext" id="error_description_extra"></div>
 										<div class="dialogquestion">
-											Aanvullende informatie
+											<label class="control-label">Aanvullende informatie</label>
 											<i class="ietje" title="Heeft u nog opmerkingen of andere relevante informatie met betrekking tot uw melding? Is u bijvoorbeeld iets opgevallen aan de adverteerder, zijn advertentie of personalia? U kunt dit hier invullen"></i>
 										</div>
 										<div class="dialoganswer">
-											<textarea name="description_extra" cols="39" rows="8" onkeypress="checkMaxFieldLength(this, 500)" class="form-control"></textarea>
+											<textarea class="form-control" name="description_extra" cols="39" rows="8" onkeypress="checkMaxFieldLength(this, 500)"></textarea>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_paymentdate"></span>
+										<div class="errortext" id="error_paymentdate"></div>
 										<div class="dialogquestion">
-											Datum betaling
+											<label class="control-label">Datum betaling</label>
 										</div>
 										<div class="dialoganswer">
-											<input name="paymentdate" maxlength="12" size="12" type="text" readonly value="" class="form-control"/>
-											<a href="#" onClick="inputCal.select(document.forms[0].paymentdate,'pdlink','dd-MM-yyyy'); return false;" name="pdlink" id="pdlink">
-											Selecteer hier een datum
-											</a>
+											<div class="input-group">
+												<input name="paymentdate" maxlength="12" size="12" type="text" readonly value="" class="form-control"/>
+												<span class="input-group-btn"><button type="button" class="btn btn-default" title="Selecteer hier een datum" onclick="inputCal.select(document.forms[0].paymentdate,'pdlink','dd-MM-yyyy'); return false;" id="pdlink"><i class="fa fa-calendar fa-fw"></i></button></span>
+											</div>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_amount"></span>
+										<div class="errortext" id="error_amount"></div>
 										<div class="dialogquestion">
-											Bedrag aankoop
+											<label class="control-label">Bedrag aankoop</label>
 											<i class="mandatory"></i>
 											<span class="grayed">(&euro;99,99)</span>
 										</div>
 										<div class="dialoganswer">
-											&euro;&nbsp;<input name="amount" size="30" maxlength="30" value="" type="text" class="form-control required validate-amount"/>
+											<div class="input-group">
+												<span class="input-group-addon"><i class="fa fa-euro fa-fw"></i></span>
+												<input name="amount" size="30" maxlength="30" value="" type="text" class="form-control required validate-amount"/>
+											</div>
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<span class="errortext" id="error_paymentmethod"></span>
+										<div class="errortext" id="error_paymentmethod"></div>
 										<div class="dialogquestion">
-											Betalingsmethode
+											<label class="control-label">Betalingsmethode</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
@@ -292,9 +301,9 @@
 										</div>
 									</div>
 									<div class="form-group form-inline" id="othertype" style="display:none;">
-										<span class="errortext" id="error_paymentmethod_other"></span>
+										<div class="errortext" id="error_paymentmethod_other"></div>
 										<div class="dialogquestion">
-											Namelijk
+											<label class="control-label">Namelijk</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
@@ -302,9 +311,9 @@
 										</div>
 									</div>
 									<div class="form-group form-inline" id="paypalnameid" style="display:none;">
-										<span class="errortext" id="error_paypalname"></span>
+										<div class="errortext" id="error_paypalname"></div>
 										<div class="dialogquestion">
-											Paypal e-mailadres wederpartij
+											<label class="control-label">Paypal e-mailadres wederpartij</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
@@ -312,9 +321,9 @@
 										</div>
 									</div>
 									<div class="form-group form-inline" id="accountnumberid" style="display:none;">
-										<span class="errortext" id="error_accountnumber"></span>
+										<div class="errortext" id="error_accountnumber"></div>
 										<div class="dialogquestion">
-											Bankrekeningnummer wederpartij
+											<label class="control-label">Bankrekeningnummer wederpartij</label>
 											<i id="accountnumber_help" class="ietje" title="Vul hier het IBAN- of Sepanummer van de tegenpartij in."></i>
 											<i class="mandatory"></i>
 											<div id="accountnumber_remark" class="marginTop" style="display:none;">(Alleen geldige IBAN-nummers worden geaccepteerd! Zie links met informatie over IBAN.)</div>
@@ -330,9 +339,9 @@
 										</div>
 									</div>
 									<div class="form-group form-inline" id="accountownerid" style="display:none;">
-										<span class="errortext" id="error_accountowner"></span>
+										<div class="errortext" id="error_accountowner"></div>
 										<div class="dialogquestion">
-											Naam rekeninghouder wederpartij
+											<label class="control-label">Naam rekeninghouder wederpartij</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
@@ -344,37 +353,35 @@
 								</div>
 								<!-- .panel-body -->
 								<div class="panel-footer">
-										<div class="form-group form-inline hidden" id="general_error">
-											<div class="col-sm-12">
-												<span class="errortext" id="error_street">
-												! U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.
-												</span>
-											</div>
+									<div class="form-group form-inline hidden" id="general_error">
+										<div class="errortext">! U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.</div>
+									</div>
+									<div class="form-group form-inline">
+										<div class="col-sm-12">
+											<span class="formbuttons">
+											<input class="btn btn-primary" name="submit_action" value="Vorige" onclick="return validate();" type="submit"/>
+											<input class="btn btn-primary" name="submit_action" value="Volgende" onclick="return validate();" type="submit"/>
+											</span>
 										</div>
-										<div class="form-group form-inline">
-											<div class="col-sm-12">
-												<span class="formbuttons">
-												<input class="btn btn-primary" name="submit_action" value="Vorige" onclick="return validate();" type="submit"/>
-												<input class="btn btn-primary" name="submit_action" value="Volgende" onclick="return validate();" type="submit"/>
-												</span>
-											</div>
-										</div>
-								</div> <!-- .panel-footer -->
-							</div> <!-- .panel -->
+									</div>
+								</div>
+								<!-- .panel-footer -->
+							</div>
+							<!-- .panel -->
 						</form>
-					</div> <!-- contentarea -->
-
-
-				</div> <!-- .content-area -->
-			</div> <!-- .main-content -->
-		</div> <!-- .container -->
-		<div class="container">
+					</div>
+					<!-- contentarea -->
+				</div>
+				<!-- .content-area -->
+			</div>
+			<!-- .main-content -->
+		</div>
+		<!-- .container -->
+		<div class="container marginTop">
 			<footer>
 				<div class="clearfix">
 					<div class="pull-left">
 						<ul class="linkList-hor">
-							<li><a href="services.html">Diensten</a></li>
-							<li><a href="partners.html">Partners</a></li>
 							<li><a href="about_us.html">Over ons</a></li>
 						</ul>
 					</div>
@@ -391,15 +398,16 @@
 				</div>
 				<div id="cookieStatus"></div>
 			</footer>
-		</div> <!-- footer -->
+		</div>
+		<!-- .container -->
 		<script src="resources/scripts/prototype.js"></script>
 		<script src="resources/scripts/yrtools.js"></script>
 		<script src="resources/scripts/yrsession.js"></script>
 		<script src="resources/scripts/validation.js"></script>
 		<script src="resources/scripts/yr-cookiebar.js"></script>
-		<script src="resources/40114112001/eforms/eforms.js"> </script>
-		<script src="resources/40114112001/eforms/formatDate.js"> </script>
-		<script src="resources/40114112001/eforms/util.js"> </script>
+		<script src="/f/resources/40114112001/eforms/eforms.js"> </script>
+		<script src="/f/resources/40114112001/eforms/formatDate.js"> </script>
+		<script src="/f/resources/40114112001/eforms/util.js"> </script>
 		<script type="text/javascript">
 			//<![CDATA[
 				(function() {
@@ -460,7 +468,7 @@
 						$('otherurl').style.display ='none';
 						document.forms[0].site_url_other.value = '';
 						$('referrer_row').style.display='none';
-						$('referrer_row').className='formrow';
+						$('referrer_row').className='form-group form-inline';
 						document.forms[0].referrer.value='';
 					} else {
 						$('otherurl').style.display ='none';
@@ -469,7 +477,7 @@
 						$('advertnum_input').className='form-control';
 						document.forms[0].site_url_other.value = '';
 						$('referrer_row').style.display='none';
-						$('referrer_row').className='formrow';
+						$('referrer_row').className='form-group form-inline';
 						document.forms[0].referrer.value='';
 					}
 
@@ -669,10 +677,13 @@
 		</script>
 		<script type="text/javascript">
 			//<![CDATA[
-				var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-				g.src='//www.google-analytics.com/ga.js';
-				s.parentNode.insertBefore(g,s)}(document,'script'));
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-57246761-1', 'auto');
+				ga('send', 'pageview');
 			//]]>
 		</script>
 	</body>

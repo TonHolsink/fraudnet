@@ -33,10 +33,10 @@
 			<div class="clearfix">
 				<div class="pull-left">
 					<c:if test="${pageContext.request.remoteUser != null}">
-						<a class="PageHeaderLogo" href="<c:url value='/index.html'/>"><img src="/fraudnet/resources/images/fraudnet-logo.png" /></a>
+						<a href="<c:url value='/index.html'/>"><img src="/fraudnet/resources/images/fraudnet-logo.png" /></a>
 					</c:if>
 					<c:if test="${pageContext.request.remoteUser == null}">
-						<a class="PageHeaderLogo" href="<c:url value='/index.html'/>"><img src="/fraudnet/resources/images/fraudnet-logo.png" /></a>
+						<a href="<c:url value='/index.html'/>"><img src="/fraudnet/resources/images/fraudnet-logo.png" /></a>
 					</c:if>
 				</div> <!-- .pull-left -->
 				<div class="pull-right">
@@ -98,9 +98,9 @@
 		<script src="/fraudnet/resources/scripts/validation.js"></script>
 		<script src="/fraudnet/resources/scripts/yr-cookiebar.js"></script>
 
-		<script src="<c:url value='/resources/${sessionScope.visit.formSupplier}/eforms/eforms.js'/>"> </script>
-		<script src="<c:url value='/resources/${sessionScope.visit.formSupplier}/eforms/formatDate.js'/>"> </script>
-		<script src="<c:url value='/resources/${sessionScope.visit.formSupplier}/eforms/util.js'/>"> </script>
+		<script src="<c:url value='/resources/${sessionScope.visit.supplierCode}/eforms/eforms.js'/>"> </script>
+		<script src="<c:url value='/resources/${sessionScope.visit.supplierCode}/eforms/formatDate.js'/>"> </script>
+		<script src="<c:url value='/resources/${sessionScope.visit.supplierCode}/eforms/util.js'/>"> </script>
 
 		<script type="text/javascript">
 			//<![CDATA[
