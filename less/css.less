@@ -51,6 +51,8 @@ td {vertical-align: top;}
 .default {cursor: default;}
 .under {text-decoration:underline;}
 .raquo {color: #866f3c;}
+.inline {display: inline;}
+.inline-block {display: inline-block;}
 
 a:hover .raquo {color: red;}
 img.float_left {
@@ -148,41 +150,13 @@ div#close, div.close {
 .mioBlank {background: none;}
 
 /**********************************************************************
- * Formulieren
+ * Panels
 /**********************************************************************/
-.make-basic-panel(@border; @heading-text-color; @heading-bg-color; @heading-border) {
-	.panel-variant(@border; @heading-text-color; @heading-bg-color; @heading-border);
-	.panel-heading {
-		font-size: @font-size-h4;
-	}
-	.panel-body, .panel-footer {
-		padding: 0;
-	}
-}
-
-.make-panel(@heading-bg-color, @bg-color, @heading-border: @panel-forms-border, @border: @panel-forms-border) {
-	background-color: @bg-color;
-	.make-basic-panel(@border; @panel-forms-text; @heading-bg-color; @heading-border);
-	.panel-body, .panel-footer {
-		padding: 15px;
-	}
-}
-
 .panel-brand {
 	.make-panel(lighten(@brand-primary, 65%), lighten(@brand-primary, 67%), lighten(@brand-primary, 60%), lighten(@brand-primary, 60%));
 }
 .panel-signal {
 	.make-panel(lighten(@brand-signal, 30%), lighten(@brand-signal, 35%), lighten(@brand-signal, 25%), lighten(@brand-signal, 25%));
-}
-.panel-forms {
-	.forms-gradient;
-	.make-basic-panel(@panel-forms-border; @panel-forms-text; @formrow-header-bg; @panel-forms-border);
-	td:first-child, th:first-child {
-		padding-left: 15px;
-	}
-	td:last-child, th:last-child {
-		padding-right: 15px;
-	}
 }
 /**********************************************************************
  * linkList-hor

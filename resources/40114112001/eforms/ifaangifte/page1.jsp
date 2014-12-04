@@ -111,7 +111,7 @@
 					</div>
 					<div class="dialoganswer">
 						<input name="b_date" size="10" maxlength="10" value="<c:out value="${requestScope['b_date']}"/>" placeholder="Geboortedatum" title="" type="text" class="form-control required validate-date">
-						<span class="grayed">(dd-mm-jjjj)</span>
+						<span class="help-block inline-block">(dd-mm-jjjj)</span>
 						<input name="b_place" size="30" maxlength="40" value="<c:out value="${requestScope['b_place']}"/>" placeholder="Geboorteplaats" title="" type="text" class="form-control required">
 					</div>
 				</div>
@@ -175,7 +175,7 @@
 						<i class="mandatory"></i>
 					</div>
 					<div class="dialoganswer">
-						<input name="postal" size="6" maxlength="6" value="<c:out value="${requestScope['postal']}"/>" placeholder="Postcode" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" class="form-control required validate-postal">&nbsp;<span class="grayed">(1234AA)</span>
+						<input name="postal" size="6" maxlength="6" value="<c:out value="${requestScope['postal']}"/>" placeholder="Postcode" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" class="form-control required validate-postal">&nbsp;<span class="help-block inline-block">(1234AA)</span>
 						<input name="place" size="30" maxlength="24" value="<c:out value="${requestScope['place']}"/>" placeholder="Woonplaats" title="" type="text" class="form-control required">
 					</div>
 				</div>
@@ -197,7 +197,7 @@
 					</div>
 					<div class="dialoganswer">
 						<input name="phone" size="10" maxlength="10" value="<c:out value="${requestScope['phone']}"/>" onkeypress="return AllowOnlyNumeric(event)" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" class="form-control validate-phone" />
-						<span class="grayed">(0201234567)</span>
+						<span class="help-block inline-block">(0201234567)</span>
 					</div>
 				</div>
 				<div class="form-group form-inline">
@@ -208,7 +208,7 @@
 					</div>
 					<div class="dialoganswer">
 						<input name="mobile" size="10" maxlength="10" value="<c:out value="${requestScope['mobile']}"/>" onkeypress="return AllowOnlyNumeric(event)" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" class="form-control validate-phone"/>
-						<span class="grayed">(0612345678)</span>
+						<span class="help-block inline-block">(0612345678)</span>
 					</div>
 				</div>
 			</div> <!-- .panel-body -->

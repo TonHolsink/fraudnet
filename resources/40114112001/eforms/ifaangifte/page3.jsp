@@ -197,7 +197,7 @@
 					<div class="dialogquestion">
 						<label class="control-label">Bedrag aankoop</label>
 						<i class="mandatory"></i>
-						<span class="grayed">(&euro;99,99)</span>
+						<span class="help-block inline-block">(&euro;99,99)</span>
 					</div>
 					<div class="dialoganswer">
 						<div class="input-group">

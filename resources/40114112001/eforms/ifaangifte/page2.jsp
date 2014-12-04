@@ -116,7 +116,7 @@
 					</div>
 					<div class="dialoganswer">
 						<input name="wp_postal" size="6" maxlength="6" value="<c:out value="${requestScope['wp_postal']}"/>" placeholder="Postcode" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" class="form-control validate-postal"/>
-						<span class="grayed">(1234AA)</span>
+						<span class="help-block inline-block">(1234AA)</span>
 						<input name="wp_place" size="30" maxlength="24" value="<c:out value="${requestScope['wp_place']}"/>" placeholder="Woonplaats" title="" type="text" class="form-control"/>
 					</div>
 				</div>
@@ -137,7 +137,7 @@
 					</div>
 					<div class="dialoganswer">
 						<input name="wp_phone" size="10" maxlength="10" value="<c:out value="${requestScope['wp_phone']}"/>" onkeypress="return AllowOnlyNumeric(event)" title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" class="form-control validate-phone"/>
-						<span class="grayed">(0201234567)</span>
+						<span class="help-block inline-block">(0201234567)</span>
 					</div>
 				</div>
 				<div class="form-group form-inline">
@@ -148,7 +148,7 @@
 					</div>
 					<div class="dialoganswer">
 						<input name="wp_mobile" size="10" maxlength="10" value="<c:out value="${requestScope['wp_mobile']}"/>" onkeypress="return AllowOnlyNumeric(event)" title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" class="form-control validate-phone"/>
-						<span class="grayed">(0612345678)</span>
+						<span class="help-block inline-block">(0612345678)</span>
 					</div>
 				</div>
 				<div class="form-group form-inline">
