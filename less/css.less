@@ -173,32 +173,35 @@ div#close, div.close {
 /**********************************************************************
  * Formulieren
 /**********************************************************************/
-.make-panel(@border; @heading-text-color; @heading-bg-color; @heading-border) {
+.make-basic-panel(@border; @heading-text-color; @heading-bg-color; @heading-border) {
 	.panel-variant(@border; @heading-text-color; @heading-bg-color; @heading-border);
 	.panel-heading {
 		font-size: @font-size-h4;
 	}
+	.panel-body, .panel-footer {
+		padding: 0;
+	}
 }
 
-.make-basic-panel(@heading-bg-color, @bg-color, @heading-border, @border) {
+.make-panel(@heading-bg-color, @bg-color, @heading-border, @border) {
 	background-color: @bg-color;
-	.make-panel(@border; @panel-forms-text; @heading-bg-color; @heading-border);
+	.make-basic-panel(@border; @panel-forms-text; @heading-bg-color; @heading-border);
 	.panel-body, .panel-footer {
 		padding: 15px;
 	}
 }
 
 .panel-brand {
-	.make-basic-panel(lighten(@brand-primary, 65%), lighten(@brand-primary, 67%), lighten(@brand-primary, 60%), lighten(@brand-primary, 60%));
+	.make-panel(lighten(@brand-primary, 65%), lighten(@brand-primary, 67%), lighten(@brand-primary, 60%), lighten(@brand-primary, 60%));
 }
 
 .panel-signal {
-	.make-basic-panel(lighten(@brand-signal, 30%), lighten(@brand-signal, 35%), lighten(@brand-signal, 25%), lighten(@brand-signal, 25%));
+	.make-panel(lighten(@brand-signal, 30%), lighten(@brand-signal, 35%), lighten(@brand-signal, 25%), lighten(@brand-signal, 25%));
 }
 
 .panel-forms {
 	.forms-gradient;
-	.make-panel(@panel-forms-border; @panel-forms-text; @panel-forms-heading-bg; @panel-forms-border);
+	.make-basic-panel(@panel-forms-border; @panel-forms-text; @panel-forms-heading-bg; @panel-forms-border);
 	.panel-header {
 		background-color: @formrow-header-bg;
 	}
