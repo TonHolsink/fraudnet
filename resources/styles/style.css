@@ -7740,9 +7740,9 @@ button.close {
  * MIXINS
  *************************************************************/
 .forms-gradient {
-  background-image: -webkit-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: -o-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: linear-gradient(to right, #ffffff 40%, #ececec 80%);
+  background-image: -webkit-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: -o-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: linear-gradient(to right, white 40%, #ececec 80%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffececec', GradientType=1);
 }
@@ -8046,6 +8046,9 @@ div.close {
 .panel-brand .panel-footer {
   padding: 0;
 }
+.panel-brand .panel-footer {
+  background-color: #e5e5ff;
+}
 .panel-brand .panel-body,
 .panel-brand .panel-footer {
   padding: 15px;
@@ -8075,6 +8078,9 @@ div.close {
 .panel-signal .panel-body,
 .panel-signal .panel-footer {
   padding: 0;
+}
+.panel-signal .panel-footer {
+  background-color: #ffeb99;
 }
 .panel-signal .panel-body,
 .panel-signal .panel-footer {
@@ -8164,15 +8170,23 @@ fieldset[disabled] .btn-signal.active {
   }
 }
 @media (min-width: 992px) {
-  .checkPanel,
   #miopreventionFormDiv {
     min-height: 386px;
   }
 }
 @media (min-width: 1200px) {
-  .checkPanel,
   #miopreventionFormDiv {
     min-height: 364px;
+  }
+}
+@media (min-width: 992px) {
+  #miopreventionMeldingDiv {
+    min-height: 496px;
+  }
+}
+@media (min-width: 1200px) {
+  #miopreventionMeldingDiv {
+    min-height: 474px;
   }
 }
 /*************************************************************
@@ -8369,9 +8383,9 @@ textarea.formrow textarea {
   }
 }
 .panel-forms {
-  background-image: -webkit-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: -o-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: linear-gradient(to right, #ffffff 40%, #ececec 80%);
+  background-image: -webkit-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: -o-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: linear-gradient(to right, white 40%, #ececec 80%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffececec', GradientType=1);
   border-color: #dddddd;
@@ -8397,6 +8411,9 @@ textarea.formrow textarea {
 .panel-forms .panel-body,
 .panel-forms .panel-footer {
   padding: 0;
+}
+.panel-forms .panel-footer {
+  background-color: #ececec;
 }
 .panel-forms .form-group,
 .panel-forms .formrow {

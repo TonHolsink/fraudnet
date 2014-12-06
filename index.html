@@ -39,98 +39,94 @@
 						<li><a href="index.html" title="Home">Home</a></li>
 						<li><a href="information.html" title="Informatie">Informatie</a></li>
 					</ul>
-				</div>
-				<!-- .pull-right -->
+				</div> <!-- .pull-right -->
 			</div>
 			<div class="headerStripe"></div>
 			<div id="messageBlock">
 			</div>
-		</div>
-		<!-- container -->
+		</div> <!-- container -->
 		<div class="container">
 			<div class="main-content">
 				<div class="content-area">
 					<div class="page-header">
 						<h1 id="pageTitle">Internetoplichting</h1>
 					</div>
-					<div id="mioprevention">
-						<h2>Check (ver)koper</h2>
-						<p>
-							Voordat u een transactie met elkaar aangaat via een handelssite of
-							webshop, kunt u hier controleren of er meldingen over deze (ver)koper
-							zijn gedaan. Ook kunt een melding doen via de knop "Doe melding".
-						</p>
-						<div class="row">
-							<div class="col-md-6">
-								<div id="miopreventionFormDiv" class="panel checkPanel panel-brand">
-									<div class="panel-heading">Check</div>
-									<div class="panel-body">
-										<form id="miopreventionForm" method="post" action="index.html" class="form-horizontal" onsubmit="return false">
-											<div class="form-group">
-												<div class="col-sm-4">
-													<label class="control-label">Categorie</label>
-													<i class="ietje" title="Deze informatie helpt ons bij het onderzoek naar internetoplichting."></i>
-												</div>
-												<div class="col-sm-8">
-													<select name="checkCategory" onkeypress="return entsub(event);" id="checkCategory" class="form-control">
-														<option value="">Kies categorie</option>
-														<option value="2">Categorie_1</option>
-														<option value="3">Categorie_2</option>
-														<option value="4">Categorie_3</option>
-													</select>
-												</div>
+					<h2>Check (ver)koper</h2>
+					<p>
+						Voordat u een transactie met elkaar aangaat via een handelssite of
+						webshop, kunt u hier controleren of er meldingen over deze (ver)koper
+						zijn gedaan. Ook kunt een melding doen via de knop "Doe melding".
+					</p>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="panel panel-brand">
+								<div class="panel-heading">Check</div>
+								<div id="miopreventionFormDiv" class="panel-body">
+									<form id="miopreventionForm" method="post" action="index.html" class="form-horizontal" onsubmit="return false">
+										<div class="form-group">
+											<div class="col-sm-4">
+												<label class="control-label">Categorie</label>
+												<i class="ietje" title="Deze informatie helpt ons bij het onderzoek naar internetoplichting."></i>
 											</div>
-											<div class="form-group">
-												<label class="col-sm-4" for="sTerm">Controleer op</label>
-												<div class="col-sm-8">
-													<input type="text" class="form-control" maxlength="40" id="sTerm" onkeyup="return entsub(this)" name="searchTerm"/>
-												</div>
+											<div class="col-sm-8">
+												<select name="checkCategory" onkeypress="return entsub(event);" id="checkCategory" class="form-control">
+													<option value="">Kies categorie</option>
+													<option value="2">Categorie_1</option>
+													<option value="3">Categorie_2</option>
+													<option value="4">Categorie_3</option>
+												</select>
 											</div>
-											<div class="form-group hidden">
-												<label class="col-sm-4" for="result">
-												Toon aan dat u een persoon bent, bereken:
-												<span id="mioCalculation">10 + 3</span> =
-												</label>
-												<div class="col-sm-8">
-													<input type="text" class="form-control" size="5" maxlength="5" id="result" onkeyup="return entsub(this)" name="result"/>
-												</div>
-											</div>
-											<div class="clearfix marginBottom">
-												<button class="pull-right btn btn-primary" onclick="javascript:checkOrNot()">controleer</button>
-											</div>
-											<div id="mioPreventionResult" role="alert">
-												<i id="resultIcon"></i>
-												<span id="mioPreventionResultText"></span>
-											</div>
-										</form>
-									</div>
-									<!-- .panel-body -->
-								</div>
-								<!-- .panel -->
-							</div>
-							<div class="col-md-6">
-								<div class="panel checkPanel panel-signal">
-									<div class="panel-heading">Melding</div>
-									<div class="panel-body">
-										<p>
-											TODO: CONTENT<br/>
-											Hier moet tekst komen die betrekking heeft op het doen van een melding.
-										</p>
-										<div class="text-right">
-											<button id="mioMelding" class="btn btn-primary" type="button">Doe melding</button>
 										</div>
+										<div class="form-group">
+											<label class="col-sm-4" for="sTerm">Controleer op</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control" maxlength="40" id="sTerm" onkeyup="return entsub(this)" name="searchTerm"/>
+											</div>
+										</div>
+										<div class="form-group hidden">
+											<label class="col-sm-4" for="result">
+											Toon aan dat u een persoon bent, bereken:
+											<span id="mioCalculation">10 + 3</span> =
+											</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control" size="5" maxlength="5" id="result" onkeyup="return entsub(this)" name="result"/>
+											</div>
+										</div>
+										<div class="clearfix marginBottom">
+											<button class="pull-right btn btn-primary" onclick="javascript:checkOrNot()">controleer</button>
+										</div>
+										<div id="mioPreventionResult" role="alert">
+											<i id="resultIcon"></i>
+											<span id="mioPreventionResultText"></span>
+										</div>
+									</form>
+								</div> <!-- .panel-body -->
+								<div class="panel-footer">
+									<button id="mioInfo" class="btn btn-default text-left overflow-x-hidden" type="button">
+										<i class="fa fa-info fa-lg"></i>
+										Informatie over de checkfunctie
+									</button>
+								</div> <!-- .panel-footer -->
+							</div> <!-- .panel -->
+						</div>
+						<div class="col-md-6">
+							<div id="miopreventionMeldingDiv" class="panel panel-signal">
+								<div class="panel-heading">Melding</div>
+								<div class="panel-body">
+									<p>
+										TODO: CONTENT<br/>
+										Hier moet tekst komen die betrekking heeft op het doen van een melding.
+									</p>
+									<div class="text-right">
+										<button id="mioMelding" class="btn btn-primary" type="button">Doe melding</button>
 									</div>
-									<!-- .panel-body -->
-								</div>
+								</div> <!-- .panel-body -->
 							</div>
 						</div>
-						<div class="">
-							<button id="mioInfo" class="btn btn-default text-left overflow-x-hidden" type="button">
-							<i class="fa fa-info fa-lg"></i> Informatie over de checkfunctie
-							</button>
-						</div>
-						<div id='preventionHelp' class="hidden">
-							<h2>Waarop kunt u controleren?</h2>
+					</div>
+					<div id='preventionHelp' class="panel panel-brand hidden">
+						<div class="panel-heading">Waarop kunt u controleren?</div>
+						<div class="panel-body">
 							U kunt zoeken op de volgende gegevens:
 							<ul class="marginTop">
 								<li>Nederlands bankrekeningnummer (gebruik alleen cijfers, bijv. 123456789)</li>
@@ -139,14 +135,11 @@
 								<li>Telefoonnummer (gebruik alleen cijfers, bijv. 0201234567)</li>
 								<li>URL van een webwinkel (bijv. www.eenwinkel.nl)</li>
 							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- .content-area -->
-			</div>
-			<!-- .main-content -->
-		</div>
-		<!-- .container -->
+						</div> <!-- .panel-body -->
+					</div> <!-- .panel -->
+				</div> <!-- .content-area -->
+			</div> <!-- .main-content -->
+		</div> <!-- .container -->
 		<!-- footer -->
 		<div class="container marginTop">
 			<footer>
@@ -169,8 +162,7 @@
 				</div>
 				<div id="cookieStatus"></div>
 			</footer>
-		</div>
-		<!-- .container -->
+		</div> <!-- .container -->
 		<!-- footer -->
 		<script src="resources/scripts/prototype.js"></script>
 		<script src="resources/scripts/yrtools.js"></script>
@@ -323,7 +315,11 @@
 						Form.Element.activate('checkCategory');
 
 						$(mioInfo).observe('click', function() {
-							$('preventionHelp').toggleClassName('hidden');
+							var el = $('preventionHelp');
+							el.toggleClassName('hidden');
+							if (!el.hasClassName('hidden')) {
+								el.scrollTo();
+							}
 						});
 					});
 
