@@ -51,7 +51,7 @@
 			<div class="main-content">
 				<div class="content-area">
 					<div class="page-header">
-						<h1 id="pageTitle">Meldingdetails</h1>
+						<h1 id="pageTitle">Uw melding</h1>
 					</div>
 					<p>
 						Hier vindt u de details van de door u ingezonden melding en krijgt u een overzicht van de status van de melding.
@@ -62,16 +62,16 @@
 							Indien u de melding wilt aanvullen, dan kunt u dit doen via de volgende knop:
 							<button id="btnToggleAanvullen" class="btn btn-primary btn-xs">Aanvullen</button>
 						<div id="pnlAanvullen" class="panel panel-forms hidden">
+							<div class="panel-heading">Uw aanvulling</div>
 							<form id="frmAanvullen" class="form" >
-								<div class="panel-heading">Uw aanvulling</div>
 								<div class="panel-body">
 									<textarea id="txtAanvullen" name="supplement" class="form-control" cols="55" rows="8" ></textarea>
 								</div>
 								<!--.panel-body -->
 								<div class="panel-footer">
 									<div class="formrow formrowtext">
-										<input type="hidden" name="number" value="012860000000229" />
-										<input type="hidden" name="hash" value="c4f125d0f27e2bd7e3b70c913e9dca17e21a024e0f4ed96c53b2853696621fa8" />
+										<input type="hidden" name="number" value="012860000000227" />
+										<input type="hidden" name="hash" value="87d0fd35e885a5e22bc9455204ca3c4fd585e227a3a63a482f629568b64247a3" />
 										<button type="submit" class="btn btn-primary">Aanvulling opslaan</button>
 									</div>
 								</div>
@@ -108,8 +108,8 @@
 								<!--.panel-body -->
 								<div class="panel-footer">
 									<div class="formrow formrowtext">
-										<input type="hidden" name="number" value="012860000000229" />
-										<input type="hidden" name="hash" value="c4f125d0f27e2bd7e3b70c913e9dca17e21a024e0f4ed96c53b2853696621fa8" />
+										<input type="hidden" name="number" value="012860000000227" />
+										<input type="hidden" name="hash" value="87d0fd35e885a5e22bc9455204ca3c4fd585e227a3a63a482f629568b64247a3" />
 										<button type="submit" class="btn btn-primary">Intrekken</button>
 									</div>
 								</div>
@@ -121,17 +121,100 @@
 					</div>
 					<!-- intrekkenEnAanvullen -->
 					<div class="panel panel-forms form-horizontal">
+						<div class="panel-heading">Historie van deze melding</div>
+						<div class="panel-body">
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">03-12-2014</label>
+								<div class="col-sm-8">
+									<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
+										Nieuwe aangifte
+										<a data-url="/f/retrieveStatusDetails.html?statusID=4367" class="morelink sendRequest" href="javascript:void(0)">
+										&#187; meer
+										</a>
+									</form>
+								</div>
+								<!-- .col-sm-8 -->
+							</div>
+							<!-- .form-group -->
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">03-12-2014</label>
+								<div class="col-sm-8">
+									<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
+										Aanvulling op melding gedaan
+										<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
+										&#187; meer
+										</a>
+									</form>
+								</div>
+								<!-- .col-sm-8 -->
+							</div>
+							<!-- .form-group -->
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">03-12-2014</label>
+								<div class="col-sm-8">
+									<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
+										Melding ingetrokken, goed ontvangen
+										<a data-url="/f/retrieveStatusDetails.html?statusID=4413" class="morelink sendRequest" href="javascript:void(0)">
+										&#187; meer
+										</a>
+									</form>
+								</div>
+								<!-- .col-sm-8 -->
+							</div>
+							<!-- .form-group -->
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">03-12-2014</label>
+								<div class="col-sm-8">
+									<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
+										Melding ingetrokken, goed ontvangen
+										<a data-url="/f/retrieveStatusDetails.html?statusID=4413" class="morelink sendRequest" href="javascript:void(0)">
+										&#187; meer
+										</a>
+									</form>
+								</div>
+								<!-- .col-sm-8 -->
+							</div>
+							<!-- .form-group -->
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">04-12-2014</label>
+								<div class="col-sm-8">
+									<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
+										Melding ingetrokken, goed ontvangen
+										<a data-url="/f/retrieveStatusDetails.html?statusID=4413" class="morelink sendRequest" href="javascript:void(0)">
+										&#187; meer
+										</a>
+									</form>
+								</div>
+								<!-- .col-sm-8 -->
+							</div>
+							<!-- .form-group -->
+							<div class="form-group form-group-sm">
+								<label class="col-sm-4">05-12-2014</label>
+								<div class="col-sm-8">
+									<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
+										Aanvulling op melding gedaan
+										<a data-url="/f/retrieveStatusDetails.html?statusID=4426" class="morelink sendRequest" href="javascript:void(0)">
+										&#187; meer
+										</a>
+									</form>
+								</div>
+								<!-- .col-sm-8 -->
+							</div>
+							<!-- .form-group -->
+						</div>
+						<!-- .panel-body -->
+					</div>
+					<!-- .panel -->
+					<div class="panel panel-forms form-horizontal">
 						<div class="panel-heading">Gegevens</div>
 						<div class="panel-body">
 							<div class="form-group form-group-sm">
-								<label class="col-sm-4">Regnr</label>
-								<div class="col-sm-8">012860000000229</div>
+								<label class="col-sm-4">Datum</label>
+								<div class="col-sm-8">03-12-2014</div>
 							</div>
 							<div class="form-group form-group-sm">
-								<label class="col-sm-4">Klantnummer</label>
-								<div class="col-sm-8">
-									068211764
-								</div>
+								<label class="col-sm-4">Regnr</label>
+								<div class="col-sm-8">012860000000227</div>
 							</div>
 							<div class="form-group form-group-sm">
 								<label class="col-sm-4">Categorie</label>
@@ -144,17 +227,13 @@
 								</div>
 								-->
 							<div class="form-group form-group-sm">
-								<label class="col-sm-4">Datum</label>
-								<div class="col-sm-8">04-12-2014</div>
-							</div>
-							<div class="form-group form-group-sm">
 								<label class="col-sm-4">Pdf</label>
 								<div class="col-sm-8">
 									<a class="textlink targetblank" href="fetchPDF.html?formDefinitionCode=ifaangifte
-										&formCode=a3500c1a-c674-4501-a2a3-74a387dbfbf3
+										&formCode=6a17f7c8-cfc1-45c2-8d72-68e067301937
 										&supCode=20107101901
-										&hash=c4f125d0f27e2bd7e3b70c913e9dca17e21a024e0f4ed96c53b2853696621fa8" target="_blank">
-									012860000000229.pdf
+										&hash=87d0fd35e885a5e22bc9455204ca3c4fd585e227a3a63a482f629568b64247a3" target="_blank">
+									012860000000227.pdf
 									</a>
 								</div>
 							</div>
@@ -341,19 +420,22 @@
 							</div>
 							<div class="form-group form-group-sm">
 								<label class="col-sm-4">Omschrijving geschil in maximaal 750 woorden</label>
-								<div class="col-sm-8">Blaat</div>
+								<div class="col-sm-8">blaat</div>
 							</div>
 							<div class="form-group form-group-sm">
 								<label class="col-sm-4">Omschrijving geschil in maximaal 750 woorden</label>
-								<div class="col-sm-8">Aanvullend geblaat</div>
+								<div class="col-sm-8">Leuter
+									Aanvullend geblaat
+									Ja, ja nog maar weer eens een keertje lekker aanvullen.
+								</div>
 							</div>
 							<div class="form-group form-group-sm">
 								<label class="col-sm-4">Datum betaling</label>
-								<div class="col-sm-8">03-12-2014</div>
+								<div class="col-sm-8">02-12-2014</div>
 							</div>
 							<div class="form-group form-group-sm">
 								<label class="col-sm-4">Bedrag aankoop</label>
-								<div class="col-sm-8">33,56</div>
+								<div class="col-sm-8">22,22</div>
 							</div>
 							<div class="form-group form-group-sm">
 								<label class="col-sm-4">Betalingsmethode</label>
@@ -377,11 +459,11 @@
 							</div>
 							<div class="form-group form-group-sm">
 								<label class="col-sm-4">Datum melding</label>
-								<div class="col-sm-8">4-12-2014</div>
+								<div class="col-sm-8">3-12-2014</div>
 							</div>
 							<div class="form-group form-group-sm">
 								<label class="col-sm-4">Tijdstip melding</label>
-								<div class="col-sm-8">10:04:25</div>
+								<div class="col-sm-8">11:37:19</div>
 							</div>
 							<div class="form-group form-group-sm">
 								<label class="col-sm-4"></label>
@@ -391,33 +473,11 @@
 						<!-- .panel-body -->
 					</div>
 					<!-- .panel -->
-					<h2>Historie van deze melding</h2>
-					<div class="panel panel-forms table-responsive">
-						<div class="panel-heading">Status</div>
-						<table class="table table-condensed">
-							<tbody>
-								<tr>
-									<td class="col1">
-										04-12-2014
-									</td>
-									<td class="col2">
-										<form id="statusDetailsForm" method="post" action="/f/retrieveStatusDetails.html">
-											Nieuwe aangifte
-											<a data-url="/f/retrieveStatusDetails.html?statusID=4367" class="morelink sendRequest" href="javascript:void(0)">
-											&#187; meer
-											</a>
-										</form>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<!-- .panel -->
 					<div id="statusDetailsBlock" class="panel panel-default popupMsg hidden">
 						<div class="panel-headings">
 							<div class="panel-heading">
 								<strong>Voortgangsinformatie</strong>
-								<button	id="close" type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<button	id="close" type="button" class="close">&times;<span class="sr-only">Close</span></button>
 							</div>
 						</div>
 						<div id="statusDetails" class="panel-body"></div>
@@ -430,7 +490,7 @@
 		</div>
 		<!-- .container -->
 		<!-- footer -->
-		<div class="container marginTop">
+		<div class="container margin-top">
 			<footer>
 				<div class="clearfix">
 					<div class="pull-left">
@@ -524,8 +584,8 @@
 									parameters: $('statusDetailsForm').serialize(true)
 								});
 								var pos = Event.pointer(event);
-								var styles= {top: (pos.y - 124) + 'px'};
-								$('statusDetailsBlock').setStyle(styles);
+								var x = ($$('.main-content')[0].measure('left'));
+								$('statusDetailsBlock').setStyle({left: x + 'px', top: (pos.y - 124) + 'px'});
 								$('statusDetailsBlock').removeClassName('hidden');
 							} else if (el.identify() == 'close') {
 								$('statusDetailsBlock').addClassName('hidden');

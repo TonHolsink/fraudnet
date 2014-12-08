@@ -40,12 +40,10 @@ caption {
 	margin-right: 1px;
 }
 td {vertical-align: top;}
-.float_right {float: right;}
 .clear {clear: both; font-size: 0; line-height: 0; min-height: 0; height: auto !important; height: 0;}
-.marginTop {margin-top: 1em;}
-.marginBottom {margin-bottom: 1em;}
-.marginTopBottom {margin-top: 1em; margin-bottom: 1em;}
-.noPaddingTop {padding-top: 0 !important;}
+.margin-top {margin-top: 1em;}
+.margin-bottom {margin-bottom: 1em;}
+.margin-top-bottom {margin-top: 1em; margin-bottom: 1em;}
 .hidden {display: none;}
 .pointer {cursor: pointer;}
 .default {cursor: default;}
@@ -53,13 +51,10 @@ td {vertical-align: top;}
 .raquo {color: #866f3c;}
 .inline {display: inline;}
 .inline-block {display: inline-block;}
+.white-space-wrap {white-space: normal;}
+.no-border {border: none;}
 
-a:hover .raquo {color: red;}
-img.float_left {
-	margin: 0 10px 0 0;
-	padding-top: 3px;
-}
-img.float_right {
+img.pull-right {
 	margin: 0 0 0 10px;
 	padding-top: 3px;
 }
@@ -104,7 +99,6 @@ img.float_right {
 	z-index: 20;
 	border: 2px solid @brand-primary;
 	background: white;
-	width: 420px;
 	min-height: 100px;
 	height: auto !important;
 	_height: 100px;
@@ -122,32 +116,6 @@ div#close, div.close {
 	cursor: pointer;
 	margin-top: 3px;
 }
-
-/*************************************************************
- * menu
- *************************************************************/
-/*************************************************************
- * SERVICES ALGEMEEN
- *************************************************************/
-/**********************************************************************
- * MIO
-/**********************************************************************/
-.mioAlert {
-	@media(min-width: @screen-sm-min) {
-		background: transparent url('../images/double_exclamation_mark_red.png') no-repeat right top;
-	}
-}
-.mioForeignIBANAlert {
-	@media(min-width: @screen-sm-min) {
-		background: transparent url('../images/exclamation_mark_orange.png') no-repeat right top;
-	}
-}
-.mioOk {
-	@media(min-width: @screen-sm-min) {
-		background: transparent url('../images/tick_green.png') no-repeat right top;
-	}
-}
-.mioBlank {background: none;}
 
 /**********************************************************************
  * Panels
@@ -189,29 +157,35 @@ div#close, div.close {
 	input[type="radio"], input[type="checkbox"] { margin-top: 2px;}
 }
 
+/*************************************************************
+ * SERVICES ALGEMEEN
+ *************************************************************/
+
+/**********************************************************************
+ * MIO
+/**********************************************************************/
+
 /**********************************************************************
  * Checkfunctie panelen even groot bij groot scherm
 /**********************************************************************/
 #miopreventionFormDiv {
 	min-height: 480px;
 	@media(min-width: @screen-xs-min) {
-		min-height: 394px;
+		min-height: 346px;
 	}
 	@media(min-width: @screen-sm-min) {
-		min-height: 284px;
-	}
-	@media(min-width: @screen-md-min) {
-		min-height: 386px;
-	}
-	@media(min-width: @screen-lg-min) {
-		min-height: 364px;
+		min-height: 285px;
 	}
 }
-#miopreventionMeldingDiv {
+.checkPanel, #miopreventionFormDiv {
 	@media(min-width: @screen-md-min) {
-		min-height: 386 + 110px;
+		min-height: 375px;
 	}
 	@media(min-width: @screen-lg-min) {
-		min-height: 364 + 110px;
+		min-height: 330px;
 	}
+}
+
+#mioPreventionResult {
+	margin-bottom: 0;
 }

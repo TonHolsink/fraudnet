@@ -91,7 +91,7 @@
 								<h1 id="pageTitle">Melding Internetoplichting</h1>
 							</div>
 							<p id="errorhandle"></p>
-							<input type="hidden" name="dialogSessionId" value="262602a3-a1a2-406c-8732-f65ee928c236"/>
+							<input type="hidden" name="dialogSessionId" value="e6a673d3-d053-4746-b7e0-a1b3516a627a"/>
 							<input type="hidden" name="formName" value="ifaangifte"/>
 							<input type="hidden" name="pageNumber" value="3"/>
 							<input type="hidden" name="formCode" value=""/>
@@ -123,14 +123,12 @@
 												<option class="input" value="Kapaza.nl" id="Kapaza.nl">Kapaza.nl</option>
 												<option class="input" value="Koopjesspullen.nl" id="Koopjesspullen.nl">Koopjesspullen.nl</option>
 												<option class="input" value="Koopplaats.nl" id="Koopplaats.nl">Koopplaats.nl</option>
-												<option class="input" value="Laguza.nl" id="Laguza.nl">Laguza.nl</option>
 												<option class="input" value="Marktnet.nl" id="Marktnet.nl">Marktnet.nl</option>
 												<option class="input" value="Marktplaza.nl" id="Marktplaza.nl">Marktplaza.nl</option>
 												<option class="input" value="Nieuwplaats.nl" id="Nieuwplaats.nl">Nieuwplaats.nl</option>
-												<option class="input" value="Sellgo.nl" id="Sellgo.nl">Sellgo.nl</option>
 												<option class="input" value="Speurders.nl" id="Speurders.nl">Speurders.nl</option>
 												<option class="input" value="Speurmarkt.nl" id="Speurmarkt.nl">Speurmarkt.nl</option>
-												<option class="input" value="Tweakers.nl" id="Tweakers.nl">Tweakers.nl</option>
+												<option class="input" value="Tweakers.net" id="Tweakers.net">Tweakers.net</option>
 												<option class="input" value="Tweedehands.net" id="Tweedehands.net">Tweedehands.net</option>
 												<option class="input" value="Tweedehands.nl" id="Tweedehands.nl">Tweedehands.nl</option>
 												<option class="input" value="Overigen" id="Overigen">Overigen</option>
@@ -147,20 +145,18 @@
 										<div class="dialoganswer">
 											<select name="referrer" size="" onchange="javascript:check_referrer_url(this)" class="form-control">
 												<option class="input" value="">Kies...</option>
-												<option class="input" value="Rechstreeks" id="Rechstreeks">Rechstreeks</option>
+												<option class="input" value="Rechtstreeks" id="Rechtstreeks">Rechtstreeks</option>
 												<option class="input" value="">--------------------</option>
 												<option class="input" value="www.marktplaats.nl" id="rwww.marktplaats.nl">Via Marktplaats.nl</option>
 												<option class="input" value="Kapaza.nl" id="rKapaza.nl">Via Kapaza.nl</option>
 												<option class="input" value="Koopjesspullen.nl" id="rKoopjesspullen.nl">Via Koopjesspullen.nl</option>
 												<option class="input" value="Koopplaats.nl" id="rKoopplaats.nl">Via Koopplaats.nl</option>
-												<option class="input" value="Laguza.nl" id="rLaguza.nl">Via Laguza.nl</option>
 												<option class="input" value="Marktnet.nl" id="rMarktnet.nl">Via Marktnet.nl</option>
 												<option class="input" value="Marktplaza.nl" id="rMarktplaza.nl">Via Marktplaza.nl</option>
 												<option class="input" value="Nieuwplaats.nl" id="rNieuwplaats.nl">Via Nieuwplaats.nl</option>
-												<option class="input" value="Sellgo.nl" id="rSellgo.nl">Via Sellgo.nl</option>
 												<option class="input" value="Speurders.nl" id="rSpeurders.nl">Via Speurders.nl</option>
 												<option class="input" value="Speurmarkt.nl" id="rSpeurmarkt.nl">Via Speurmarkt.nl</option>
-												<option class="input" value="Tweakers.nl" id="rTweakers.nl">Via Tweakers.nl</option>
+												<option class="input" value="Tweakers.net" id="rTweakers.net">Via Tweakers.net</option>
 												<option class="input" value="Tweedehands.net" id="rTweedehands.net">Via Tweedehands.net</option>
 												<option class="input" value="Tweedehands.nl" id="rTweedehands.nl">Via Tweedehands.nl</option>
 												<option class="input" value="Overigen" id="rOverigen">Overigen</option>
@@ -271,13 +267,13 @@
 										<div class="dialogquestion">
 											<label class="control-label">Bedrag aankoop</label>
 											<i class="mandatory"></i>
-											<span class="help-block inline-block">(&euro;99,99)</span>
 										</div>
 										<div class="dialoganswer">
 											<div class="input-group">
 												<span class="input-group-addon"><i class="fa fa-euro fa-fw"></i></span>
 												<input name="amount" size="30" maxlength="30" value="" type="text" class="form-control required validate-amount"/>
 											</div>
+											<span class="help-block inline-block">(&euro;99,99)</span>
 										</div>
 									</div>
 									<div class="form-group form-inline">
@@ -326,11 +322,11 @@
 											<label class="control-label">Bankrekeningnummer wederpartij</label>
 											<i id="accountnumber_help" class="ietje" title="Vul hier het IBAN- of Sepanummer van de tegenpartij in."></i>
 											<i class="mandatory"></i>
-											<div id="accountnumber_remark" class="marginTop" style="display:none;">(Alleen geldige IBAN-nummers worden geaccepteerd! Zie links met informatie over IBAN.)</div>
+											<div id="accountnumber_remark" class="margin-top" style="display:none;">(Alleen geldige IBAN-nummers worden geaccepteerd! Zie links met informatie over IBAN.)</div>
 										</div>
 										<div class="dialoganswer">
 											<input name="accountnumber" size="34" maxlength="34" value="" type="text" onkeypress="return AllowAlphaNumeric(event)" class="form-control required validate-iban"/>
-											<div id="explain_iban" class="marginTop" style="display:none;">
+											<div id="explain_iban" class="margin-top" style="display:none;">
 												<ul>
 													<li><a href="http://www.ibannl.org/iban_nummer_uitleg.php" class="targetblank" target="_blank">Informatie over IBAN</a></li>
 													<li><a href="https://www.ibanbicservice.nl/SingleRequest.aspx" class="targetblank" target="_blank">online IBAN check/converter</a></li>
@@ -377,7 +373,7 @@
 			<!-- .main-content -->
 		</div>
 		<!-- .container -->
-		<div class="container marginTop">
+		<div class="container margin-top">
 			<footer>
 				<div class="clearfix">
 					<div class="pull-left">
@@ -405,9 +401,9 @@
 		<script src="resources/scripts/yrsession.js"></script>
 		<script src="resources/scripts/validation.js"></script>
 		<script src="resources/scripts/yr-cookiebar.js"></script>
-		<script src="/f/resources/40114112001/eforms/eforms.js"> </script>
-		<script src="/f/resources/40114112001/eforms/formatDate.js"> </script>
-		<script src="/f/resources/40114112001/eforms/util.js"> </script>
+		<script src="resources/40114112001/eforms/eforms.js"> </script>
+		<script src="resources/40114112001/eforms/formatDate.js"> </script>
+		<script src="resources/40114112001/eforms/util.js"> </script>
 		<script type="text/javascript">
 			//<![CDATA[
 				(function() {

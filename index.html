@@ -39,30 +39,32 @@
 						<li><a href="index.html" title="Home">Home</a></li>
 						<li><a href="information.html" title="Informatie">Informatie</a></li>
 					</ul>
-				</div> <!-- .pull-right -->
+				</div>
+				<!-- .pull-right -->
 			</div>
 			<div class="headerStripe"></div>
 			<div id="messageBlock">
 			</div>
-		</div> <!-- container -->
+		</div>
+		<!-- container -->
 		<div class="container">
 			<div class="main-content">
 				<div class="content-area">
 					<div class="page-header">
 						<h1 id="pageTitle">Internetoplichting</h1>
 					</div>
-					<h2>Check (ver)koper</h2>
+					<h2>Fraudnet</h2>
 					<p>
-						Voordat u een transactie met elkaar aangaat via een handelssite of
-						webshop, kunt u hier controleren of er meldingen over deze (ver)koper
-						zijn gedaan. Ook kunt een melding doen via de knop "Doe melding".
+						Hier tekst
 					</p>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="panel panel-brand">
-								<div class="panel-heading">Check</div>
-								<div id="miopreventionFormDiv" class="panel-body">
-									<form id="miopreventionForm" method="post" action="index.html" class="form-horizontal" onsubmit="return false">
+								<div class="panel-heading">Check (ver)koper</div>
+								<div id="miopreventionFormDiv" class="checkPanel panel-body">
+									<p>
+										Controleer de betrouwbaarheid van een online (ver)koper of een webwinkel.
+									<form id="miopreventionForm" method="post" action="/f/index.html" class="form-horizontal" onsubmit="return false">
 										<div class="form-group">
 											<div class="col-sm-4">
 												<label class="control-label">Categorie</label>
@@ -74,6 +76,7 @@
 													<option value="2">Categorie_1</option>
 													<option value="3">Categorie_2</option>
 													<option value="4">Categorie_3</option>
+													<option value="6">Categorie_4</option>
 												</select>
 											</div>
 										</div>
@@ -86,13 +89,13 @@
 										<div class="form-group hidden">
 											<label class="col-sm-4" for="result">
 											Toon aan dat u een persoon bent, bereken:
-											<span id="mioCalculation">10 + 3</span> =
+											<span id="mioCalculation">7 + 4</span> =
 											</label>
 											<div class="col-sm-8">
 												<input type="text" class="form-control" size="5" maxlength="5" id="result" onkeyup="return entsub(this)" name="result"/>
 											</div>
 										</div>
-										<div class="clearfix marginBottom">
+										<div class="clearfix margin-bottom">
 											<button class="pull-right btn btn-primary" onclick="javascript:checkOrNot()">controleer</button>
 										</div>
 										<div id="mioPreventionResult" role="alert">
@@ -100,30 +103,42 @@
 											<span id="mioPreventionResultText"></span>
 										</div>
 									</form>
-								</div> <!-- .panel-body -->
+								</div>
+								<!-- .panel-body -->
 								<div class="panel-footer">
-									<button id="mioInfo" class="btn btn-default text-left overflow-x-hidden" type="button">
-										<i class="fa fa-info fa-lg"></i>
-										Informatie over de checkfunctie
+									<button id="mioInfo" class="btn btn-default text-left overflow-x-hidden white-space-wrap" type="button">
+									<i class="fa fa-info fa-lg"></i> Informatie over de checkfunctie
 									</button>
-								</div> <!-- .panel-footer -->
-							</div> <!-- .panel -->
+								</div>
+								<!-- .panel-footer -->
+							</div>
+							<!-- .panel -->
 						</div>
+						<!-- .col-md-6 -->
 						<div class="col-md-6">
-							<div id="miopreventionMeldingDiv" class="panel panel-signal">
-								<div class="panel-heading">Melding</div>
-								<div class="panel-body">
+							<div class="panel panel-signal">
+								<div class="panel-heading">Doe Melding</div>
+								<div class="checkPanel panel-body">
 									<p>
-										TODO: CONTENT<br/>
-										Hier moet tekst komen die betrekking heeft op het doen van een melding.
+										Bent u toch opgelicht? Meldt het hier.
 									</p>
+									<p>
+										Fraudnet stuurt uw melding door naar de politie.
+									</p>
+								</div>
+								<!-- .panel-body -->
+								<div class="panel-footer">
 									<div class="text-right">
 										<button id="mioMelding" class="btn btn-primary" type="button">Doe melding</button>
 									</div>
-								</div> <!-- .panel-body -->
+								</div>
+								<!-- .panel-footer -->
 							</div>
+							<!-- .panel -->
 						</div>
+						<!-- .col-md-6 -->
 					</div>
+					<!-- .row -->
 					<div id='preventionHelp' class="panel panel-brand hidden">
 						<div class="panel-heading">Waarop kunt u controleren?</div>
 						<div class="panel-body">
@@ -135,13 +150,18 @@
 								<li>Telefoonnummer (gebruik alleen cijfers, bijv. 0201234567)</li>
 								<li>URL van een webwinkel (bijv. www.eenwinkel.nl)</li>
 							</ul>
-						</div> <!-- .panel-body -->
-					</div> <!-- .panel -->
-				</div> <!-- .content-area -->
-			</div> <!-- .main-content -->
-		</div> <!-- .container -->
+						</div>
+						<!-- .panel-body -->
+					</div>
+					<!-- .panel -->
+				</div>
+				<!-- .content-area -->
+			</div>
+			<!-- .main-content -->
+		</div>
+		<!-- .container -->
 		<!-- footer -->
-		<div class="container marginTop">
+		<div class="container margin-top">
 			<footer>
 				<div class="clearfix">
 					<div class="pull-left">
@@ -162,7 +182,8 @@
 				</div>
 				<div id="cookieStatus"></div>
 			</footer>
-		</div> <!-- .container -->
+		</div>
+		<!-- .container -->
 		<!-- footer -->
 		<script src="resources/scripts/prototype.js"></script>
 		<script src="resources/scripts/yrtools.js"></script>
@@ -195,7 +216,7 @@
 
 					clearResult = function() {
 						$('mioPreventionResultText').update('');
-						$('mioPreventionResult').className = "alert alert-info"
+						$('mioPreventionResult').className = "alert alert-info";
 						$('miopreventionForm').className = formBaseClass + " " + "mioBlank";
 						$('resultIcon').className = " ";
 					};
@@ -214,7 +235,10 @@
 								url,
 								{	method: 'post',
 									parameters: pars,
-									onComplete: processMioFormResult
+									onSuccess: processMioFormResult,
+									onFailure: function() {
+										resultMessage('Er is een onverwachte fout opgetreden', 'danger');
+									}
 								}
 							);
 						}
