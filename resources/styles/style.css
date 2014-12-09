@@ -5435,6 +5435,9 @@ fieldset[disabled] .btn-signal.active {
 .modal-backdrop {
   z-index: 0;
 }
+.modal-content {
+  background-color: #ffe066;
+}
 /*************************************************************
  * EFORMS
  *************************************************************/

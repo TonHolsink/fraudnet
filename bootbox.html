@@ -68,10 +68,28 @@
 			<div class=col-md-12>
 				<p class=lead>
 					Alert
+					<a href="#" data-bb="alert" class="btn btn-default"><i class="fa fa-play"></i></a>
+				</p>
+			</div>
+		</div>
+		<div class=row>
+			<div class=col-md-12>
+				<p class=lead>
+					Alert Callback
 					<a href="#" data-bb="alert_callback" class="btn btn-default"><i class="fa fa-play"></i></a>
 				</p>
 			</div>
 		</div>
+<!-- WERKT NIET
+		<div class=row>
+			<div class=col-md-12>
+				<p class=lead>
+					Alert button
+					<a href="#" data-bb="alert_button" class="btn btn-default"><i class="fa fa-play"></i></a>
+				</p>
+			</div>
+		</div>
+-->
 		<div class=row>
 			<div class=col-md-12>
 				<p class=lead>
@@ -80,6 +98,16 @@
 				</p>
 			</div>
 		</div>
+<!-- WERKT NIET
+		<div class=row>
+			<div class=col-md-12>
+				<p class=lead>
+					Confirm Buttons
+					<a href="#" data-bb="confirm_buttons" class="btn btn-default"><i class="fa fa-play"></i></a>
+				</p>
+			</div>
+		</div>
+-->
 		<div class=row>
 			<div class=col-md-12>
 				<p class=lead>
@@ -177,6 +205,63 @@
 			//<![CDATA
 				(function() {
 
+					$(function() {
+
+						bootbox.setDefaults({
+						  /**
+						   * @optional String
+						   * @default: en
+						   * which locale settings to use to translate the three
+						   * standard button labels: OK, CONFIRM, CANCEL
+						   */
+						  locale: "nl",
+
+						  /**
+						   * @optional Boolean
+						   * @default: true
+						   * whether the dialog should be shown immediately
+						   */
+						  show: true,
+
+						  /**
+						   * @optional Boolean
+						   * @default: true
+						   * whether the dialog should be have a backdrop or not
+						   */
+						  backdrop: true,
+
+						  /**
+						   * @optional Boolean
+						   * @default: true
+						   * show a close button
+						   */
+						  closeButton: true,
+
+						  /**
+						   * @optional Boolean
+						   * @default: true
+						   * animate the dialog in and out (not supported in < IE 10)
+						   */
+						  animate: true,
+
+						  /**
+						   * @optional String
+						   * @default: null
+						   * an additional class to apply to the dialog wrapper
+						   */
+						  className: "my-modal"
+
+						});
+					});
+
+				})();
+
+			//]]>
+		</script>
+		<script type="text/javascript">
+			//<![CDATA
+				(function() {
+
 					/**
 					 * Bootbox Demos; crude, but effective...
 					 */
@@ -236,76 +321,76 @@
 
 						demos.dialog = function() {
 							bootbox.dialog({
-							message: "I am a custom dialog",
-							title: "Custom title",
-							buttons: {
-								success: {
-								label: "Success!",
-								className: "btn-success",
-								callback: function() {
-									Example.show("great success");
+								message: "I am a custom dialog",
+								title: "Custom title",
+								buttons: {
+									success: {
+										label: "Success!",
+										className: "btn-success",
+										callback: function() {
+											Example.show("great success");
+										}
+									},
+									danger: {
+										label: "Danger!",
+										className: "btn-danger",
+										callback: function() {
+											Example.show("uh oh, look out!");
+										}
+									},
+									main: {
+										label: "Click ME!",
+										className: "btn-primary",
+										callback: function() {
+											Example.show("Primary button");
+										}
+									}
 								}
-								},
-								danger: {
-								label: "Danger!",
-								className: "btn-danger",
-								callback: function() {
-									Example.show("uh oh, look out!");
-								}
-								},
-								main: {
-								label: "Click ME!",
-								className: "btn-primary",
-								callback: function() {
-									Example.show("Primary button");
-								}
-								}
-							}
 							});
 						};
 
 						demos.custom_html = function () {
-						bootbox.dialog({
-							title: "That html",
-							message: '<img src="images/bootstrap_logo.png" width="100px"/><br/> You can also use <b>html</b>'
-						});
+							bootbox.dialog({
+								title: "That html",
+								message: '<img src="resources/images/fraudnet-logo.png" width="100px"/><br/> You can also use <b>html</b>'
+							});
 						};
 
 						demos.custom_form = function () {
-						bootbox.dialog({
-							title: "This is a form in a modal.",
-							message: '<div class="row">	' +
-								'<div class="col-md-12"> ' +
-								'<form class="form-horizontal"> ' +
-								'<div class="form-group"> ' +
-								'<label class="col-md-4 control-label" for="name">Name</label> ' +
-								'<div class="col-md-4"> ' +
-								'<input id="name" name="name" type="text" placeholder="Your name" class="form-control input-md"> ' +
-								'<span class="help-block">Here goes your name</span> </div> ' +
-								'</div> ' +
-								'<div class="form-group"> ' +
-								'<label class="col-md-4 control-label" for="awesomeness">How awesome is this?</label> ' +
-								'<div class="col-md-4"> <div class="radio"> <label for="awesomeness-0"> ' +
-								'<input type="radio" name="awesomeness" id="awesomeness-0" value="Really awesome" checked="checked"> ' +
-								'Really awesome </label> ' +
-								'</div><div class="radio"> <label for="awesomeness-1"> ' +
-								'<input type="radio" name="awesomeness" id="awesomeness-1" value="Super awesome"> Super awesome </label> ' +
-								'</div> ' +
-								'</div> </div>' +
-								'</form> </div>	</div>',
-							buttons: {
-								success: {
-								label: "Save",
-								className: "btn-success",
-								callback: function () {
-									var name = $('#name').val();
-									var answer = $("input[name='awesomeness']:checked").val()
-									Example.show("Hello " + name + ". You've chosen <b>" + answer + "</b>");
+							bootbox.dialog({
+								title: "This is a form in a modal.",
+								message: '<div class="row">	' +
+									'<div class="col-md-12"> ' +
+									'<form class="form-horizontal"> ' +
+									'<div class="form-group"> ' +
+									'<label class="col-md-4 control-label" for="name">Name</label> ' +
+									'<div class="col-md-4"> ' +
+									'<input id="name" name="name" type="text" placeholder="Your name" class="form-control input-md"> ' +
+									'<span class="help-block">Here goes your name</span> </div> ' +
+									'</div> ' +
+									'<div class="form-group"> ' +
+									'<label class="col-md-4 control-label" for="awesomeness">How awesome is this?</label> ' +
+									'<div class="col-md-4"> <div class="radio"> <label for="awesomeness-0"> ' +
+									'<input type="radio" name="awesomeness" id="awesomeness-0" value="Really awesome" checked="checked"> ' +
+									'Really awesome </label> ' +
+									'</div><div class="radio"> <label for="awesomeness-1"> ' +
+									'<input type="radio" name="awesomeness" id="awesomeness-1" value="Super awesome"> Super awesome </label> ' +
+									'</div> ' +
+									'</div> </div>' +
+									'</form> </div>	</div>',
+								buttons: {
+									success: {
+										label: "Save",
+										className: "btn-success",
+										callback: function () {
+											var name = $('#name').val();
+											var answer = $("input[name='awesomeness']:checked").val()
+											Example.show("Hello " + name + ". You've chosen <b>" + answer + "</b>");
+										}
+									}
 								}
-								}
-							}
-							}
-						);
+
+							});
 						};
 
 					});
