@@ -5012,9 +5012,9 @@ button.close {
  * MIXINS
  *************************************************************/
 .forms-gradient {
-  background-image: -webkit-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: -o-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: linear-gradient(to right, #ffffff 40%, #ececec 80%);
+  background-image: -webkit-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: -o-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: linear-gradient(to right, white 40%, #ececec 80%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffececec', GradientType=1);
 }
@@ -5168,6 +5168,9 @@ td {
 }
 .no-border {
   border: none;
+}
+.spacer {
+  display: inline-block;
 }
 img.pull-right {
   margin: 0 0 0 10px;
@@ -5439,14 +5442,6 @@ fieldset[disabled] .btn-signal.active {
 .modal-content {
   background-color: #fff0b3;
 }
-/*****************************************
-.modal-header {
-	background-color: @brand-signal;
-}
-.modal-footer {
-	background-color: @brand-signal;
-}
-********************************************/
 /*************************************************************
  * EFORMS
  *************************************************************/
@@ -5641,9 +5636,9 @@ textarea.formrow textarea {
   }
 }
 .panel-forms {
-  background-image: -webkit-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: -o-linear-gradient(left, #ffffff 40%, #ececec 80%);
-  background-image: linear-gradient(to right, #ffffff 40%, #ececec 80%);
+  background-image: -webkit-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: -o-linear-gradient(left, white 40%, #ececec 80%);
+  background-image: linear-gradient(to right, white 40%, #ececec 80%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffececec', GradientType=1);
   border-color: #dddddd;

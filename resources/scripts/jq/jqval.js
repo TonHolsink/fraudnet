@@ -373,6 +373,7 @@
 			return !!($(this).data('bs.validator.errors') || []).length;
 		}
 		var result = !!this.$element.find(':input:enabled').filter(fieldErrors).length;
+/****************************************
 		var $el = $('#errorhandle');
 		if ($el.length > 0) {
 			if (result) {
@@ -381,6 +382,7 @@
 				$el.addClass('hidden');
 			}
 		}
+******************************************/
 		return result;
 	}
 
@@ -392,6 +394,7 @@
 		}
 
 		var result = !!this.$element.find(':input[required]:enabled').filter(fieldIncomplete).length;
+/****************************************
 		var $el = $('#errorhandle');
 		if ($el.length > 0) {
 			if (result) {
@@ -400,6 +403,7 @@
 				$el.addClass('hidden');
 			}
 		}
+******************************************/
 		return result;
 	}
 
