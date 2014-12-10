@@ -23,6 +23,10 @@
 		return result;
 	};
 
+	function isEmpty(v) {
+		return ((v == null) || (v.length == 0)); // || /^\s+$/.test(v));
+	}
+
 	// VALIDATOR CLASS DEFINITION
 	// ==========================
 
@@ -152,6 +156,9 @@
 		date: function($el) {
 			var pcFormat = /^(0[1-9]|[12][0-9]|3[01])([-])(0[1-9]|1[012])\2(19|20)\d\d$/;
 			var v = $el.val();
+			if (isEmpty(v)) {
+				return true;
+			}
 			if (!pcFormat.test(v)) {
 				return false;
 			} else {
@@ -365,8 +372,16 @@
 		function fieldErrors() {
 			return !!($(this).data('bs.validator.errors') || []).length;
 		}
-
-		return !!this.$element.find(':input:enabled').filter(fieldErrors).length;
+		var result = !!this.$element.find(':input:enabled').filter(fieldErrors).length;
+		var $el = $('#errorhandle');
+		if ($el.length > 0) {
+			if (result) {
+				$el.removeClass('hidden');
+			} else {
+				$el.addClass('hidden');
+			}
+		}
+		return result;
 	}
 
 	Validator.prototype.isIncomplete = function () {
@@ -376,7 +391,16 @@
 						$.trim(this.value) === '';
 		}
 
-		return !!this.$element.find(':input[required]:enabled').filter(fieldIncomplete).length;
+		var result = !!this.$element.find(':input[required]:enabled').filter(fieldIncomplete).length;
+		var $el = $('#errorhandle');
+		if ($el.length > 0) {
+			if (result) {
+				$el.removeClass('hidden');
+			} else {
+				$el.addClass('hidden');
+			}
+		}
+		return result;
 	}
 
 	Validator.prototype.onSubmit = function (e) {

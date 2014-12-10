@@ -5680,6 +5680,10 @@ textarea.formrow textarea {
   padding: 10px 0;
   border-top: 1px solid #f1f1f1;
 }
+.panel-forms .form-group-inline {
+  border: none;
+  padding: 0;
+}
 .panel-forms .form-group-sm {
   padding: 6px 0;
 }
