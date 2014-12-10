@@ -81,12 +81,15 @@
 					</script>
 					<div id="tabs"></div>
 					<div id="eformsContent" class="eformsContent">
-						<form  id="dialog" class="form form-horizontal" action="formPage.html" method="post" enctype="multipart/form-data" name="eform">
+						<form id="dialog" class="form form-horizontal" data-toggle="validator" action="formPage.html" method="post" enctype="multipart/form-data" name="eform">
 							<input type="hidden" name="supplier" value="40114112001"/>
 							<div class="page-header">
 								<h1 id="pageTitle">Melding Internetoplichting</h1>
 							</div>
-							<p id="errorhandle"></p>
+							<div id="errorhandle" class="alert alert-danger hidden">
+								<i class="fa fa-warning fa-lg"></i>
+								Er zijn fouten op de pagina. Controleer a.u.b de rood omkaderde velden.
+							</div>
 							<input type="hidden" name="dialogSessionId" value="e6a673d3-d053-4746-b7e0-a1b3516a627a"/>
 							<input type="hidden" name="formName" value="ifaangifte"/>
 							<input type="hidden" name="pageNumber" value="1"/>
@@ -105,25 +108,25 @@
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_bsn"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Burgerservicenummer</label>
 											<i class="ietje" title="Iedere Nederlandse burgers heeft een burgerservicenummer (BSN). Dit bsn is een persoonsnummer. Uw BSN vindt u bijvoorbeeld op uw rijbewijs of verzekeringspas. Indien u geen BSN nummer heeft, kunt u aangifte doen bij uw lokale politiebureau"></i>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="bsn" size="10" maxlength="9" value="" onkeypress="return AllowOnlyNumeric(event)" title="" type="text" class="form-control required validate-bsn">
+											<input name="bsn" size="10" maxlength="9" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="" type="text" data-req="req" data-bsn="bsn" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_bsn"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_firstname"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Voorna(a)m(en)</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="firstname" size="50" maxlength="100" value="" title="" type="text" class="form-control required">
+											<input name="firstname" size="50" maxlength="100" value="" title="" type="text" data-req="req" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_firstname"></div>
 									</div>
 									<div class="form-group form-inline">
 										<div class="dialogquestion">
@@ -135,57 +138,56 @@
 										</div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_lastname"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Achternaam</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="lastname" size="50" maxlength="100" value="" title="" type="text" class="form-control required">
+											<input name="lastname" size="50" maxlength="100" value="" title="" type="text" data-req="req" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_lastname"></div>
 									</div>
 									<div class="form-group form-inline" id="gender">
-										<div class="errortext" id="error_gender"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Geslacht</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
 											<label class="radio-inline">
-											<input name="gender" value="M" type="radio" class="s20 validate-one-required">
+											<input name="gender" value="M" type="radio" data-onereq="onereq">
 											Man
 											</label>
 											<label class="radio-inline">
-											<input name="gender" value="V" type="radio" class="s20 validate-one-required">
+											<input name="gender" value="V" type="radio">
 											Vrouw
 											</label>
 										</div>
+										<div class="help-block with-errors" id="error_gender"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_b_country"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Geboorteland</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="b_country" size="50" maxlength="50" value="" title="" type="text" class="form-control required">
+											<input name="b_country" size="50" maxlength="50" value="" title="" type="text" data-req="req" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_b_country"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_b_date"></div>
-										<div class="errortext" id="error_b_place"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Geboortedatum en geboorteplaats</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="b_date" size="10" maxlength="10" value="" placeholder="Geboortedatum" title="" type="text" class="form-control required validate-date">
+											<input name="b_date" size="10" maxlength="10" value="" placeholder="Geboortedatum" title="" type="text" data-req="req" data-date="date" class="form-control">
 											<span class="help-block inline-block">(dd-mm-jjjj)</span>
-											<input name="b_place" size="30" maxlength="40" value="" placeholder="Geboorteplaats" title="" type="text" class="form-control required">
+											<input name="b_place" size="30" maxlength="40" value="" placeholder="Geboorteplaats" title="" type="text" data-req="req" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_b_date"></div>
+										<div class="help-block" id="error_b_place"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_username"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Gebruikersnaam handelssite</label>
 											<i class="ietje" title="gebruikersnaam die u hanteert op de handelssite"></i>
@@ -193,107 +195,109 @@
 										<div class="dialoganswer">
 											<input name="username" size="30" maxlength="30" value="" title="" type="text" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_username"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_email"></div>
 										<div class="dialogquestion">
 											<label class="control-label">E-mailadres</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="email" size="50" maxlength="50" value="" title="" type="text" class="form-control required validate-email">
+											<input name="email" size="50" maxlength="50" value="" title="" type="text" data-req="req" data-email="email" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_email"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_street"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Straat</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="street" size="30" maxlength="35" value="" title="" type="text" class="form-control required">
+											<input name="street" size="30" maxlength="35" value="" title="" type="text" data-req="req" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_street"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_housenumber"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Huisnummer</label>
 											<i class="ietje" title="Vul alleen cijfers in."></i>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="housenumber" size="10" maxlength="5" value="" title="Vul alleen cijfers in." onkeypress="return AllowOnlyNumeric(event)"  type="text" onBlur="getAddress()" class="form-control required validate-digits">
+											<input name="housenumber" size="10" maxlength="5" value="" title="Vul alleen cijfers in." onkeypress="return YRTOOLS.AllowOnlyNumeric(event)"  type="text" onBlur="getAddress()" data-req="req" data-digits="digits" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_housenumber"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_housenumber_addon"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Huisnummer toevoeging</label>
 											<i class="ietje" title="Bijvoorbeeld II of bis."></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="housenumber_addon" size="5" maxlength="4" onkeypress="return AllowAlphaNumeric(event)" value="" title="Bijvoorbeeld II of bis." type="text" class="form-control">
+											<input name="housenumber_addon" size="5" maxlength="4" onkeypress="return YRTOOLS.AllowAlphaNumeric(event)" value="" title="Bijvoorbeeld II of bis." type="text" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_housenumber_addon"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_postal"></div>
-										<div class="errortext" id="error_place"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Postcode en woonplaats</label>
 											<i class="ietje" title="Postcode: Gebruik geen spatie. Bijvoorbeeld 1234AB."></i>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="postal" size="6" maxlength="6" value="" placeholder="Postcode" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" class="form-control required validate-postal">
+											<input name="postal" size="6" maxlength="6" value="" placeholder="Postcode" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" data-req="req" data-postal="postal" class="form-control">
 											<span class="help-block inline-block">(1234AA)</span>
-											<input name="place" size="30" maxlength="24" value="" placeholder="Woonplaats" title="" type="text" class="form-control required">
+											<input name="place" size="30" maxlength="24" value="" placeholder="Woonplaats" title="" type="text" data-req="req" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_postal"></div>
+										<div class="help-block" id="error_place"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_country"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Land</label>
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="country" size="15" maxlength="20" value="" title="" type="text" class="form-control required">
+											<input name="country" size="15" maxlength="20" value="" title="" type="text" data-req="req" class="form-control">
 										</div>
+										<div class="help-block with-errors" id="error_country"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_phone"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Telefoonnummer</label>
 											<i class="ietje" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="phone" size="10" maxlength="10" value="" onkeypress="return AllowOnlyNumeric(event)" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" class="form-control validate-phone" />
+											<input name="phone" size="10" maxlength="10" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" data-phone="phone" class="form-control" />
 											<span class="help-block inline-block">(0201234567)</span>
 										</div>
+										<div class="help-block with-errors" id="error_phone"></div>
 									</div>
 									<div class="form-group form-inline">
-										<div class="errortext" id="error_mobile"></div>
 										<div class="dialogquestion">
 											<label class="control-label">Mobiele telefoonnummer</label>
 											<i class="ietje" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="mobile" size="10" maxlength="10" value="" onkeypress="return AllowOnlyNumeric(event)" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" class="form-control validate-phone"/>
+											<input name="mobile" size="10" maxlength="10" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" data-phone="phone" class="form-control"/>
 											<span class="help-block inline-block">(0612345678)</span>
 										</div>
+										<div class="help-block with-errors" id="error_mobile"></div>
 									</div>
 								</div>
 								<!-- .panel-body -->
 								<div class="panel-footer">
-									<div class="form-group form-inline hidden" id="general_error">
-										<div class="errortext">! U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.</div>
-									</div>
 									<div class="form-group form-inline">
 										<div class="col-sm-12">
-											<span class="formbuttons">
-											<button class="btn btn-primary" name="submit_action" value="Volgende" id="submit" type="submit">
-											Volgende
-											</button>
-											</span>
+											<div id="general_error" class="alert alert-danger hidden">
+												<i class="fa fa-warning fa-lg"></i>
+												U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.											Er zijn fouten op de pagina. Controleer a.u.b de rood omkaderde velden.
+											</div>
+											<div class="formbuttons">
+												<button class="btn btn-primary" name="submit_action" value="Volgende" id="submit" type="submit">
+													Volgende
+												</button>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -335,6 +339,8 @@
 		<script src="resources/scripts/jq/jquery.min.js"></script>
 		<script src="resources/scripts/jq/bootstrap.min.js"></script>
 		<script src="resources/scripts/jq/bootbox.min.js"></script>
+		<script src="resources/scripts/jq/yrtools.js"></script>
+		<script src="resources/scripts/jq/jqval.js"></script>
 
 		<script src="resources/40114112001/eforms/formatDate.js"> </script>
 <!--
@@ -369,10 +375,10 @@
 					var newdate=new Date();
 					var newtimems=newdate.getTime()+(5*60*1000);
 					newdate.setTime(newtimems);
-					bootbox.alert('U bent meer dan 55 minuten bezig met het invullen van dit scherm. Klik op een knop onderin het invulscherm. ' +
-							'U heeft hiervoor nog 5 minuten (tot ' + newdate.formatDate("H:i") + '). Anders moet u alle gegevens opnieuw invullen.');
+					bootbox.alert('<p><strong>U bent meer dan 55 minuten bezig met het invullen van dit scherm.</strong></p><p>Klik op een knop onderin het invulscherm. ' +
+							'U heeft hiervoor nog 5 minuten (tot ' + newdate.formatDate("H:i") + '). Anders moet u alle gegevens opnieuw invullen.</p>');
 				}
-				, 10*1000);
+				, 3300000);
 			// ]]>
 		</script>
 		<script type="text/javascript">
@@ -381,43 +387,39 @@
 				 * Call the backend to retrieve a street/place combi.
 				 */
 				function getAddress() {
-					//UITGEZET
+					//UITGEZET (EN NIET GETEST)
 					return;
 					var postalCode = this.document.eform.postal.value;
 					var houseNumber = this.document.eform.housenumber.value;
 					if (postalCode != '' && houseNumber != '') {
 						if (postalCode.length == 6) {
-							var url='retrieveAddress.html';
-							new Ajax.Request
-							(
-								url,
-								{
-									method: 'get',
-									parameters: 'supplierid=40114112001&postal=' + postalCode + "|" + houseNumber,
-								 	onComplete: setAddress
+
+							$.ajax({
+								dataType : "json",
+								type: "GET",
+								url: "retrieveAddress.html",
+								data: {
+									supplierid: '40114112001',
+									postal: postalCode + "|" + houseNumber
 								}
-							);
+							})
+							.done(function(json) {
+								if (json.error == '') {
+									var street = json.street;
+									var place = json.place;
+									if (street != undefined && place != undefined) {
+										this.document.eform.street.value = street;
+										this.document.eform.place.value = place;
+										this.document.eform.country.value='NEDERLAND';
+									}
+								}
+
+							});
+
 						}
 					}
 				}
 
-				/**
-				 * Process the result of the call to the address retrieval.
-				 */
-				function setAddress(request) {
-						var pcData = request.responseText;
-					var jsonData = eval('(' + pcData + ')');
-					var error = jsonData.error;
-					if (error == '') {
-						var street = jsonData.street;
-						var place = jsonData.place;
-						if (street != undefined && place != undefined) {
-							this.document.eform.street.value = street;
-							this.document.eform.place.value = place;
-							this.document.eform.country.value='NEDERLAND';
-						}
-					}
-				}
 			// ]]>
 		</script>
 <!--

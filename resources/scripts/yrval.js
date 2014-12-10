@@ -4,13 +4,13 @@ var YRVAL = YRVAL ? YRVAL : function() {
 	// Check if string is an integer, with an optional +/- sign character.
 	var isInteger_re = /^(\+|-)?\d+$/;
 	isInteger = function(s) {
-		return String(s).search (isInteger_re) != -1
+		return String(s).search(isInteger_re) != -1
 	};
 
 	// Check if string is a whole number(digits only, >=0).
 	var isWhole_re = /^\d+$/;
 	isWhole = function(s) {
-		return String(s).search (isWhole_re) != -1
+		return String(s).search(isWhole_re) != -1
 	};
 
 	// Check if input is numeric (dutch locale)

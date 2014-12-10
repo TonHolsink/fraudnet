@@ -60,7 +60,7 @@
 			// minchecked: 'Te weinig opties geselecteerd',
 			email: 'Geef een geldig e-mail adres. Bijvoorbeeld fred@domain.com',
 			req: 'Dit is een verplicht veld',
-			onereq: 'Kies een van bovenstaande opties',
+			onereq: 'Kies een van de opties',
 			number: 'Voer een geldig nummer in',
 			postal: 'Deze postcode is niet goed. Gebruik geen spatie. Bijvoorbeeld 1234AB',
 			digits: 'Gebruik alleen cijfers. Punten, komma\'s en streepjes zijn niet toegestaan.',
@@ -381,7 +381,18 @@
 
 	Validator.prototype.onSubmit = function (e) {
 		this.validate();
-		if (this.isIncomplete() || this.hasErrors()) e.preventDefault();
+		if (this.isIncomplete() || this.hasErrors()) {
+			e.preventDefault();
+			var $el = $('#errorhandle');
+			if ($el.length > 0) {
+				$el.removeClass('hidden');
+				$('html, body').animate({
+					scrollTop: 0
+				}, 1000);
+			}
+		} else {
+			$('#errorhandle').addClass('hidden');
+		}
 	}
 
 	Validator.prototype.toggleSubmit = function () {
