@@ -5710,6 +5710,67 @@ textarea.formrow textarea {
     display: inline;
   }
 }
+/*************************************************************
+ * validatie mbt 2 inputs op 1 regel
+ *************************************************************/
+.form-group.form-group-inline .help-block,
+.form-group.form-group-inline .control-label,
+.form-group.form-group-inline .radio,
+.form-group.form-group-inline .checkbox,
+.form-group.form-group-inline .radio-inline,
+.form-group.form-group-inline .checkbox-inline {
+  color: #555555;
+}
+.form-group.form-group-inline .form-control {
+  border-color: #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.form-group.form-group-inline .form-control:focus {
+  border-color: #b3b3b3;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ffffff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ffffff;
+}
+.form-group.form-group-inline .input-group-addon {
+  color: #555555;
+  border-color: #cccccc;
+  background-color: #ffffff;
+}
+.form-group.form-group-inline .form-control-feedback {
+  color: #555555;
+}
+.form-group-inline.has-error .help-block,
+.form-group-inline.has-error .control-label,
+.form-group-inline.has-error .radio,
+.form-group-inline.has-error .checkbox,
+.form-group-inline.has-error .radio-inline,
+.form-group-inline.has-error .checkbox-inline {
+  color: #a94442;
+}
+.form-group-inline.has-error .form-control {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.form-group-inline.has-error .form-control:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+.form-group-inline.has-error .input-group-addon {
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
+}
+.form-group-inline.has-error .form-control-feedback {
+  color: #a94442;
+}
+.help-block.with-errors-inline {
+  color: #a94442;
+}
+/*************************************************************
+ * Input placeholder
+ *************************************************************/
 .form-control::-webkit-input-placeholder,
 ::-webkit-input-placeholder {
   /* WebKit browsers */

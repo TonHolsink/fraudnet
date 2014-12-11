@@ -125,8 +125,27 @@ label, #dialogBox .dialogquestion{
 		}
 	}
 }
-
-//Input placeholder
+/*************************************************************
+ * validatie mbt 2 inputs op 1 regel
+ *************************************************************/
+// .form-group-inline .form-control {
+// 	border-color: @input-border;
+// }
+.form-group.form-group-inline  {
+	.form-control-validation(@input-color; @input-border; @input-bg);
+}
+// .form-group-inline.has-error .form-control {
+// 	border-color: @state-danger-text;
+// }
+.form-group-inline.has-error {
+	.form-control-validation(@state-danger-text; @state-danger-text; @state-danger-bg);
+}
+.help-block.with-errors-inline {
+	color: @state-danger-text;
+}
+/*************************************************************
+ * Input placeholder
+ *************************************************************/
 .form-control::-webkit-input-placeholder, ::-webkit-input-placeholder { /* WebKit browsers */
 	color: @placeholder-color;
 }
