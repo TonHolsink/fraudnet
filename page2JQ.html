@@ -200,10 +200,10 @@
 											<span class="help-block inline-block">(1234AA)</span>
 											<div class="form-group form-inline form-group-inline">
 													<input name="wp_place" size="30" maxlength="24" value="" placeholder="Woonplaats" title="" type="text" class="form-control"/>
-													<div class="help-block" id="error_wp_place"></div>
 											</div>
 										</div>
 										<div class="help-block with-errors" id="error_wp_postal"></div>
+										<div class="help-block errorText" id="error_wp_place"></div>
 									</div>
 									<div class="form-group form-inline">
 										<div class="dialogquestion">
@@ -263,36 +263,27 @@
 										</div>
 										<div class="help-block with-errors" id="error_feedback_wederpartij"></div>
 									</div>
-								</div>
-								<!-- .panel-body -->
+								</div> <!-- .panel-body -->
 								<div class="panel-footer">
 									<div class="form-group form-inline">
-										<div class="forminput">
-											<div class="col-sm-12">
-												<div id="general_error" class="alert alert-danger hidden">
-													<i class="fa fa-warning fa-lg"></i>
-													U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.
-												</div>
-												<div class="formbuttons">
-													<input class="btn btn-primary" name="submit_action" value="Vorige" type="submit"/>
-													<input class="btn btn-primary" name="submit_action" value="Volgende" type="submit"/>
-												</div>
+										<div class="col-sm-12">
+											<div id="general_error" class="alert alert-danger hidden">
+												<i class="fa fa-warning fa-lg"></i>
+												U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.
+											</div>
+											<div class="formbuttons">
+												<input class="btn btn-primary" name="submit_action" value="Vorige" type="submit"/>
+												<input class="btn btn-primary" name="submit_action" value="Volgende" type="submit"/>
 											</div>
 										</div>
 									</div>
-								</div>
-								<!-- .panel-footer -->
-							</div>
-							<!-- .panel -->
+								</div> <!-- .panel-footer -->
+							</div> <!-- .panel -->
 						</form>
-					</div>
-					<!-- contentarea -->
-				</div>
-				<!-- .content-area -->
-			</div>
-			<!-- .main-content -->
-		</div>
-		<!-- .container -->
+					</div> <!-- contentarea -->
+				</div> <!-- .content-area -->
+			</div> <!-- .main-content -->
+		</div> <!-- .container -->
 		<div class="container margin-top">
 			<footer>
 				<div class="clearfix">
@@ -314,14 +305,14 @@
 				</div>
 				<div id="cookieStatus"></div>
 			</footer>
-		</div>
-		<!-- .container -->
+		</div> <!-- .container -->
 		<script src="resources/scripts/jq/jquery.min.js"></script>
 		<script src="resources/scripts/jq/bootstrap.min.js"></script>
 		<script src="resources/scripts/jq/bootbox.min.js"></script>
 		<script src="resources/scripts/jq/yrtools.js"></script>
 		<script src="resources/scripts/jq/jqval.js"></script>
 
+		<script src="resources/scripts/jq/eformsJQ.js"> </script>
 		<script src="resources/40114112001/eforms/formatDate.js"> </script>
 <!--
 		<script src="resources/scripts/prototype.js"></script>

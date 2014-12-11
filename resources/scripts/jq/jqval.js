@@ -81,7 +81,8 @@
 			ext: 'Het bestandstype is niet toegestaan',
 			selection: 'Maak een keuze'
 		},
-		formErrorMsg: '.formErrorMsg'
+		formErrorMsg: '.formErrorMsg',
+		hidden: false //if true also hidden enabled fields are validated otherwise only enabled fields
 	}
 
 	Validator.VALIDATORS = {
@@ -372,7 +373,8 @@
 		function fieldErrors() {
 			return !!($(this).data('bs.validator.errors') || []).length;
 		}
-		var result = !!this.$element.find(':input:enabled').filter(fieldErrors).length;
+		var method = this.options.hidden ? ':input:enabled' : ':input:enabled:visible';
+		var result = !!this.$element.find(method).filter(fieldErrors).length;
 /****************************************
 		var $el = $('#errorhandle');
 		if ($el.length > 0) {
@@ -393,7 +395,8 @@
 						$.trim(this.value) === '';
 		}
 
-		var result = !!this.$element.find(':input[required]:enabled').filter(fieldIncomplete).length;
+		var method = this.options.hidden ? ':input[required]:enabled' : ':input[required]:enabled:visible';
+		var result = !!this.$element.find(method).filter(fieldIncomplete).length;
 /****************************************
 		var $el = $('#errorhandle');
 		if ($el.length > 0) {
