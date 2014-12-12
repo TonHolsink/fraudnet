@@ -270,12 +270,22 @@ function v_bsn(element) {
 	}
 }
 
-function checkMaxFieldLength(element, maxAllowed) {
+function checkMaxFieldLength(element, maxAllowed, el) {
 	if (noenter()) {
 		var contents = element.value;
-		if (contents.length >= maxAllowed) {
+		if (contents.length > maxAllowed) {
 			element.value = element.value.substring(0, maxAllowed);
-			bootbox.alert("! Deze tekst mag niet langer zijn dan " + maxAllowed + " karakters.");
+			var msg = "<i class='fa fa-info fa-lg'></i> Deze tekst mag niet langer zijn dan " + maxAllowed + " karakters.";
+			if (el) {
+				$('#' + el).html(msg);
+			} else {
+				bootbox.alert(msg);
+			}
+			return false;
+		} else {
+			if (el) {
+				$('#' + el).empty();
+			}
 		}
 		return true;
 	}

@@ -88,7 +88,7 @@
 							<div class="page-header">
 								<h1 id="pageTitle">Melding Internetoplichting</h1>
 							</div>
-							<div id="errorhandle" class="alert alert-danger hidden">
+							<div id="errorhandle" class="alert alert-danger formErrorMsg hidden">
 								<i class="fa fa-warning fa-lg"></i>
 								Er zijn fouten op de pagina. Controleer a.u.b de rood omkaderde velden.
 							</div>
@@ -199,11 +199,11 @@
 											<input name="wp_postal" size="6" maxlength="6" value="" placeholder="Postcode" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" data-postal="postal" class="form-control"/>
 											<span class="help-block inline-block">(1234AA)</span>
 											<div class="form-group form-inline form-group-inline">
-													<input name="wp_place" size="30" maxlength="24" value="" placeholder="Woonplaats" title="" type="text" class="form-control"/>
+												<input name="wp_place" size="30" maxlength="24" value="" placeholder="Woonplaats" title="" type="text" class="form-control"/>
 											</div>
 										</div>
 										<div class="help-block with-errors" id="error_wp_postal"></div>
-										<div class="help-block errorText" id="error_wp_place"></div>
+										<div class="help-block with-errors-inline" id="error_wp_place"></div>
 									</div>
 									<div class="form-group form-inline">
 										<div class="dialogquestion">
@@ -267,9 +267,9 @@
 								<div class="panel-footer">
 									<div class="form-group form-inline">
 										<div class="col-sm-12">
-											<div id="general_error" class="alert alert-danger hidden">
+											<div id="general_error" class="alert alert-danger formErrorMsg hidden">
 												<i class="fa fa-warning fa-lg"></i>
-												U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.
+												Er zijn fouten op de pagina. Controleer a.u.b de rood omkaderde velden.
 											</div>
 											<div class="formbuttons">
 												<input class="btn btn-primary" name="submit_action" value="Vorige" type="submit"/>

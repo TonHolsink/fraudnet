@@ -63,8 +63,8 @@
 			//WERKT NIET GOED
 			// minchecked: 'Te weinig opties geselecteerd',
 			email: 'Geef een geldig e-mail adres. Bijvoorbeeld fred@domain.com',
-			req: 'Dit is een verplicht veld',
-			onereq: 'Kies een van de opties',
+			// req: 'Dit is een verplicht veld',
+			// onereq: 'Kies een van de opties',
 			number: 'Voer een geldig nummer in',
 			postal: 'Deze postcode is niet goed. Gebruik geen spatie. Bijvoorbeeld 1234AB',
 			digits: 'Gebruik alleen cijfers. Punten, komma\'s en streepjes zijn niet toegestaan.',
@@ -79,9 +79,9 @@
 			domesticaccountnr: 'Dit bankrekeningnummer is niet goed',
 			iban: 'Dit bankrekeningnummer is niet goed',
 			ext: 'Het bestandstype is niet toegestaan',
-			selection: 'Maak een keuze'
+			// selection: 'Maak een keuze'
 		},
-		formErrorMsg: '.formErrorMsg',
+		formErrorMsgClass: '.formErrorMsg',
 		hidden: false //if true also hidden enabled fields are validated otherwise only enabled fields
 	}
 
@@ -346,7 +346,9 @@
 			var $group = $el.closest('.form-group');
 			var $block;
 			if ($group.hasClass('form-group-inline')) {
-				$block = $group.parents('.form-group').find('.help-block.with-errors-inline');
+				var $parentGroup = $group.parents('.form-group');
+				$parentGroup.addClass('has-error-inline');
+				$block = $parentGroup.find('.help-block.with-errors-inline');
 			} else {
 				$block = $group.find('.help-block.with-errors');
 			}
@@ -370,7 +372,9 @@
 		var $group = $el.closest('.form-group');
 		var $block;
 		if ($group.hasClass('form-group-inline')) {
-			$block = $group.parents('.form-group').find('.help-block.with-errors-inline');
+			var $parentGroup = $group.parents('.form-group');
+			$parentGroup.removeClass('has-error-inline');
+			$block = $parentGroup.find('.help-block.with-errors-inline');
 		} else {
 			$block = $group.find('.help-block.with-errors');
 		}
@@ -445,15 +449,25 @@
 				.html(originalContent);
 		});
 
+		this.$element.find('.help-block.with-errors-inline').each(function () {
+			var $this = $(this);
+			var originalContent = $this.data('bs.validator.originalContent');
+
+			$this
+				.removeData('bs.validator.originalContent')
+				.html(originalContent);
+		});
+
 		this.$element.find('input[type="submit"], button[type="submit"]').removeClass('disabled');
 
 		this.$element.find('.has-error').removeClass('has-error');
+		this.$element.find('.has-error-inline').removeClass('has-error-inline');
 
 		return this;
 	}
 
 	Validator.prototype.showFormError = function (hasErr) {
-		(this.$element).find(this.options.formErrorMsg).toggleClass('hidden', !hasErr);
+		(this.$element).find(this.options.formErrorMsgClass).toggleClass('hidden', !hasErr);
 		return;
 	}
 
@@ -470,6 +484,7 @@
 			if (!data && option == 'destroy') return;
 			if (!data) $this.data('bs.validator', (data = new Validator(this, options)));
 			if (typeof option == 'string') data[option]();
+
 		});
 	}
 

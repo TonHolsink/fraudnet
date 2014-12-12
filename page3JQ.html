@@ -88,7 +88,7 @@
 							<div class="page-header">
 								<h1 id="pageTitle">Melding Internetoplichting</h1>
 							</div>
-							<div id="errorhandle" class="alert alert-danger hidden">
+							<div id="errorhandle" class="alert alert-danger formErrorMsg hidden">
 								<i class="fa fa-warning fa-lg"></i>
 								Er zijn fouten op de pagina. Controleer a.u.b de rood omkaderde velden.
 							</div>
@@ -144,7 +144,7 @@
 										</div>
 										<div class="dialoganswer">
 											<input type="hidden" value="" name="hiddenreferrer"/>
-											<select id="referrer" name="referrer" size="" onchange="javascript:check_referrer_url(this)" data-selection="selection" class="form-control">
+											<select id="referrer" name="referrer" size="" onchange="javascript:check_referrer_url(this)" data-req="req" class="form-control">
 												<option class="input" value="">Kies...</option>
 												<option class="input" value="Rechtstreeks" id="Rechtstreeks">Rechtstreeks</option>
 												<option class="input" value="">--------------------</option>
@@ -228,20 +228,20 @@
 										<div class="dialogquestion">
 											<label class="control-label">Omschrijving conflict in maximaal 750 tekens</label>
 											<i class="mandatory"></i>
+											<div id="description_wordcount" class="help-block"></div>
 										</div>
 										<div class="dialoganswer">
-											<textarea class="form-control required" name="description" cols="39" rows="10" onkeypress="checkMaxFieldLength(this, 750)"></textarea>
+											<textarea data-req="req" class="form-control" name="description" cols="39" rows="10" onkeyup="checkMaxFieldLength(this, 7, 'description_wordcount')"></textarea>
 										</div>
 										<div class="help-block with-errors" id="error_description"></div>
-										<div id="description_wordcount"></div>
 									</div>
 									<div class="form-group">
 										<div class="dialogquestion">
-											<label class="control-label">Aanvullende informatie</label>
+											<label class="control-label">Aanvullende informatie in maximaal 500 tekens</label>
 											<i class="ietje" title="Heeft u nog opmerkingen of andere relevante informatie met betrekking tot uw melding? Is u bijvoorbeeld iets opgevallen aan de adverteerder, zijn advertentie of personalia? U kunt dit hier invullen"></i>
 										</div>
 										<div class="dialoganswer">
-											<textarea class="form-control" name="description_extra" cols="39" rows="8" onkeypress="checkMaxFieldLength(this, 500)"></textarea>
+											<textarea class="form-control" name="description_extra" cols="39" rows="8" onkeyup="checkMaxFieldLength(this, 5, 'error_description_extra')"></textarea>
 										</div>
 										<div class="help-block with-errors" id="error_description_extra"></div>
 									</div>
@@ -256,6 +256,7 @@
 											</div>
 										</div>
 										<div class="help-block with-errors" id="error_paymentdate"></div>
+										<div id="description_extra_wordcount" class="help-block"></div>
 									</div>
 									<div class="form-group form-inline">
 										<div class="dialogquestion">
@@ -265,7 +266,7 @@
 										<div class="dialoganswer">
 											<div class="input-group">
 												<span class="input-group-addon"><i class="fa fa-euro fa-fw"></i></span>
-												<input name="amount" size="30" maxlength="30" value="" type="text" class="form-control required validate-amount"/>
+												<input name="amount" size="30" maxlength="30" value="" type="text" data-req="req" data-amount="amount" class="form-control"/>
 											</div>
 											<span class="help-block inline-block">(&euro;99,99)</span>
 										</div>
@@ -278,7 +279,7 @@
 										</div>
 										<div class="dialoganswer">
 											<input type="hidden" value="" name="hiddenpayment"/>
-											<select id="payMethod" name="paymentmethod" size="" onchange="checkField_paymentmethod(this)" class="form-control required">
+											<select id="payMethod" name="paymentmethod" size="" onchange="checkField_paymentmethod(this)" data-req="req" class="form-control">
 												<option class="input" value="">Kies een betaalmethode</option>
 												<option class="input" value="overschrijving" id="overschrijving">Bankoverschrijving (met IBAN)</option>
 												<option class="input" value="IDEAL" id="IDEAL">IDEAL (met IBAN)</option>
@@ -297,7 +298,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input type="text" name="paymentmethod_other" size="50" maxlength="50" title="" value="" class="form-control required"/>
+											<input type="text" name="paymentmethod_other" size="50" maxlength="50" title="" value="" data-req="req" class="form-control"/>
 										</div>
 										<div class="help-block with-errors" id="error_paymentmethod_other"></div>
 									</div>
@@ -307,7 +308,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="paypalname" size="40" maxlength="40" value="" type="text" class="form-control required"/>
+											<input name="paypalname" size="40" maxlength="40" value="" type="text" data-req="req" class="form-control"/>
 										</div>
 										<div class="help-block with-errors" id="error_paypalname"></div>
 									</div>
@@ -316,10 +317,10 @@
 											<label class="control-label">Bankrekeningnummer wederpartij</label>
 											<i id="accountnumber_help" class="ietje" title="Vul hier het IBAN- of Sepanummer van de tegenpartij in."></i>
 											<i class="mandatory"></i>
-											<div id="accountnumber_remark" class="margin-top" style="display: none;">(Alleen geldige IBAN-nummers worden geaccepteerd! Zie links met informatie over IBAN.)</div>
+											<div id="accountnumber_remark" class="help-block" style="display: none;">(Alleen geldige IBAN-nummers worden geaccepteerd! Zie links met informatie over IBAN.)</div>
 										</div>
 										<div class="dialoganswer">
-											<input name="accountnumber" size="34" maxlength="34" value="" type="text" onkeypress="return YRTOOLS.AllowAlphaNumeric(event)" class="form-control required validate-iban"/>
+											<input name="accountnumber" size="34" maxlength="34" value="" type="text" onkeypress="return YRTOOLS.AllowAlphaNumeric(event)" data-req="req" data-iban="iban" class="form-control"/>
 											<div id="explain_iban" class="margin-top" style="display: none;">
 												<ul>
 													<li><a href="http://www.ibannl.org/iban_nummer_uitleg.php" class="targetblank" target="_blank">Informatie over IBAN</a></li>
@@ -335,7 +336,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="accountowner" size="30" maxlength="30" value="" type="text" class="form-control required"/>
+											<input name="accountowner" size="30" maxlength="30" value="" type="text" data-req="req" class="form-control"/>
 										</div>
 										<div class="help-block with-errors" id="error_accountowner"></div>
 									</div>
@@ -346,9 +347,9 @@
 								<div class="panel-footer">
 									<div class="form-group form-inline">
 										<div class="col-sm-12">
-											<div id="general_error" class="alert alert-danger hidden">
+											<div id="general_error" class="alert alert-danger formErrorMsg hidden">
 												<i class="fa fa-warning fa-lg"></i>
-												U heeft niet alle verplichte vragen beantwoord. Na het invullen van deze vragen kunt u naar de volgende pagina.
+												Er zijn fouten op de pagina. Controleer a.u.b de rood omkaderde velden.
 											</div>
 											<div class="formbuttons">
 												<input class="btn btn-primary" name="submit_action" value="Vorige" type="submit"/>
@@ -455,40 +456,27 @@
 					$('#advertnum_row').removeClass('has-error');
 					$('#error_advertnumber').empty();
 
-
 					if (url_value=='Overige') {
 						$('#otherurl').show();
-						// $('#site_url_other').prop('disabled', false);
 						$('#advertnum_notrequired').show();
 						$('#advertnum_required').hide();
-						// $('#advertnum_required').prop('disabled', true);
 						$('#advertnum_input').removeData('req')
 						$('#referrer_row').show();
-						// $('#referrer').removeAttr('disabled');
-
-
 					} else if (url_value=='www.marktplaats.nl') {
 						$('#advertnum_required').show();
-						// $('#advertnum_required').prop('disabled', false);
 						$('#advertnum_input').data('req', 'req');
 						$('#advertnum_notrequired').hide();
 						$('#otherurl').hide();
-						// $('#site_url_other').prop('disabled', true);
 						document.forms[0].site_url_other.value = '';
 						$('#referrer_row').hide();
-						// $('#referrer').attr('disabled', 'disabled');
-
 						document.forms[0].referrer.value='';
 					} else {
 						$('#otherurl').hide();
-						// $('#site_url_other').prop('disabled', true);
 						$('#advertnum_required').hide();
-						// $('#advertnum_required').prop('disabled', true);
 						$('#advertnum_notrequired').show();
 						$('#advertnum_input').removeData('req')
 						document.forms[0].site_url_other.value = '';
 						$('#referrer_row').hide();
-						// $('#referrer').attr('disabled', 'disabled');
 						document.forms[0].referrer.value='';
 					}
 

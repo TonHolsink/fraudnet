@@ -5012,9 +5012,9 @@ button.close {
  * MIXINS
  *************************************************************/
 .forms-gradient {
-  background-image: -webkit-linear-gradient(left, white 40%, #ececec 80%);
-  background-image: -o-linear-gradient(left, white 40%, #ececec 80%);
-  background-image: linear-gradient(to right, white 40%, #ececec 80%);
+  background-image: -webkit-linear-gradient(left, #ffffff 40%, #ececec 80%);
+  background-image: -o-linear-gradient(left, #ffffff 40%, #ececec 80%);
+  background-image: linear-gradient(to right, #ffffff 40%, #ececec 80%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffececec', GradientType=1);
 }
@@ -5442,6 +5442,14 @@ fieldset[disabled] .btn-signal.active {
 .modal-content {
   background-color: #fff0b3;
 }
+/*****************************************
+.modal-header {
+	background-color: @brand-signal;
+}
+.modal-footer {
+	background-color: @brand-signal;
+}
+********************************************/
 /*************************************************************
  * EFORMS
  *************************************************************/
@@ -5462,6 +5470,7 @@ a.mandatory:hover {
 }
 .help-block {
   font-size: smaller;
+  line-height: 1em;
 }
 label,
 #dialogBox .dialogquestion {
@@ -5623,6 +5632,9 @@ textarea.formrow textarea {
     width: 33.33333333%;
   }
 }
+.dialogquestion .help-block {
+  margin: 15px 0;
+}
 .dialoganswer {
   position: relative;
   min-height: 1px;
@@ -5636,9 +5648,9 @@ textarea.formrow textarea {
   }
 }
 .panel-forms {
-  background-image: -webkit-linear-gradient(left, white 40%, #ececec 80%);
-  background-image: -o-linear-gradient(left, white 40%, #ececec 80%);
-  background-image: linear-gradient(to right, white 40%, #ececec 80%);
+  background-image: -webkit-linear-gradient(left, #ffffff 40%, #ececec 80%);
+  background-image: -o-linear-gradient(left, #ffffff 40%, #ececec 80%);
+  background-image: linear-gradient(to right, #ffffff 40%, #ececec 80%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffececec', GradientType=1);
   border-color: #dddddd;
@@ -5696,6 +5708,14 @@ textarea.formrow textarea {
 }
 .panel-forms .help-block {
   margin: 0 15px;
+}
+.panel-forms .help-block.with-errors ul,
+.panel-forms .help-block.with-errors-inline ul {
+  margin-bottom: 0.5em;
+}
+.panel-forms .dialogquestion .help-block,
+.panel-forms .dialoganswer .help-block {
+  margin: 0.5em 0;
 }
 .panel-forms td:first-child,
 .panel-forms th:first-child {
@@ -5765,7 +5785,8 @@ textarea.formrow textarea {
 .form-group-inline.has-error .form-control-feedback {
   color: #a94442;
 }
-.help-block.with-errors-inline {
+.help-block.with-errors-inline,
+.form-group.has-error-inline .control-label {
   color: #a94442;
 }
 /*************************************************************

@@ -17,7 +17,9 @@
 
 .help-block {
 	font-size: smaller;
+	line-height: 1em;
 }
+
 
 label, #dialogBox .dialogquestion{
 	font-size: 13px;
@@ -77,6 +79,7 @@ label, #dialogBox .dialogquestion{
 
 .dialogquestion {
 	.make-sm-column(4);
+	.help-block {margin: 15px 0;}
 }
 .dialoganswer {
 	.make-sm-column(8);
@@ -112,6 +115,14 @@ label, #dialogBox .dialogquestion{
 	.help-block {
 		margin: 0 15px;
 	}
+	.help-block.with-errors ul,
+	.help-block.with-errors-inline ul {
+		margin-bottom: 0.5em;
+	}
+	.dialogquestion,
+	.dialoganswer {
+		.help-block {margin: 0.5em 0;}
+	}
 	td:first-child, th:first-child {
 		padding-left: 15px;
 	}
@@ -140,9 +151,12 @@ label, #dialogBox .dialogquestion{
 .form-group-inline.has-error {
 	.form-control-validation(@state-danger-text; @state-danger-text; @state-danger-bg);
 }
-.help-block.with-errors-inline {
+
+.help-block.with-errors-inline,
+.form-group.has-error-inline .control-label {
 	color: @state-danger-text;
 }
+
 /*************************************************************
  * Input placeholder
  *************************************************************/
