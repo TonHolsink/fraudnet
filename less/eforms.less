@@ -123,18 +123,31 @@ label, #dialogBox .dialogquestion{
 	.dialoganswer {
 		.help-block {margin: 0.5em 0;}
 	}
+	.alert {
+		margin-bottom: 15px;
+	}
+	.panel-footer {
+		min-height: 152px;
+		@media(min-width: @screen-md-min) {
+			min-height: 118px;
+		}
+		.alert {
+			margin-bottom: 0;
+		}
+	}
 	td:first-child, th:first-child {
 		padding-left: 15px;
 	}
 	td:last-child, th:last-child {
 		padding-right: 15px;
 	}
-	//Mandatory asterisk following a label sometiems appeared on a new line
-	@media(min-width: @screen-sm-min) {
-		.dialogquestion label {
+	//Mandatory asterisk following a label sometimes appeared on a new line
+	.dialogquestion label {
+		@media(min-width: @screen-sm-min) {
 			display: inline;
 		}
 	}
+
 }
 /*************************************************************
  * validatie mbt 2 inputs op 1 regel

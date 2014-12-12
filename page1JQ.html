@@ -83,7 +83,7 @@
 							<div class="page-header">
 								<h1 id="pageTitle">Melding Internetoplichting</h1>
 							</div>
-							<div id="errorhandle" class="alert alert-danger formErrorMsg hidden">
+							<div id="errorhandle" class="alert alert-danger hidden">
 								<i class="fa fa-warning fa-lg"></i>
 								Er zijn fouten op de pagina. Controleer a.u.b de rood omkaderde velden.
 							</div>
@@ -96,6 +96,10 @@
 								<div class="panel-body">
 									<div class="form-group formrowtext">
 										<div class="infotext">
+											<div class="fa-stack fa-inset">
+												<i class="fa fa-square fa-stack-2x"></i>
+												<i class="fa fa-info fa-stack-1x fa-inverse"></i>
+											</div>
 											<p>
 												Vul onderstaande velden zo volledig en accuraat als mogelijk in. Wij wijzen u erop dat de melding correct en naar waarheid dient te worden ingevuld.
 											</p>
@@ -287,16 +291,14 @@
 									</div>
 								</div> <!-- .panel-body -->
 								<div class="panel-footer">
-									<div class="form-group form-inline">
-										<div class="col-sm-12">
-											<div id="general_error" class="alert alert-danger formErrorMsg hidden">
+									<div class="form-group">
+										<div class="dialogquestion margin-bottom">
+											<input class="btn btn-primary" name="submit_action" value="Volgende" type="submit"/>
+										</div>
+										<div id="general_error" class="dialoganswer formErrorMsg hidden">
+											<div class="alert alert-danger">
 												<i class="fa fa-warning fa-lg"></i>
 												Er zijn fouten op de pagina. Controleer a.u.b de rood omkaderde velden.
-											</div>
-											<div class="formbuttons">
-												<button class="btn btn-primary" name="submit_action" value="Volgende" id="submit" type="submit">
-													Volgende
-												</button>
 											</div>
 										</div>
 									</div>
