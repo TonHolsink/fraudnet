@@ -404,13 +404,9 @@
 		this.validate();
 		if (this.isIncomplete() || this.hasErrors()) {
 			e.preventDefault();
-			var $el = $('#errorhandle');
-			if ($el.length > 0) {
-				$el.removeClass('hidden');
-				$('html, body').animate({
-					scrollTop: 0
-				}, 1000);
-			}
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1000);
 		} else {
 			$('#errorhandle').addClass('hidden');
 		}
