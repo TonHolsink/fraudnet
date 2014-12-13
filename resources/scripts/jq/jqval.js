@@ -358,10 +358,15 @@
 
 			errors = $('<ul/>')
 				.addClass('list-unstyled')
-				.append($.map(errors, function (error) { return $('<li/>')[method](error) }));
+				.append($.map(errors, function (error) {
+					return (error ? $('<li/>')[method](error) : '');
+				}));
 
 			$block.data('bs.validator.originalContent') === undefined && $block.data('bs.validator.originalContent', $block.html());
-			$block.empty().append(errors);
+			$block.empty();
+			if (errors.children().length > 0) {
+				$block.append(errors);
+			}
 
 			$group.addClass('has-error');
 
@@ -408,11 +413,6 @@
 		this.validate();
 		if (this.isIncomplete() || this.hasErrors()) {
 			e.preventDefault();
-			$('html, body').animate({
-				scrollTop: 0
-			}, 1000);
-		} else {
-			$('#errorhandle').addClass('hidden');
 		}
 	}
 
