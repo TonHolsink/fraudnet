@@ -161,7 +161,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="wp_email" size="50" maxlength="50" value="" title="" type="text" data-req="req" data-email="email" class="form-control"/>
+											<input name="wp_email" size="50" maxlength="50" value="" title="" type="text" data-valtype="req email" class="form-control"/>
 										</div>
 										<div class="help-block with-errors" id="error_wp_email"></div>
 									</div>
@@ -200,7 +200,7 @@
 											<i title="Postcode: Gebruik geen spatie. Bijvoorbeeld 1234AB." class="ietje"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="wp_postal" size="6" maxlength="6" value="" placeholder="Postcode" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" data-postal="postal" class="form-control"/>
+											<input name="wp_postal" size="6" maxlength="6" value="" placeholder="Postcode" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" data-valtype="postal" class="form-control"/>
 											<span class="help-block inline-block">(1234AA)</span>
 											<div class="form-group form-inline form-group-inline">
 												<input name="wp_place" size="30" maxlength="24" value="" placeholder="Woonplaats" title="" type="text" class="form-control"/>
@@ -224,7 +224,7 @@
 											<i title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." class="ietje"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="wp_phone" size="10" maxlength="10" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" data-phone="phone" class="form-control"/>
+											<input name="wp_phone" size="10" maxlength="10" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" data-valtype="phone" class="form-control"/>
 											<span class="help-block inline-block">(0201234567)</span>
 										</div>
 										<div class="help-block with-errors" id="error_wp_phone"></div>
@@ -235,7 +235,7 @@
 											<i title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." class="ietje"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="wp_mobile" size="10" maxlength="10" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" data-phone="phone" class="form-control"/>
+											<input name="wp_mobile" size="10" maxlength="10" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="Vul tien cijfers in. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" data-valtype="phone" class="form-control"/>
 											<span class="help-block inline-block">(0612345678)</span>
 										</div>
 										<div class="help-block with-errors" id="error_wp_mobile"></div>
@@ -246,7 +246,7 @@
 											<i title="Dit is een nummer waarmee elke computer die verbonden is met het internet, zichtbaar is voor alle andere computers die online zijn. Bijvoorbeeld: 145.119.165.102. De volgende adressen invullen heeft geen zin, omdat dit bekende mailservers zijn : 10.X.X.X, 65.54.X.X, 65.55.X.X, 195.78.85.X, 209.85.X.X, 212.54.42.X" class="ietje"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="wp_ipaddress" size="15" maxlength="15" value="" title="Vul een ip nummer in, bijvoorbeeld : 192.168.0.1. Gebruik alleen cijfers en punten. De volgende adressen invullen heeft geen zin, omdat dit bekende mailservers zijn : 10.X.X.X, 65.54.X.X, 65.55.X.X, 195.78.85.X, 209.85.X.X, 212.54.42.X " type="text" data-ip="ip" class="form-control"/>
+											<input name="wp_ipaddress" size="15" maxlength="15" value="" title="Vul een ip nummer in, bijvoorbeeld : 192.168.0.1. Gebruik alleen cijfers en punten. De volgende adressen invullen heeft geen zin, omdat dit bekende mailservers zijn : 10.X.X.X, 65.54.X.X, 65.55.X.X, 195.78.85.X, 209.85.X.X, 212.54.42.X " type="text" data-valtype="ip" class="form-control"/>
 										</div>
 										<div class="help-block with-errors" id="error_wp_ipaddress"></div>
 									</div>
@@ -257,7 +257,7 @@
 										</div>
 										<div class="dialoganswer">
 											<label class="radio-inline">
-											<input name="feedback_wederpartij" value="Y" type="radio" data-onereq="onereq">
+											<input name="feedback_wederpartij" value="Y" type="radio" data-valtype="onereq">
 											Ja
 											</label>
 											<label class="radio-inline">

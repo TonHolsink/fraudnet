@@ -117,7 +117,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="bsn" size="10" maxlength="9" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="" type="text" data-req="req" data-bsn="bsn" class="form-control">
+											<input name="bsn" size="10" maxlength="9" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="" type="text" data-valtype="req bsn" class="form-control">
 										</div>
 										<div class="help-block with-errors" id="error_bsn"></div>
 									</div>
@@ -127,7 +127,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="firstname" size="50" maxlength="100" value="" title="" type="text" data-req="req" class="form-control">
+											<input name="firstname" size="50" maxlength="100" value="" title="" type="text" data-valtype="req" class="form-control">
 										</div>
 										<div class="help-block with-errors" id="error_firstname"></div>
 									</div>
@@ -146,7 +146,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="lastname" size="50" maxlength="100" value="" title="" type="text" data-req="req" class="form-control">
+											<input name="lastname" size="50" maxlength="100" value="" title="" type="text" data-valtype="req" class="form-control">
 										</div>
 										<div class="help-block with-errors" id="error_lastname"></div>
 									</div>
@@ -157,7 +157,7 @@
 										</div>
 										<div class="dialoganswer">
 											<label class="radio-inline">
-											<input name="gender" value="M" type="radio" data-onereq="onereq">
+											<input name="gender" value="M" type="radio" data-valtype="onereq">
 											Man
 											</label>
 											<label class="radio-inline">
@@ -173,7 +173,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="b_country" size="50" maxlength="50" value="" title="" type="text" data-req="req" class="form-control">
+											<input name="b_country" size="50" maxlength="50" value="" title="" type="text" data-valtype="req" class="form-control">
 										</div>
 										<div class="help-block with-errors" id="error_b_country"></div>
 									</div>
@@ -183,10 +183,10 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="b_date" size="10" maxlength="10" value="" placeholder="Geboortedatum" title="" type="text" data-req="req" data-date="date" class="form-control">
+											<input name="b_date" size="10" maxlength="10" value="" placeholder="Geboortedatum" title="" type="text" data-valtype="req date" class="form-control">
 											<span class="help-block inline-block">(dd-mm-jjjj)</span>
 											<div class="form-group form-inline form-group-inline">
-												<input name="b_place" size="30" maxlength="40" value="" placeholder="Geboorteplaats" title="" type="text" data-req="req" class="form-control">
+												<input name="b_place" size="30" maxlength="40" value="" placeholder="Geboorteplaats" title="" type="text" data-valtype="req" class="form-control">
 											</div>
 										</div>
 										<div class="help-block with-errors" id="error_b_date"></div>
@@ -208,7 +208,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="email" size="50" maxlength="50" value="" title="" type="text" data-req="req" data-email="email" class="form-control">
+											<input name="email" size="50" maxlength="50" value="" title="" type="text" data-valtype="req email" class="form-control">
 										</div>
 										<div class="help-block with-errors" id="error_email"></div>
 									</div>
@@ -218,7 +218,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="street" size="30" maxlength="35" value="" title="" type="text" data-req="req" class="form-control">
+											<input name="street" size="30" maxlength="35" value="" title="" type="text" data-valtype="req" class="form-control">
 										</div>
 										<div class="help-block with-errors" id="error_street"></div>
 									</div>
@@ -229,7 +229,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="housenumber" size="10" maxlength="5" value="" title="Vul alleen cijfers in." onkeypress="return YRTOOLS.AllowOnlyNumeric(event)"  type="text" onBlur="getAddress()" data-req="req" data-digits="digits" class="form-control">
+											<input name="housenumber" size="10" maxlength="5" value="" title="Vul alleen cijfers in." onkeypress="return YRTOOLS.AllowOnlyNumeric(event)"  type="text" onBlur="getAddress()" data-valtype="req digits" class="form-control">
 										</div>
 										<div class="help-block with-errors" id="error_housenumber"></div>
 									</div>
@@ -250,10 +250,10 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="postal" size="6" maxlength="6" value="" placeholder="Postcode" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" data-req="req" data-postal="postal" class="form-control">
+											<input name="postal" size="6" maxlength="6" value="" placeholder="Postcode" title="Gebruik geen spatie. Bijvoorbeeld 1234AB." type="text" onChange="getAddress()" data-valtype="req postal" class="form-control">
 											<span class="help-block inline-block">(1234AA)</span>
 											<div class="form-group form-inline form-group-inline">
-												<input name="place" size="30" maxlength="24" value="" placeholder="Woonplaats" title="" type="text" data-req="req" class="form-control">
+												<input name="place" size="30" maxlength="24" value="" placeholder="Woonplaats" title="" type="text" data-valtype="req" class="form-control">
 											</div>
 										</div>
 										<div class="help-block with-errors" id="error_postal"></div>
@@ -265,7 +265,7 @@
 											<i class="mandatory"></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="country" size="15" maxlength="20" value="" title="" type="text" data-req="req" class="form-control">
+											<input name="country" size="15" maxlength="20" value="" title="" type="text" data-valtype="req" class="form-control">
 										</div>
 										<div class="help-block with-errors" id="error_country"></div>
 									</div>
@@ -275,7 +275,7 @@
 											<i class="ietje" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="phone" size="10" maxlength="10" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" data-phone="phone" class="form-control" />
+											<input name="phone" size="10" maxlength="10" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" data-valtype="phone" class="form-control" />
 											<span class="help-block inline-block">(0201234567)</span>
 										</div>
 										<div class="help-block with-errors" id="error_phone"></div>
@@ -286,7 +286,7 @@
 											<i class="ietje" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789."></i>
 										</div>
 										<div class="dialoganswer">
-											<input name="mobile" size="10" maxlength="10" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" data-phone="phone" class="form-control"/>
+											<input name="mobile" size="10" maxlength="10" value="" onkeypress="return YRTOOLS.AllowOnlyNumeric(event)" title="Vul tien cijfers in, zonder landcode. Gebruik geen streepje, haakje of spatie. Bijvoorbeeld 0123456789." type="text" data-valtype="phone" class="form-control"/>
 											<span class="help-block inline-block">(0612345678)</span>
 										</div>
 										<div class="help-block with-errors" id="error_mobile"></div>
