@@ -31,11 +31,36 @@ label, #dialogBox .dialogquestion{
  *************************************************************/
 .flowcontainer {
 	margin-top: 15px;
-	.label {
-		display: inline-block;
-		background-color: grey;
+	> li {
+		background-color: gray;
+		min-height: 24px;
+		line-height: 24px;
+		display: block;
+		// padding: 0;
+		padding: 0 5px;
+		+ li {
+			margin-top: 2px;
+		}
+		@media(min-width: @screen-xs-min) {
+			display: inline-block;
+			margin-top: 0;
+		}
+		 > a {
+			// padding: 0 5px;
+			margin-left: -5px;
+			margin-right: -5px;
+			padding: 0 5px;
+			// border: 1px solid transparent;
+			border-radius: @border-radius-base;
+			&:hover {
+				background-color: lighten(gray, 10%);
+			}
+		}
 	}
-	.label.current {background-color: @brand-signal;}
+	.current {
+		// padding: 1px 5px;
+		background-color: @brand-signal;
+	}
 }
 
 /*************************************************************
