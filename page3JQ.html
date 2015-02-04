@@ -245,6 +245,7 @@
 										<div class="dialogquestion">
 											<label class="control-label">Aanvullende informatie in maximaal 500 tekens</label>
 											<i class="ietje" title="Heeft u nog opmerkingen of andere relevante informatie met betrekking tot uw melding? Is u bijvoorbeeld iets opgevallen aan de adverteerder, zijn advertentie of personalia? U kunt dit hier invullen"></i>
+											<div id="description_extra_wordcount" class="help-block"></div>
 										</div>
 										<div class="dialoganswer">
 											<textarea class="form-control" name="description_extra" cols="39" rows="8" onkeyup="checkMaxFieldLength(this, 5, 'error_description_extra')"></textarea>
@@ -256,13 +257,12 @@
 											<label class="control-label">Datum betaling</label>
 										</div>
 										<div class="dialoganswer">
-											<div class="input-group">
-												<input name="paymentdate" maxlength="12" size="12" type="text" readonly value="" class="form-control"/>
-												<span class="input-group-btn"><button type="button" class="btn btn-default" title="Selecteer hier een datum" onclick="inputCal.select(document.forms[0].paymentdate,'pdlink','dd-MM-yyyy'); return false;" id="pdlink"><i class="fa fa-calendar fa-fw"></i></button></span>
+											<div id="datetimepicker1" class="input-group date">
+												<input name="paymentdate" type="text" value="" maxlength="10" size="10" class="form-control"/>
+												<span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
 											</div>
 										</div>
 										<div class="help-block with-errors" id="error_paymentdate"></div>
-										<div id="description_extra_wordcount" class="help-block"></div>
 									</div>
 									<div class="form-group form-inline">
 										<div class="dialogquestion">
@@ -424,22 +424,34 @@
 
 			//]]>
 		</script>
+
 		<!-- local script to bottom -->
-		<script type="text/javascript" src="resources/scripts/CalendarPopup.js"></script>
+		<script src="resources/scripts/jq/moment/moment.min.js"></script>
+		<script src="resources/scripts/jq/moment/nl.js"></script>
+		<script src="resources/scripts/jq/bootstrap-datetimepicker.min.js"></script>
 		<script type="text/javascript">
 			// <![CDATA[
-				var inputCal = new CalendarPopup();
+				(function() {
 
-				//Prevent return press
-				function kk(e) {
-					key = e ? e.which : window.event.keyCode;
-					if(key==13) {
-						return false;
+					//Prevent return press
+					function kk(e) {
+						key = e ? e.which : window.event.keyCode;
+						if(key==13) {
+							return false;
+						}
 					}
-				}
 
-				document.onkeypress = kk;
+					$(function() {
+						document.onkeypress = kk;
+						moment.locale('nl');
+						$('#datetimepicker1').datetimepicker({
+							format: 'DD-MM-YYYY',
+							extraFormats: ['DD-MM-YY'],
+							useCurrent: false
+						});
+					});
 
+				})();
 			// ]]>
 		</script>
 		<script type="text/javascript">
